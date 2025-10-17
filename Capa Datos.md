@@ -25,4 +25,6 @@ Atributos de la tabla en db:
 --    CB_Caja VARCHAR(200) NULL
 --);
 
+<img width="1360" height="546" alt="image" src="https://github.com/user-attachments/assets/d85db29b-5b8e-4957-ad31-d0fcb7a2e462" />
+
 
