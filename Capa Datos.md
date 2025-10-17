@@ -27,4 +27,8 @@ Atributos de la tabla en db:
 
 <img width="1360" height="546" alt="image" src="https://github.com/user-attachments/assets/d85db29b-5b8e-4957-ad31-d0fcb7a2e462" />
 
+# 1 Crear La Clase CodigoDeBarras
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/d10ab42c-1265-41e8-8d82-3a42f32ecb48" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/808ec9ca-da2a-4b45-9b5f-e09fc5801b1b" />
+
 
