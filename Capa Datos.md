@@ -35,5 +35,11 @@ Atributos de la tabla en db:
 # 2 Crear Los Metodos
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/ea1520d8-b9e1-4b01-a0e8-7b582dadaaf2" />
 
+# 3 Instalar Paquetes
+Install-Package Microsoft.Data.SqlClient
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/c62477f1-99b8-47de-88da-8f4ee8a0bb41" />
+
+Install-Package System.Configuration.ConfigurationManager
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/480d49c8-f81b-42b5-b498-2689666ee5d4" />
 
 
