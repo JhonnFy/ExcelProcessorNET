@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<connectionStrings>
+			<add name="CadenaSQL"
+				 connectionString="Server=DESKTOP-1276GPH\SQLEXPRESS;
+					Database=ExcelDB;
+					User Id=AdminDeve¿?;
+					Password=AdminDeveloper¿?;
+					TrustServerCertificate=True;"
+			providerName="System.Data.SqlClient" />
+	</connectionStrings>
+</configuration>
