@@ -8,5 +8,5 @@
 					Password=AdminDeveloper¿?;
 					TrustServerCertificate=True;"
 			providerName="System.Data.SqlClient" />
-	</connectionStrings>
+	</connectionStrings>     
 </configuration>
