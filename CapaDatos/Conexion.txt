@@ -14,13 +14,13 @@ namespace CapaDatos
             {
                 var cs = ConfigurationManager.ConnectionStrings["CadenaSQL"];
                 if (cs == null || string.IsNullOrEmpty(cs.ConnectionString))
-                    throw new Exception("No se encontr√≥ la cadena de conexi√≥n 'CadenaSQL' o est√° vac√≠a.");
+                    throw new Exception("No se encontrÛ la cadena de conexiÛn 'CadenaSQL' o est· vacÌa.");
 
                 cadenaConexion = cs.ConnectionString;
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al inicializar la conexi√≥n: " + ex.Message);
+                throw new Exception("Error al inicializar la conexiÛn: " + ex.Message);
             }
         }
 
@@ -32,7 +32,7 @@ namespace CapaDatos
                 using (var conn = new SqlConnection(cadenaConexion))
                 {
                     conn.Open();
-                    return (true, "Conexi√≥n exitosa a la base de datos.");
+                    return (true, "ConexiÛn exitosa a la base de datos.");
                 }
             }
             catch (SqlException ex)
