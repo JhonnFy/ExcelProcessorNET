@@ -41,5 +41,8 @@ Install-Package Microsoft.Data.SqlClient
 
 Install-Package System.Configuration.ConfigurationManager
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/480d49c8-f81b-42b5-b498-2689666ee5d4" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/12f52861-c417-45b6-b735-d0737732f540" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/65e2c339-7bbb-4796-9839-c1d1fa817a09" />
+Instalar paquetes desarrolaldos por Microsoft
 
 
