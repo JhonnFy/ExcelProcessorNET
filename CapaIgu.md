@@ -11,4 +11,7 @@ Capa Igu
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/80f572bc-0181-469f-841c-bc88f10cc2f2" />
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/4bd4b71d-ce2a-49cc-915e-c62884130223" />
 
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/a0b09db7-3da7-4d32-bc38-654543308877" />
 
+Importante:
+Revisar el nombre del servidor: SELECT @@SERVERNAME AS NombreServidor;

@@ -41,5 +41,20 @@ Install-Package Microsoft.Data.SqlClient
 
 Install-Package System.Configuration.ConfigurationManager
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/480d49c8-f81b-42b5-b498-2689666ee5d4" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/12f52861-c417-45b6-b735-d0737732f540" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/65e2c339-7bbb-4796-9839-c1d1fa817a09" />
+Instalar paquetes desarrolaldos por Microsoft
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b2c65458-a471-49e8-bc4f-353512fb33f5" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/6274e327-b0bb-4614-8885-50409332cc0e" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/0da7301b-9874-40a6-8c76-f757bbfb2bf0" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/c31452ed-97e4-4bad-8582-2e943f68f539" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/a9f0a1e2-6e54-4cdc-9ccd-1410920e6ee1" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/46dc2209-2128-4d32-b297-71e45b5ebef6" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/932c1b7e-2898-43a9-8565-53eda86a6c3d" />
+# Importar Refertencia Capa Datos
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/c43fcd92-e7ec-4c4c-b1ac-14fdd1e961ab" />
+
+
+
 
 
