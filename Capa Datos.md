@@ -44,5 +44,6 @@ Install-Package System.Configuration.ConfigurationManager
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/12f52861-c417-45b6-b735-d0737732f540" />
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/65e2c339-7bbb-4796-9839-c1d1fa817a09" />
 Instalar paquetes desarrolaldos por Microsoft
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b2c65458-a471-49e8-bc4f-353512fb33f5" />
 
 
