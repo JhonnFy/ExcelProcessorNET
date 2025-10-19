@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos
 {
-    public class CodigoDeBarras
+    public class modeloCodigoDeBarras
     {
     
         public int IdIdentity { get; set;}
