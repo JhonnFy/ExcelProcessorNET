@@ -1,7 +1,0 @@
-1-Crear el modelo(1 Por Cada Tabla).
-	+Los nombres del modelo deben coincidir con los nombres de las columnas en el archivo Excel.
-	+No tener espacios en los nombres de las propiedades del modelo.
-	+Usar tipos de datos compatibles con los datos en el archivo Excel (string, int, double, DateTime, etc.).
-2-Crear las clases CRUD (1 Por Cada Tabla)
-	+CrudCodigoDeBarrasOrigen
-	+CrudCodigoDeBarrasDestino
