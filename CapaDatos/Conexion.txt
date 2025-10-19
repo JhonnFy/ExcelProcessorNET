@@ -44,5 +44,10 @@ namespace CapaDatos
                 return (false, $"Error general: {ex.Message}");
             }
         }
+
+        public SqlConnection ObtenerConexion()
+        {
+            return new SqlConnection(cadenaConexion);
+        }
     }
 }
