@@ -12,6 +12,8 @@ Capa Testing Nunit
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/611a131d-ad71-4da7-b27e-f892a8b07ac1" />
 
 # 3 Agregar las clases
+<img width="383" height="326" alt="image" src="https://github.com/user-attachments/assets/135aee74-4d64-49e3-afda-4ccfcee932c7" />
+
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/4a259c2c-2a74-4128-86eb-4498447be8a4" />
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/c65803bc-4cdb-4dfa-9792-7c07af9d8116" />
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/c8b16343-696a-4df2-9957-70b749fcc5e8" />
