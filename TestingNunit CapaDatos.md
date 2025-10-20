@@ -25,5 +25,6 @@ Capa Testing Nunit
 
 Importante:
 Antes de iniciar el test, insertar unos registros en la tabla de la db.
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/96fe3c00-3d46-4d8d-9ef8-9bfef27bc65c" />
 
 
