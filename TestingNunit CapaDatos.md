@@ -33,3 +33,9 @@ Install-Package NUnit3TestAdapter
 Install-Package Microsoft.NET.Test.Sdk
 
 Seleccionar la CapaTResting 
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/3d50a5fc-737c-401e-adad-584bc9046edb" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/5e95846b-70e6-42b0-aacc-9b313a21f69c" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b713eaf4-279c-40be-b067-c221c357b462" />
+
+
+
