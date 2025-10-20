@@ -27,4 +27,11 @@ Importante:
 Antes de iniciar el test, insertar unos registros en la tabla de la db.
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/96fe3c00-3d46-4d8d-9ef8-9bfef27bc65c" />
 
+# 4-Instalar paquetes
+Install-Package NUnit
+Install-Package NUnit3TestAdapter
+Install-Package Microsoft.NET.Test.Sdk
+
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/734adecb-209f-43af-8e43-9e62fd63a1c8" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/4c7b4219-75ef-469a-a46d-1f9eeb89850d" />
 
