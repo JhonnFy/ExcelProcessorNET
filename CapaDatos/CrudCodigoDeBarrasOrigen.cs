@@ -12,7 +12,7 @@ namespace CapaDatos
     {
         private Conexion conexion = new Conexion();
                 
-        public List<ModeloCodigoDeBarrasOrigen> LeerOrigen() { 
+        public List<ModeloCodigoDeBarrasOrigen> ReadOrigen() { 
         
             var lista = new List<ModeloCodigoDeBarrasOrigen>();
             
@@ -53,6 +53,20 @@ namespace CapaDatos
                 throw new Exception("Error al leer los orígenes de código de barras: " + ex.Message);
             }
 
+            return lista;
+        }
+
+        public List<ModeloCodigoDeBarrasOrigen> ReadOrigenId()
+        {
+            var lista = new List<ModeloCodigoDeBarrasOrigen>();
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al leer los orígenes de código de barras por Id: " + ex.Message);
+            }
             return lista;
         }
 

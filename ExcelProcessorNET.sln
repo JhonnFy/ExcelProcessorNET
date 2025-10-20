@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36603.0 d17.14
+VisualStudioVersion = 17.14.36603.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelProcessorNET", "ExcelProcessorNET\ExcelProcessorNET.csproj", "{A9E29B19-A313-4FF4-B71F-F4D00A8F100A}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaIgu", "CapaIgu\CapaIgu.csproj", "{83BAF0D6-D3D8-4268-BC12-3BD9C47049B6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "CapaNegocio\CapaNegocio.csproj", "{2F513C89-8386-47CF-B34E-2C339C5739C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaTesting", "CapaTesting\CapaTesting.csproj", "{C696C558-B0F8-4A8D-8114-D9D539771AA6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{2F513C89-8386-47CF-B34E-2C339C5739C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F513C89-8386-47CF-B34E-2C339C5739C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F513C89-8386-47CF-B34E-2C339C5739C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C696C558-B0F8-4A8D-8114-D9D539771AA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C696C558-B0F8-4A8D-8114-D9D539771AA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C696C558-B0F8-4A8D-8114-D9D539771AA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C696C558-B0F8-4A8D-8114-D9D539771AA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
