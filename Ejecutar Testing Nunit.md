@@ -7,3 +7,8 @@
 # .Net 8
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/85b68c2a-0b82-4808-a020-f37ac572dd1b" />
 
+
+# 3 Instalar Paquetes Nunit
+Install-Package NUnit
+Install-Package NUnit3TestAdapter
+Install-Package Microsoft.NET.Test.Sdk
