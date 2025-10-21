@@ -41,6 +41,9 @@ CB_Documento, CB_Expediente, CB_Caja FROM CodigoDeBarrasOrigen
 En este momento, tenemos 2 registros:
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/8d19b892-4d8b-48b0-a152-7bc492e1f80f" />
 
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/f39b9467-3689-4a3d-9688-bf84f738c310" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/303ecc17-dc42-4dd4-9964-784f2cf1f603" />
+
 
 
 
