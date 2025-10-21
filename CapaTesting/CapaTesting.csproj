@@ -25,4 +25,11 @@
     <Using Include="NUnit.Framework" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Testing CapaControlador\" />
+    <Folder Include="Testing CapaNegocio\" />
+    <Folder Include="Testing CapaIgu\" />
+    <Folder Include="Testing CapaDatos\" />
+  </ItemGroup>
+
 </Project>
