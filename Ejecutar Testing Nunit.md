@@ -30,6 +30,18 @@ Testing CapaNegocio
 
 <img width="468" height="383" alt="image" src="https://github.com/user-attachments/assets/bfed2ee3-043b-45d9-8b7a-559c7248544b" />
 
+----------------------------
+Creando El [Test] Para El Metodo ReadOrigen()
+----------------------------
+Este testing confirma retorna elñ valor de esta consulta:
+SELECT 
+IdIdentity, Radicado, Id, Empleado, Identificacion, Tipo_Documental, Codigo_De_Barras_Recepcion,
+CB_Documento, CB_Expediente, CB_Caja FROM CodigoDeBarrasOrigen
+
+En este momento, tenemos 2 registros:
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/8d19b892-4d8b-48b0-a152-7bc492e1f80f" />
+
+
 
 
 
