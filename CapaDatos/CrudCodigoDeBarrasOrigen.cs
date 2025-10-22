@@ -21,7 +21,8 @@ namespace CapaDatos
                 using (var db = conexion.ObtenerConexion())
                 {
                     db.Open();
-                    string @read = "SELECT " +
+                    string @read =
+                        "SELECT " +
                         "IdIdentity, Radicado, Id, Empleado, Identificacion, Tipo_Documental, Codigo_De_Barras_Recepcion, " +
                         "CB_Documento, CB_Expediente, CB_Caja FROM CodigoDeBarrasOrigen";
 
@@ -66,7 +67,8 @@ namespace CapaDatos
                 
                 {
                     db.Open();
-                    string @read = "SELECT " +
+                    string @read = 
+                        "SELECT " +
                         "IdIdentity, Radicado, Id, Empleado, Identificacion, Tipo_Documental, Codigo_De_Barras_Recepcion, " +
                         "CB_Documento, CB_Expediente, CB_Caja " +
                         "FROM CodigoDeBarrasOrigen " +
@@ -105,6 +107,45 @@ namespace CapaDatos
                 throw new Exception("[ReadOrigenPorId].[Error al leer el código de barras por Id]" + ex.Message);
             }
             return listaReadOrigenId;
+        }
+
+        public List<ModeloCodigoDeBarrasOrigen> CreateOrigen()
+        {
+            var listaCreateOrigen = new List<ModeloCodigoDeBarrasOrigen>();
+
+            try
+            {
+                using var db = conexion.ObtenerConexion();
+                db.Open();
+
+                string @create =  
+                    "INSERT INTO CodigoDeBarrasOrigen " +
+                    "(Radicado,Id,Empleado,Identificacion,Tipo_Documental,Codigo_De_Barras_Recepcion,CB_Documento,CB_Expediente,CB_Caja) " +
+                    "VALUES " +
+                    "(@Radicado,@Id,@Empleado,@Identificacion,@Tipo_Documental,@Codigo_De_Barras_Recepcion,@CB_Documento,@CB_Expediente,@CB_Caja)";
+
+                using (SqlCommand createSql = new SqlCommand(@create, db))
+                {
+                    createSql.Parameters.AddWithValue("@Radicado", DBNull.Value);
+                    createSql.Parameters.AddWithValue("@Id", DBNull.Value);
+                    createSql.Parameters.AddWithValue("@Empleado", DBNull.Value);
+                    createSql.Parameters.AddWithValue("@Identificacion", DBNull.Value);
+                    createSql.Parameters.AddWithValue("@Tipo_Documental", DBNull.Value);
+                    createSql.Parameters.AddWithValue("@Codigo_De_Barras_Recepcion", DBNull.Value);
+
+                    createSql.Parameters.AddWithValue("@CB_Documento", (Object?) DBNull.Value);
+                    createSql.Parameters.AddWithValue("@CB_Expediente", (Object?) DBNull.Value);
+                    createSql.Parameters.AddWithValue("@CB_Caja", (Object?) DBNull.Value);
+
+                    createSql.ExecuteNonQuery();
+
+                }
+        }
+            catch (Exception ex)
+            {
+                throw new Exception("[CreateOrigen].[Error al crear el código de barras origen] " + ex.Message);
+            }
+            return listaCreateOrigen;
         }
 
     }
