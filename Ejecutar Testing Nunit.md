@@ -4,8 +4,8 @@
 # 2- Crear El Proyecto
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/ba96d050-6a79-4a86-9753-e86d30102625" />
 
-# .Net 8
-<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/85b68c2a-0b82-4808-a020-f37ac572dd1b" />
+# .Net 4.8
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/455c71e8-479b-48ad-8432-ce75aa45aad8" />
 
 
 # 3 Instalar Paquetes Nunit
@@ -43,6 +43,8 @@ En este momento, tenemos 2 registros:
 
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/f39b9467-3689-4a3d-9688-bf84f738c310" />
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/303ecc17-dc42-4dd4-9964-784f2cf1f603" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/a61f93e9-8255-4ef2-88bd-6c60ba6f4c44" />
+
 
 
 
