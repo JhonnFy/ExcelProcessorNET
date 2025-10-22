@@ -1,9 +1,10 @@
-# 1- Create New Project MSTest
+# 1- Create New Project 
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/e1807ca1-c22d-4488-8995-a85fc7a4d158" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/c58438c5-22e9-4d37-9980-c891a2edb76b" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/f147615c-bd83-422f-9b16-93ffea678925" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/185f12b4-c1af-468a-9431-6fbdff2015f5" />
 
-<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/585f1727-f31e-4d49-8a0c-0cbd0c0bbf37" />
-<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/4765c367-b8e0-4a48-a6eb-2a52b489f100" />
-<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/9107aeb0-560e-48b4-a9dc-50e800e67ecd" />
-<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/dcde3699-6b30-4f1b-8059-8e3c766dd382" />
+
 
 #2 Instalar los paquetes:
 Install-Package MSTest.TestFramework
@@ -17,5 +18,6 @@ Install-Package MSTest.TestAdapter
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b1106ab2-a149-4cf3-b5e9-8be0ea6c78fd" />
 
 # 4- Crear La Clase
+
 
 
