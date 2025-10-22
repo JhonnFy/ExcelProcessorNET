@@ -9,12 +9,16 @@
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/23b23328-9d66-4a3c-a712-8647cb7714c7" />
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/24fc1a39-771a-495e-995a-26f753307bf5" />
 
-
 # 3-Crea La Clase
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/fd984314-76f2-49e0-8745-e4d905d017fd" />
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/70d93efe-a242-4c28-90b6-8c05acb9e31c" />
 
-# 4- Crear La Clase
+# 4- Crear El App Config
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/91046f44-fac3-4af5-83be-e13707729842" />
+
+# 5 Crear El Metodo (No tener datos vacios)
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/55e9ff43-76f7-41e0-bf5a-292c279d44f4" />
 
 
 https://chatgpt.com/c/68f7e852-6584-832c-8bf4-4aded5b8098f
+
