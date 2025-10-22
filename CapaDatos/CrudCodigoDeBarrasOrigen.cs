@@ -109,10 +109,8 @@ namespace CapaDatos
             return listaReadOrigenId;
         }
 
-        public List<ModeloCodigoDeBarrasOrigen> CreateOrigen()
+        public bool CreateOrigen(ModeloCodigoDeBarrasOrigen nuevoRegistro)
         {
-            var listaCreateOrigen = new List<ModeloCodigoDeBarrasOrigen>();
-
             try
             {
                 using var db = conexion.ObtenerConexion();
@@ -126,26 +124,26 @@ namespace CapaDatos
 
                 using (SqlCommand createSql = new SqlCommand(@create, db))
                 {
-                    createSql.Parameters.AddWithValue("@Radicado", DBNull.Value);
-                    createSql.Parameters.AddWithValue("@Id", DBNull.Value);
-                    createSql.Parameters.AddWithValue("@Empleado", DBNull.Value);
-                    createSql.Parameters.AddWithValue("@Identificacion", DBNull.Value);
-                    createSql.Parameters.AddWithValue("@Tipo_Documental", DBNull.Value);
-                    createSql.Parameters.AddWithValue("@Codigo_De_Barras_Recepcion", DBNull.Value);
+                    createSql.Parameters.AddWithValue("@Radicado", nuevoRegistro.Radicado);
+                    createSql.Parameters.AddWithValue("@Id", nuevoRegistro.Id);
+                    createSql.Parameters.AddWithValue("@Empleado", nuevoRegistro.Empleado);
+                    createSql.Parameters.AddWithValue("@Identificacion", nuevoRegistro.Identificacion);
+                    createSql.Parameters.AddWithValue("@Tipo_Documental", nuevoRegistro.TipoDocumental);
+                    createSql.Parameters.AddWithValue("@Codigo_De_Barras_Recepcion", nuevoRegistro.CodigoDeBarrasRecepcion);
 
-                    createSql.Parameters.AddWithValue("@CB_Documento", (Object?) DBNull.Value);
-                    createSql.Parameters.AddWithValue("@CB_Expediente", (Object?) DBNull.Value);
-                    createSql.Parameters.AddWithValue("@CB_Caja", (Object?) DBNull.Value);
+                    createSql.Parameters.AddWithValue("@CB_Documento", nuevoRegistro.CbDocumento ?? (object)DBNull.Value);
+                    createSql.Parameters.AddWithValue("@CB_Expediente", nuevoRegistro.CbExpediente ?? (object)DBNull.Value);
+                    createSql.Parameters.AddWithValue("@CB_Caja", nuevoRegistro.CbCaja ?? (object)DBNull.Value);
 
-                    createSql.ExecuteNonQuery();
+                    int filasAfectadas = createSql.ExecuteNonQuery();
+                    return filasAfectadas > 0;
 
                 }
-        }
+            }
             catch (Exception ex)
             {
                 throw new Exception("[CreateOrigen].[Error al crear el código de barras origen] " + ex.Message);
             }
-            return listaCreateOrigen;
         }
 
     }
