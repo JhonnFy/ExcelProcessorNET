@@ -16,9 +16,11 @@
 # 4- Crear El App Config
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/91046f44-fac3-4af5-83be-e13707729842" />
 
-# 5 Crear El Metodo (No tener datos vacios)
+# 5 Crear El Metodo 
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/55e9ff43-76f7-41e0-bf5a-292c279d44f4" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b2806f4b-2adc-4eac-9cca-42b1301fe06c" />
 
 
 https://chatgpt.com/c/68f7e852-6584-832c-8bf4-4aded5b8098f
+
 
