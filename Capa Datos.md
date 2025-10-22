@@ -34,6 +34,7 @@ Atributos de la tabla en db:
 
 # 2 Crear Los Metodos
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/ea1520d8-b9e1-4b01-a0e8-7b582dadaaf2" />
+<img width="326" height="470" alt="image" src="https://github.com/user-attachments/assets/16ccb5c0-b352-43cc-8949-2cf3c2b771d0" />
 
 
 
