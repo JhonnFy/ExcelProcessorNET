@@ -39,9 +39,6 @@ namespace CapaDatos
                                 Identificacion = runReadSQL.GetString(4),
                                 TipoDocumental = runReadSQL.GetString(5),
                                 CodigoDeBarrasRecepcion = runReadSQL.GetString(6),
-                                //CbDocumento = runReadSQL.GetString(7),
-                                //CbExpediente = runReadSQL.GetString(8),
-                                //CbCaja = runReadSQL.GetString(9)
                                 CbDocumento = runReadSQL.IsDBNull(7) ? null : runReadSQL.GetString(7),
                                 CbExpediente = runReadSQL.IsDBNull(8) ? null : runReadSQL.GetString(8),
                                 CbCaja = runReadSQL.IsDBNull(9) ? null : runReadSQL.GetString(9)
