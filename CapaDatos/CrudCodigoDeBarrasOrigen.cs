@@ -14,7 +14,7 @@ namespace CapaDatos
                 
         public List<ModeloCodigoDeBarrasOrigen> ReadOrigen() { 
         
-            var lista = new List<ModeloCodigoDeBarrasOrigen>();
+            var listaReadOrigen = new List<ModeloCodigoDeBarrasOrigen>();
             
             try
             {            
@@ -43,7 +43,7 @@ namespace CapaDatos
                                 CbExpediente = runReadSQL.IsDBNull(8) ? null : runReadSQL.GetString(8),
                                 CbCaja = runReadSQL.IsDBNull(9) ? null : runReadSQL.GetString(9)
                             };
-                            lista.Add(modelo);
+                            listaReadOrigen.Add(modelo);
                         }
                     }
                 }
@@ -53,21 +53,57 @@ namespace CapaDatos
                 throw new Exception("[ReadOrigen].[Error al leer los orígenes de código de barras] " + ex.Message);
             }
 
-            return lista;
+            return listaReadOrigen;
         }
 
-        public List<ModeloCodigoDeBarrasOrigen> ReadOrigenId()
+        public List<ModeloCodigoDeBarrasOrigen> ReadOrigenId(long identificacion)
         {
-            var lista = new List<ModeloCodigoDeBarrasOrigen>();
+            var listaReadOrigenId = new List<ModeloCodigoDeBarrasOrigen>();
+
             try
             {
-                
+                using (var db = conexion.ObtenerConexion())
+                {
+                    db.Open();
+                    string @read = "SELECT " +
+                        "IdIdentity, Radicado, Id, Empleado, Identificacion, Tipo_Documental, Codigo_De_Barras_Recepcion, " +
+                        "CB_Documento, CB_Expediente, CB_Caja " +
+                        "FROM CodigoDeBarrasOrigen " +
+                        "WHERE Identificacion = @Identificacion";
+
+                    using (SqlCommand readSql = new SqlCommand(read, db))
+                    {
+
+                        readSql.Parameters.AddWithValue("@Identificacion", identificacion); 
+
+                    using (SqlDataReader runReasSql = readSql.ExecuteReader())
+                    {
+                            if (runReasSql.Read())
+                            {
+                                var modelo = new ModeloCodigoDeBarrasOrigen
+                                {
+                                    IdIdentity = runReasSql.GetInt32(0),
+                                    Radicado = runReasSql.GetInt64(1),
+                                    Id = runReasSql.GetInt64(2),
+                                    Empleado = runReasSql.GetString(3),
+                                    Identificacion = runReasSql.GetString(4),
+                                    TipoDocumental = runReasSql.GetString(5),
+                                    CodigoDeBarrasRecepcion = runReasSql.GetString(6),
+                                    CbDocumento = runReasSql.IsDBNull(7) ? null : runReasSql.GetString(7),
+                                    CbExpediente = runReasSql.IsDBNull(8) ? null : runReasSql.GetString(8),
+                                    CbCaja = runReasSql.IsDBNull(9) ? null : runReasSql.GetString(9)
+                                };
+                            }
+                    }
+
+                    }
+                }
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al leer los orígenes de código de barras por Id: " + ex.Message);
+                throw new Exception("[ReadOrigenPorId].[Error al leer el código de barras por Id]" + ex.Message);
             }
-            return lista;
+            return listaReadOrigenId;
         }
 
     }
