@@ -58,11 +58,12 @@ namespace CapaDatos
 
         public List<ModeloCodigoDeBarrasOrigen> ReadOrigenId(long identificacion)
         {
-            var listaReadOrigenId = new List<ModeloCodigoDeBarrasOrigen>();
+              var listaReadOrigenId = new List<ModeloCodigoDeBarrasOrigen>();
 
             try
             {
                 using (var db = conexion.ObtenerConexion())
+                
                 {
                     db.Open();
                     string @read = "SELECT " +
@@ -76,26 +77,26 @@ namespace CapaDatos
 
                         readSql.Parameters.AddWithValue("@Identificacion", identificacion); 
 
-                    using (SqlDataReader runReasSql = readSql.ExecuteReader())
-                    {
-                            if (runReasSql.Read())
-                            {
-                                var modelo = new ModeloCodigoDeBarrasOrigen
+                        using (SqlDataReader runReasSql = readSql.ExecuteReader())
+                        {
+                                if (runReasSql.Read())
                                 {
-                                    IdIdentity = runReasSql.GetInt32(0),
-                                    Radicado = runReasSql.GetInt64(1),
-                                    Id = runReasSql.GetInt64(2),
-                                    Empleado = runReasSql.GetString(3),
-                                    Identificacion = runReasSql.GetString(4),
-                                    TipoDocumental = runReasSql.GetString(5),
-                                    CodigoDeBarrasRecepcion = runReasSql.GetString(6),
-                                    CbDocumento = runReasSql.IsDBNull(7) ? null : runReasSql.GetString(7),
-                                    CbExpediente = runReasSql.IsDBNull(8) ? null : runReasSql.GetString(8),
-                                    CbCaja = runReasSql.IsDBNull(9) ? null : runReasSql.GetString(9)
-                                };
+                                    var modelo = new ModeloCodigoDeBarrasOrigen
+                                    {
+                                        IdIdentity = runReasSql.GetInt32(0),
+                                        Radicado = runReasSql.GetInt64(1),
+                                        Id = runReasSql.GetInt64(2),
+                                        Empleado = runReasSql.GetString(3),
+                                        Identificacion = runReasSql.GetString(4),
+                                        TipoDocumental = runReasSql.GetString(5),
+                                        CodigoDeBarrasRecepcion = runReasSql.GetString(6),
+                                        CbDocumento = runReasSql.IsDBNull(7) ? null : runReasSql.GetString(7),
+                                        CbExpediente = runReasSql.IsDBNull(8) ? null : runReasSql.GetString(8),
+                                        CbCaja = runReasSql.IsDBNull(9) ? null : runReasSql.GetString(9)
+                                    };
+                                    listaReadOrigenId.Add(modelo);
                             }
-                    }
-
+                        }
                     }
                 }
             }
