@@ -4,20 +4,17 @@
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/f147615c-bd83-422f-9b16-93ffea678925" />
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/185f12b4-c1af-468a-9431-6fbdff2015f5" />
 
+# 2-Agregar La Referencia Capa Datos
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/db9ee339-b12b-4b96-952a-93bbb145eb7d" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/23b23328-9d66-4a3c-a712-8647cb7714c7" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/24fc1a39-771a-495e-995a-26f753307bf5" />
 
 
-#2 Instalar los paquetes:
-Install-Package MSTest.TestFramework
-Install-Package MSTest.TestAdapter
-
-<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/fa1f0c33-2e75-478c-990a-56e0eefc78a0" />
-<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/0bdfaff3-a38c-461b-b9e6-63259f35ac06" />
-
-# 3-Agregar La Referencia Capa Datos
-<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/d255ca1c-a213-4cfe-98a0-7ff936c9ad7a" />
-<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b1106ab2-a149-4cf3-b5e9-8be0ea6c78fd" />
+# 3-Crea La Clase
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/fd984314-76f2-49e0-8745-e4d905d017fd" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/70d93efe-a242-4c28-90b6-8c05acb9e31c" />
 
 # 4- Crear La Clase
 
 
-
+https://chatgpt.com/c/68f7e852-6584-832c-8bf4-4aded5b8098f
