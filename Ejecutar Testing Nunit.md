@@ -13,6 +13,13 @@ Install-Package NUnit
 Install-Package NUnit3TestAdapter
 Install-Package Microsoft.NET.Test.Sdk
 
+Install-Package NUnit -Version 3.13.3
+Install-Package NUnit3TestAdapter -Version 4.3.1
+Install-Package Microsoft.NET.Test.Sdk -Version 17.3.2
+
+
+
+
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/69866180-101f-47bd-8708-7a994637a5ec" />
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/703e9afd-9c0d-4706-a6c6-8e592e2930cf" />
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/fa2f3bff-2910-4898-b428-d5efd594485d" />
@@ -44,6 +51,7 @@ En este momento, tenemos 2 registros:
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/f39b9467-3689-4a3d-9688-bf84f738c310" />
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/303ecc17-dc42-4dd4-9964-784f2cf1f603" />
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/a61f93e9-8255-4ef2-88bd-6c60ba6f4c44" />
+
 
 
 
