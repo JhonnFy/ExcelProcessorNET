@@ -187,6 +187,31 @@ namespace CapaDatos
             }
         }
 
+        public bool DeleteOrigen(ModeloCodigoDeBarrasOrigen EliminarRegistro)
+        {
+            try
+            {
+                using var db = conexion.ObtenerConexion();
+                db.Open();
+
+                string @delete =
+                    "DELETE FROM CodigoDeBarrasOrigen " +
+                    "WHERE Identificacion = @Identificacion ";
+
+                using (SqlCommand deleteSql = new SqlCommand(delete, db))
+                {
+                    deleteSql.Parameters.AddWithValue("@Identificacion", EliminarRegistro.Identificacion);
+
+                    int filasAfectadas = deleteSql.ExecuteNonQuery();
+                    return filasAfectadas > 0;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("[DeleteOrigen].[Error al eliminar el código de barras origen] " + ex.Message);
+            }
+        }
 
     }
 }
