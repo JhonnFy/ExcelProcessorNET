@@ -1,9 +1,9 @@
-﻿using CapaDatos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaDatos;
 
 namespace CapaTesting.Testing_CapaDatos
 {
@@ -19,14 +19,20 @@ namespace CapaTesting.Testing_CapaDatos
                 {
                     Radicado = 1234567890,
                     Id = 1,
-                    Empleado = "Juan Perez Us1",
-                    Identificacion = "9876543210",
+                    Empleado = "Juan Perez Modificado Test",
+                    Identificacion = "120783560406",
                     TipoDocumental = "Informe Actualizado",
                     CodigoDeBarrasRecepcion = "CBR1234567890",
                     CbDocumento = null,
                     CbExpediente = null,
                     CbCaja = null
                 };
+
+                CrudCodigoDeBarrasOrigen objUpdate = new CrudCodigoDeBarrasOrigen();
+                bool resultado = objUpdate.UpdateOrigen(objUpdateOrigen);
+
+                Assert.IsTrue(resultado, "[Test Update Origen] La actualización del registro falló.");
+                Console.WriteLine("[Test Update Origen] La actualización del registro fue exitosa");
             }
             catch (Exception ex)
             {

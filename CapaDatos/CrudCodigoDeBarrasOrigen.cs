@@ -162,7 +162,7 @@ namespace CapaDatos
                         "Identificacion = @Identificacion," +
                         "Tipo_Documental = @Tipo_Documental," +
                         "Codigo_De_Barras_Recepcion = @Codigo_De_Barras_Recepcion " +
-                        "WHERE IdIdentity = @Identificacion";
+                        "WHERE Identificacion = @Identificacion ";
 
                 using (SqlCommand updateSql = new SqlCommand(@update, db))
                 {
