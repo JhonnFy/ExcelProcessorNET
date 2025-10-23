@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 
-
 namespace CapaDatos
 {
     public class CrudCodigoDeBarrasOrigen
     {
         private Conexion conexion = new Conexion();
                 
-        public List<ModeloCodigoDeBarrasOrigen> ReadOrigen() { 
+        public List<ModeloCodigoDeBarrasOrigen> ReadOrigen() 
+        { 
         
             var listaReadOrigen = new List<ModeloCodigoDeBarrasOrigen>();
             
@@ -145,6 +145,44 @@ namespace CapaDatos
                 throw new Exception("[CreateOrigen].[Error al crear el código de barras origen] " + ex.Message);
             }
         }
+
+        public bool UpdateOrigen(ModeloCodigoDeBarrasOrigen actualizarRegistro)
+        {
+            try
+            {
+                using var db = conexion.ObtenerConexion();
+                db.Open();
+
+                string @update =
+                    "UPDATE CodigoDeBarrasOrigen " +
+                    "SET " +
+                        "Radicado = @Radicado," +
+                        "Id = @Id, " +
+                        "Empleado = @Empleado," +
+                        "Identificacion = @Identificacion," +
+                        "Tipo_Documental = @Tipo_Documental," +
+                        "Codigo_De_Barras_Recepcion = @Codigo_De_Barras_Recepcion " +
+                        "WHERE IdIdentity = @Identificacion";
+
+                using (SqlCommand updateSql = new SqlCommand(@update, db))
+                {
+                    updateSql.Parameters.AddWithValue("@Radicado", actualizarRegistro.Radicado);
+                    updateSql.Parameters.AddWithValue("@Id", actualizarRegistro.Id);
+                    updateSql.Parameters.AddWithValue("@Empleado", actualizarRegistro.Empleado);
+                    updateSql.Parameters.AddWithValue("@Identificacion", actualizarRegistro.Identificacion);
+                    updateSql.Parameters.AddWithValue("@Tipo_Documental", actualizarRegistro.TipoDocumental);
+                    updateSql.Parameters.AddWithValue("@Codigo_De_Barras_Recepcion", actualizarRegistro.CodigoDeBarrasRecepcion);
+                    int filasAfectadas = updateSql.ExecuteNonQuery();
+                    return filasAfectadas > 0;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("[UpdateOrigen].[Error al actualizar el código de barras origen] " + ex.Message);
+            }
+        }
+
 
     }
 }
