@@ -172,6 +172,10 @@ namespace CapaDatos
                     updateSql.Parameters.AddWithValue("@Identificacion", actualizarRegistro.Identificacion);
                     updateSql.Parameters.AddWithValue("@Tipo_Documental", actualizarRegistro.TipoDocumental);
                     updateSql.Parameters.AddWithValue("@Codigo_De_Barras_Recepcion", actualizarRegistro.CodigoDeBarrasRecepcion);
+                    updateSql.Parameters.AddWithValue("@CB_Documento", actualizarRegistro.CbDocumento ?? (object)DBNull.Value);
+                    updateSql.Parameters.AddWithValue("@CB_Expediente", actualizarRegistro.CbExpediente ?? (object)DBNull.Value);
+                    updateSql.Parameters.AddWithValue("@CB_Caja", actualizarRegistro.CbCaja ?? (object)DBNull.Value);
+                    
                     int filasAfectadas = updateSql.ExecuteNonQuery();
                     return filasAfectadas > 0;
                 }

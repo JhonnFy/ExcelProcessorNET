@@ -17,7 +17,13 @@ namespace CapaTesting.Testing_CapaDatos
             {
                 ModeloCodigoDeBarrasOrigen objUpdateOrigen = new ModeloCodigoDeBarrasOrigen
                 {
-
+                    Radicado = 1234567890,
+                    Id = 1,
+                    Empleado = "Juan Perez Us1",
+                    Identificacion = "9876543210",
+                    TipoDocumental = "Informe Actualizado",
+                    CodigoDeBarrasRecepcion = "CBR1234567890",
+                    CB_Documento = null
                 };
             }
             catch (Exception ex)
