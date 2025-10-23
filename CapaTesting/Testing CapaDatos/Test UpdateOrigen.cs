@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace CapaTesting.Testing_CapaDatos
 {
-    internal class Test_UpdateOrigen
+    [TestClass]
+    public class Test_UpdateOrigen
     {
+        [TestMethod]
+        public void TestUpdateOrigen()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail($"[Test Update Origen] La prueba falló con una excepción: {ex.Message}");
+            }
+        }
+
     }
 }
