@@ -23,7 +23,9 @@ namespace CapaTesting.Testing_CapaDatos
                     Identificacion = "9876543210",
                     TipoDocumental = "Informe Actualizado",
                     CodigoDeBarrasRecepcion = "CBR1234567890",
-                    CB_Documento = null
+                    CbDocumento = null,
+                    CbExpediente = null,
+                    CbCaja = null
                 };
             }
             catch (Exception ex)
