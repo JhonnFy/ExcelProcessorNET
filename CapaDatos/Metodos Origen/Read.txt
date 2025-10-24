@@ -12,7 +12,7 @@ namespace CapaDatos
         private Conexion conexion = new Conexion();
                 
         public List<ModeloCodigoDeBarrasOrigen> ReadOrigen() 
-        { 
+        {    
         
             var listaReadOrigen = new List<ModeloCodigoDeBarrasOrigen>();
             
