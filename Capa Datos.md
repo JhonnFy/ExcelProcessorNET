@@ -1,23 +1,20 @@
-
 # 🧱 Capa Datos – Proyecto Código de Barras
 
-En esta capa, el **objetivo principal** es conectarse a la base de datos y exponer métodos para **leer, escribir, actualizar y eliminar datos**, **sin mezclar reglas de negocio ni lógica de interfaz**.
+En esta capa el **objetivo principal** es conectarse a la base de datos y exponer métodos para **leer, escribir, actualizar y eliminar datos**, **sin mezclar reglas de negocio ni lógica de interfaz**.
 
 ---
 
 ## 📊 Columnas del archivo Excel de origen
 
-| Columna | Descripción |
-|----------|--------------|
-| **RADICADO** | Columna con datos del Excel origen |
-| **ID** | Columna con datos del Excel origen |
-| **EMPLEADO** | Columna con datos del Excel origen |
-| **IDENTIFICACION** | Columna con datos del Excel origen |
-| **TIPO_DOCUMENTAL** | Columna con datos del Excel origen |
-| **CODIGO_DE_BARRAS_RECEPCION** | Columna con datos del Excel origen |
-| **CB Documento** | Columna vacía en el Excel origen — se llenará durante el proceso |
-| **CB Expediente** | Columna vacía en el Excel origen — se llenará durante el proceso |
-| **CB Caja** | Columna vacía en el Excel origen — se llenará durante el proceso |
+- **RADICADO** → Columna con datos del Excel origen  
+- **ID** → Columna con datos del Excel origen  
+- **EMPLEADO** → Columna con datos del Excel origen  
+- **IDENTIFICACION** → Columna con datos del Excel origen  
+- **TIPO_DOCUMENTAL** → Columna con datos del Excel origen  
+- **CODIGO_DE_BARRAS_RECEPCION** → Columna con datos del Excel origen  
+- **CB Documento** → Columna vacía en el Excel origen — se llenará durante el proceso  
+- **CB Expediente** → Columna vacía en el Excel origen — se llenará durante el proceso  
+- **CB Caja** → Columna vacía en el Excel origen — se llenará durante el proceso  
 
 ---
 
@@ -36,7 +33,6 @@ CREATE TABLE CodigoDeBarrasData (
     CB_Expediente VARCHAR(200) NULL,
     CB_Caja VARCHAR(200) NULL
 );
-
 
 
 
