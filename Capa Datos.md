@@ -34,7 +34,7 @@ CREATE TABLE CodigoDeBarrasData (
     CB_Caja VARCHAR(200) NULL
 );
 
-
+```
 
 
 
