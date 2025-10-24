@@ -35,13 +35,11 @@ CREATE TABLE CodigoDeBarrasData (
 );
 ```
 ---
-
 ## 🖼️ Vista previa en base de datos
 
 <p align="center">
   <img width="1000" alt="Vista previa en base de datos" src="https://github.com/user-attachments/assets/d85db29b-5b8e-4957-ad31-d0fcb7a2e462" />
 </p>
-
 ---
 
 ## 🧩 1️⃣ Crear la clase `CodigoDeBarras`
