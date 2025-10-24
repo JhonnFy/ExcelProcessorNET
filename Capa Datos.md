@@ -34,6 +34,8 @@ CREATE TABLE CodigoDeBarrasData (
     CB_Caja VARCHAR(200) NULL
 );
 ```
+🖼️ Vista previa en base de datos
+<img width="1360" height="546" alt="image" src="https://github.com/user-attachments/assets/d85db29b-5b8e-4957-ad31-d0fcb7a2e462" />
 <img width="1360" height="546" alt="image" src="https://github.com/user-attachments/assets/d85db29b-5b8e-4957-ad31-d0fcb7a2e462" />
 
 # 1 Crear La Clase CodigoDeBarras
