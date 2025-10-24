@@ -126,7 +126,8 @@ Se implementan los métodos en la clase `CrudCodigoDeBarrasOrigen` para ejecutar
 
 ### 🧪 Pruebas unitarias (Capa Testing)
 <p align="center">
-	<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/67e615e5-5139-4e52-a23a-a95114d9d888" />
+	<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/bda7951a-1470-4d8a-bd9f-6127c09a7920" />
+
 </p>
 
 - ✔ `Test_CreateOrigen`  
