@@ -139,7 +139,7 @@ Se implementan los métodos en la clase `CrudCodigoDeBarrasOrigen` para ejecutar
 
 ---
 
-## 🖼️ CapaDatos terminada
+## 🖼️ CapaDatos TERMINADA ✅
 
 <p align="center">
 	<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/036f90c8-5c01-4781-9593-d9052ff2b5bd" />
