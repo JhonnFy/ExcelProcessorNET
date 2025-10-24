@@ -18,22 +18,42 @@ En esta capa el **objetivo principal** es conectarse a la base de datos y expone
 
 ---
 
-## 🗄️ Estructura de la tabla en base de datos
+## 🗄️ Estructura de la tabla CodigoDeBarrasOrigen
 
 ```sql
-CREATE TABLE CodigoDeBarrasData (
-    IdIdentity INT IDENTITY(1,1) NOT NULL,
-    RADICADO BIGINT,
-    ID BIGINT,
-    EMPLEADO VARCHAR(200),
-    IDENTIFICACION VARCHAR(200),
-    TIPO_DOCUMENTAL VARCHAR(200),
-    CODIGO_DE_BARRAS_RECEPCION VARCHAR(200) NULL,
-    CB_Documento VARCHAR(200) NULL,
-    CB_Expediente VARCHAR(200) NULL,
-    CB_Caja VARCHAR(200) NULL
-);
+CREATE TABLE CodigoDeBarrasOrigen(
+	IdIdentity int IDENTITY(1,1) NOT NULL,
+	Radicado bigint,
+	Id bigint,
+	Empleado varchar(200),
+	Identificacion varchar(200),
+	Tipo_Documental varchar(200),
+	Codigo_De_Barras_Recepcion varchar(200),
+	CB_Documento varchar(200) NULL,
+	CB_Expediente varchar(200) NULL,
+	CB_Caja varchar(200) NULL
+)
+GO
 ```
+
+## 🗄️ Estructura de la tabla CodigoDeBarrasDestino
+
+```sql
+CREATE TABLE CodigoDeBarrasDestino(
+	IdIdentity int IDENTITY(1,1) NOT NULL,
+	Radicado bigint NULL,
+	Id bigint NULL,
+	Empleado varchar(200) NULL,
+	Identificacion varchar(200) NULL,
+	Tipo_Documental varchar(200) NULL,
+	Codigo_De_Barras_Recepcion varchar(200) NULL,
+	CB_Documento varchar(200) NULL,
+	CB_Expediente varchar(200) NULL,
+	CB_Caja varchar(200) NULL
+)
+GO
+```
+
 ---
 
 ## 🖼️ Vista previa en base de datos
