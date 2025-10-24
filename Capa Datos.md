@@ -1,3 +1,61 @@
+
+# 🧱 Capa Datos – Proyecto Código de Barras
+
+En esta capa, el **objetivo principal** es conectarse a la base de datos y exponer métodos para **leer, escribir, actualizar y eliminar datos**, **sin mezclar reglas de negocio ni lógica de interfaz**.
+
+---
+
+## 📊 Columnas del archivo Excel de origen
+
+| Columna | Descripción |
+|----------|--------------|
+| **RADICADO** | Columna con datos del Excel origen |
+| **ID** | Columna con datos del Excel origen |
+| **EMPLEADO** | Columna con datos del Excel origen |
+| **IDENTIFICACION** | Columna con datos del Excel origen |
+| **TIPO_DOCUMENTAL** | Columna con datos del Excel origen |
+| **CODIGO_DE_BARRAS_RECEPCION** | Columna con datos del Excel origen |
+| **CB Documento** | Columna vacía en el Excel origen — se llenará durante el proceso |
+| **CB Expediente** | Columna vacía en el Excel origen — se llenará durante el proceso |
+| **CB Caja** | Columna vacía en el Excel origen — se llenará durante el proceso |
+
+---
+
+## 🗄️ Estructura de la tabla en base de datos
+
+```sql
+CREATE TABLE CodigoDeBarrasData (
+    IdIdentity INT IDENTITY(1,1) NOT NULL,
+    RADICADO BIGINT,
+    ID BIGINT,
+    EMPLEADO VARCHAR(200),
+    IDENTIFICACION VARCHAR(200),
+    TIPO_DOCUMENTAL VARCHAR(200),
+    CODIGO_DE_BARRAS_RECEPCION VARCHAR(200) NULL,
+    CB_Documento VARCHAR(200) NULL,
+    CB_Expediente VARCHAR(200) NULL,
+    CB_Caja VARCHAR(200) NULL
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 En esta capa el objetivo principal es conectarse a la base de datos y exponer métodos para leer/escribir datos, sin mezclar reglas de negocio ni lógica de interfaz.
 
 Columnas Del Excel:
@@ -38,5 +96,31 @@ Atributos de la tabla en db:
 
 
 
+🧩 Checklist final – Capa Datos
+✅ Métodos CRUD implementados:
+ CreateOrigen() → Inserta un nuevo registro
+ ReadOrigen() / ReadId() → Consulta registros
+ UpdateOrigen() → Actualiza registros existentes
+ DeleteOrigen() → Elimina registros por Identificación
 
+✅ Estructura correcta:
+ Clase Conexion que obtiene la cadena de conexión y abre el SqlConnection
+ Clases CRUD separadas (por ejemplo, CrudCodigoDeBarrasOrigen)
+ Clases Modelo (ModeloCodigoDeBarrasOrigen) con propiedades bien definidas
+ Todos los métodos están dentro de bloques try-catch con mensajes de error claros
+ Los comandos SQL usan parámetros (@Parametro), nunca concatenación directa
+
+✅ Buenas prácticas:
+ using var db = conexion.ObtenerConexion(); → conexión limpia y cerrada automáticamente
+ ExecuteNonQuery() usado para INSERT, UPDATE, DELETE
+ ExecuteReader() usado para SELECT
+ Manejo correcto de tipos (AddWithValue, etc.)
+ Retorno de valores booleanos o listas según corresponda
+
+✅ Pruebas unitarias (Capa Testing):
+ Test de CreateOrigen
+ Test de ReadOrigen
+ Test de UpdateOrigen
+ Test de DeleteOrigen
+ Todos los tests pasan correctamente (✔ Passed)
 
