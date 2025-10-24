@@ -18,7 +18,7 @@ namespace CapaTesting.Testing_CapaDatos
             {
                 ModeloCodigoDeBarrasOrigen borrarRegistro = new ModeloCodigoDeBarrasOrigen
                 {
-                    Identificacion = "9876543210"
+                    Identificacion = "1234567890"
                 };
 
                 CrudCodigoDeBarrasOrigen objDelete = new CrudCodigoDeBarrasOrigen();
