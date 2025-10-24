@@ -60,7 +60,7 @@ A continuación, se crea la clase modelo que representará las columnas de la ta
 
 ---
 
-## 🧮 2️⃣ Crear los métodos CRUD
+## 🧮 2️⃣ Crear el modelo CRUD
 
 Se implementan los métodos en la clase `CrudCodigoDeBarrasOrigen` para ejecutar las operaciones básicas sobre la base de datos.
 
