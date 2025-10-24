@@ -34,43 +34,79 @@ CREATE TABLE CodigoDeBarrasData (
     CB_Caja VARCHAR(200) NULL
 );
 ```
+---
 
-🖼️ Vista previa en base de datos
-<img width="1360" height="546" alt="image" src="https://github.com/user-attachments/assets/d85db29b-5b8e-4957-ad31-d0fcb7a2e462" />
-🧩 1️⃣ Crear la clase CodigoDeBarras
+## 🖼️ Vista previa en base de datos
+
+<p align="center">
+  <img width="1000" alt="Vista previa en base de datos" src="https://github.com/user-attachments/assets/d85db29b-5b8e-4957-ad31-d0fcb7a2e462" />
+</p>
+
+---
+
+## 🧩 1️⃣ Crear la clase `CodigoDeBarras`
 
 A continuación, se crea la clase modelo que representará las columnas de la tabla y servirá como entidad base para los métodos CRUD.
-<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/d10ab42c-1265-41e8-8d82-3a42f32ecb48" /> <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/808ec9ca-da2a-4b45-9b5f-e09fc5801b1b" /> <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/1e8bfd5f-55ca-4c2c-942f-14e41da70f46" />
-🧮 2️⃣ Crear los métodos CRUD
 
-Se implementan los métodos en la clase CrudCodigoDeBarrasOrigen para ejecutar las operaciones básicas sobre la base de datos.
-<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/ea1520d8-b9e1-4b01-a0e8-7b582dadaaf2" /> <img width="326" height="470" alt="image" src="https://github.com/user-attachments/assets/16ccb5c0-b352-43cc-8949-2cf3c2b771d0" />
-✅ Checklist Final – Capa Datos
-🧱 Métodos CRUD implementados:
-✅ CreateOrigen() → Inserta un nuevo registro
-✅ ReadOrigen() / ReadId() → Consulta registros
-✅ UpdateOrigen() → Actualiza registros existentes
-✅ DeleteOrigen() → Elimina registros por Identificación
+<p align="center">
+  <img width="1000" alt="Clase CodigoDeBarras 1" src="https://github.com/user-attachments/assets/d10ab42c-1265-41e8-8d82-3a42f32ecb48" />
+</p>
+<p align="center">
+  <img width="1000" alt="Clase CodigoDeBarras 2" src="https://github.com/user-attachments/assets/808ec9ca-da2a-4b45-9b5f-e09fc5801b1b" />
+</p>
+<p align="center">
+  <img width="1000" alt="Clase CodigoDeBarras 3" src="https://github.com/user-attachments/assets/1e8bfd5f-55ca-4c2c-942f-14e41da70f46" />
+</p>
 
+---
 
-🧩 Estructura correcta:
-Clase Conexion que obtiene la cadena de conexión y abre el SqlConnection
-Clases CRUD separadas (por ejemplo: CrudCodigoDeBarrasOrigen)
-Clases Modelo (ModeloCodigoDeBarrasOrigen) con propiedades bien definidas
-Todos los métodos dentro de bloques try-catch con mensajes de error claros
-Los comandos SQL usan parámetros (@Parametro), nunca concatenación directa
+## 🧮 2️⃣ Crear los métodos CRUD
 
-💡 Buenas prácticas:
-using var db = conexion.ObtenerConexion(); → conexión limpia y cerrada automáticamente
-ExecuteNonQuery() usado para INSERT, UPDATE, DELETE
-ExecuteReader() usado para SELECT
-Manejo correcto de tipos (AddWithValue, etc.)
-Retorno de valores booleanos o listas según corresponda
+Se implementan los métodos en la clase `CrudCodigoDeBarrasOrigen` para ejecutar las operaciones básicas sobre la base de datos.
 
-🧪 Pruebas unitarias (Capa Testing):
-✔ Test de CreateOrigen
-✔ Test de ReadOrigen
-✔ Test de UpdateOrigen
-✔ Test de DeleteOrigen
+<p align="center">
+  <img width="1000" alt="Métodos CRUD principales" src="https://github.com/user-attachments/assets/ea1520d8-b9e1-4b01-a0e8-7b582dadaaf2" />
+</p>
+<p align="center">
+  <img width="350" alt="Método Delete" src="https://github.com/user-attachments/assets/16ccb5c0-b352-43cc-8949-2cf3c2b771d0" />
+</p>
 
-🟢 Todos los tests pasan correctamente (✔ Passed)
+---
+
+## ✅ Checklist Final – Capa Datos
+
+### 🧱 Métodos CRUD implementados
+- ✅ `CreateOrigen()` → Inserta un nuevo registro  
+- ✅ `ReadOrigen()` / `ReadId()` → Consulta registros  
+- ✅ `UpdateOrigen()` → Actualiza registros existentes  
+- ✅ `DeleteOrigen()` → Elimina registros por Identificación  
+
+---
+
+### 🧩 Estructura correcta
+- Clase `Conexion` que obtiene la cadena de conexión y abre el `SqlConnection`  
+- Clases CRUD separadas (por ejemplo: `CrudCodigoDeBarrasOrigen`)  
+- Clases Modelo (`ModeloCodigoDeBarrasOrigen`) con propiedades bien definidas  
+- Todos los métodos dentro de bloques `try-catch` con mensajes de error claros  
+- Los comandos SQL usan parámetros (`@Parametro`), nunca concatenación directa  
+
+---
+
+### 💡 Buenas prácticas
+- `using var db = conexion.ObtenerConexion();` → conexión limpia y cerrada automáticamente  
+- `ExecuteNonQuery()` usado para `INSERT`, `UPDATE`, `DELETE`  
+- `ExecuteReader()` usado para `SELECT`  
+- Manejo correcto de tipos (`AddWithValue`, etc.)  
+- Retorno de valores booleanos o listas según corresponda  
+
+---
+
+### 🧪 Pruebas unitarias (Capa Testing)
+- ✔ `Test_CreateOrigen`  
+- ✔ `Test_ReadOrigen`  
+- ✔ `Test_UpdateOrigen`  
+- ✔ `Test_DeleteOrigen`  
+
+🟢 **Todos los tests pasan correctamente (✔ Passed)**
+
+---
