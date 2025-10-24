@@ -136,8 +136,6 @@ Se implementan los métodos en la clase `CrudCodigoDeBarrasOrigen` para ejecutar
 
 🟢 **Todos los tests pasan correctamente (✔ Passed)**
 
-
-
 ---
 
 ## 🖼️ CapaDatos terminada
