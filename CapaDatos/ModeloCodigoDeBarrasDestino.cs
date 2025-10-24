@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CapaDatos
 {
     public class ModeloCodigoDeBarrasDestino
-    {   
+    {      
         public int IdIdentity { get; set; }
         public long Radicado { get; set; }
         public long Id { get; set;  }
