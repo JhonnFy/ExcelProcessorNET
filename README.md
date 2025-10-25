@@ -1,4 +1,5 @@
-Los nombres y las cc son generados por PowerShell, no son reales.
+# Los nombres y las cc son generados por PowerShell, no son reales.
+
 <img width="581" height="366" alt="image" src="https://github.com/user-attachments/assets/e593526a-740f-4602-a16e-69602de22022" />
 <img width="1360" height="546" alt="image" src="https://github.com/user-attachments/assets/d7078806-db38-4ed5-9aad-4049173510b4" />
 
