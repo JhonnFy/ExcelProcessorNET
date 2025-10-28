@@ -23,12 +23,12 @@ namespace CapaTesting.Testing_CapaNegocio_Origen
                 {
                     new ModeloCodigoDeBarrasOrigen
                     {
-                        Radicado = 7,
-                        Id = 7,
-                        Empleado = "Modelo Codigo De Barras Origen 3",
-                        Identificacion = "999999999",
-                        TipoDocumental = "Tipo Test 9",
-                        CodigoDeBarrasRecepcion = "CBR999999999",
+                        Radicado = 11,
+                        Id = 11,
+                        Empleado = "Guardar Lista Origen 11",
+                        Identificacion = "11",
+                        TipoDocumental = "Tipo Test 11",
+                        CodigoDeBarrasRecepcion = "CBR11",
                         CbDocumento = null,
                         CbExpediente = null,
                         CbCaja = null
@@ -36,12 +36,12 @@ namespace CapaTesting.Testing_CapaNegocio_Origen
 
                     new ModeloCodigoDeBarrasOrigen
                     {
-                        Radicado = 8,
-                        Id = 8,
-                        Empleado = "Modelo Codigo De Barras Origen 4",
-                        Identificacion = "101010101010",
-                        TipoDocumental = "Tipo Test 10",
-                        CodigoDeBarrasRecepcion = "CBR101010101010",
+                        Radicado = 12,
+                        Id = 12,
+                        Empleado = "Guardar Lista Origen 12",
+                        Identificacion = "12",
+                        TipoDocumental = "Tipo Test 12",
+                        CodigoDeBarrasRecepcion = "CBR12",
                         CbDocumento = null,
                         CbExpediente = null,
                         CbCaja = null

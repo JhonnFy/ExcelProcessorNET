@@ -36,13 +36,6 @@ namespace CapaNegocio
                     if (exito)
                         totalGuardados++;
 
-                    //if (string.IsNullOrWhiteSpace(registroOrigen.Identificacion))
-                    //{
-                    //    Console.WriteLine($"[CapaNegocioOrigen] Registro sin Identificación, omitido.");
-                    //    continue;
-                    //}
-
-
                 }
 
                 Console.WriteLine($"[CapaNegocioOrigen] Proceso completado. Total guardados: {totalGuardados} de {listaExcel.Count}");
