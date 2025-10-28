@@ -38,7 +38,6 @@ namespace CapaNegocio
                         continue;
                     }
 
-                    // Intentar guardar cada registro
                     bool exito = datosOrigen.CreateOrigen(registroOrigen);
                     if (exito)
                         totalGuardados++;
