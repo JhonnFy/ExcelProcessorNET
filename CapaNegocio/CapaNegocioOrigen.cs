@@ -32,15 +32,17 @@ namespace CapaNegocio
                 foreach (var registroOrigen in listaExcel)
                 {
 
-                    if (string.IsNullOrWhiteSpace(registroOrigen.Identificacion))
-                    {
-                        Console.WriteLine($"[CapaNegocioOrigen] Registro sin Identificación, omitido.");
-                        continue;
-                    }
-
                     bool exito = datosOrigen.CreateOrigen(registroOrigen);
                     if (exito)
                         totalGuardados++;
+
+                    //if (string.IsNullOrWhiteSpace(registroOrigen.Identificacion))
+                    //{
+                    //    Console.WriteLine($"[CapaNegocioOrigen] Registro sin Identificación, omitido.");
+                    //    continue;
+                    //}
+
+
                 }
 
                 Console.WriteLine($"[CapaNegocioOrigen] Proceso completado. Total guardados: {totalGuardados} de {listaExcel.Count}");
