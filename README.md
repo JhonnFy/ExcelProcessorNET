@@ -7,7 +7,7 @@ Los nombres y números de identificación han sido generados automáticamente me
 
 1. CapaDatos
 2. CapaNegocio
-3. CapaControlador
+3. CapaControlador 🎼
 4. CapaIgu
 
 ## 🧩 Regla 1 — Limpieza de Nombres en la Sabana
