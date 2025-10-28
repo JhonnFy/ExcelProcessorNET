@@ -5,6 +5,11 @@
 
 Los nombres y números de identificación han sido generados automáticamente mediante PowerShell. No corresponden a datos reales.
 
+1. CapaDatos
+2. CapaNegocio
+3. CapaControlador
+4. CapaIgu
+
 ## 🧩 Regla 1 — Limpieza de Nombres en la Sabana
 
 **Descripción:**  
