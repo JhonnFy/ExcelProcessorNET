@@ -1,5 +1,8 @@
 🧠 Conceptos importantes para la CapaNegocio
 
+<img width="752" height="395" alt="image" src="https://github.com/user-attachments/assets/fa0dfaf7-83a2-425b-8a08-5b3697f5a449" />
+
+
 La CapaNegocio no tocará SQL ni conexión.
 Su trabajo será:
 Recibir la lista de objetos desde el Excel.
