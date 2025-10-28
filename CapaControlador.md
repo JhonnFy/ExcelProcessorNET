@@ -9,6 +9,6 @@ Recibir la respuesta de la CapaNegocio (éxito, error, lista de objetos).
 Preparar la información para que la UI pueda mostrarla de manera clara (mensajes, tablas, alertas).
 
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/d05a382d-fd83-41c5-b2ca-18a7df441886" />
-<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/ea7ed08d-70e3-4d3b-8941-30c52db9121e" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/3f655f8d-72ea-4756-a5af-b103962c8d8a" />
 
 
