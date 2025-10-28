@@ -1,4 +1,6 @@
+---
 # Los nombres y números de identificación han sido generados automáticamente mediante PowerShell. No corresponden a datos reales.
+---
 
 # 📘 Reglas de Negocio
 
