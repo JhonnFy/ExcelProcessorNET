@@ -20,3 +20,10 @@ Aplica reglas de negocio:
 Transformaciones (mayúsculas/minúsculas, limpieza de texto, validaciones).
 Llama a la CapaDatos para guardar los registros corregidos en la Tabla2 (destino).
 Retorna el estado de la operación al Controlador o interfaz.
+
+
+1- Crear La clase
+2- Agregar La Referencia
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/b881ed52-89b7-44dd-b92a-ea4be7b1f972" />
+<img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/8075209c-c7a9-4e81-9e55-a043a4ac6051" />
+
