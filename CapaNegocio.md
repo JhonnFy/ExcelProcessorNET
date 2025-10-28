@@ -15,7 +15,7 @@ Guardar los datos corregidos en Tabla2 (otra instancia de método Create de la C
 Recibir la lista de objetos del Excel (cada objeto = fila).
 Guardar los objetos tal como vienen en la Tabla1 (origen) usando la CapaDatos.
 No aplica reglas ni transforma nada todavía.
-Concepto clave: una capa = una responsabilidad. Así puedes mantener orden y claridad.
+Concepto clave: una capa = una responsabilidad. 
 
 🧩 CapaNegocioDestino – responsabilidad
 Recibe los objetos desde CapaNegocioOrigen o lee desde Tabla1.
