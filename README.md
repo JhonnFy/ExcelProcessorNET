@@ -28,8 +28,84 @@
 
 
 
+# 📘 Reglas de Negocio
 
+---
 
+## 🧩 Regla 1 — Limpieza de Nombres en la Sabana
+
+**Descripción:**  
+En la sabana de datos, los nombres de las personas incluyen un prefijo numérico.
+
+**Ejemplo original:**
+1. Santiago Jorge Ruiz Alvarez  
+2. Isabella Jose Mendoza Castro  
+3. Juan Mariana Castro Ruiz  
+4. Carlos Jhon Gomez Ruiz  
+
+**Regla:**  
+Se debe eliminar el **prefijo numérico** (incluyendo punto o espacio) de cada registro, conservando únicamente el nombre completo.
+
+**Resultado esperado:**
+- Santiago Jorge Ruiz Alvarez  
+- Isabella Jose Mendoza Castro  
+- Juan Mariana Castro Ruiz  
+- Carlos Jhon Gomez Ruiz  
+
+---
+
+## 🧩 Regla 2 — Limpieza de Cédulas en la Sabana
+
+**Descripción:**  
+En la sabana, las cédulas de ciudadanía (CC) también incluyen un prefijo numérico.
+
+**Ejemplo original:**
+1. 241758461  
+2. 7455039910  
+3. 4478468449  
+4. 4192283306  
+
+**Regla:**  
+Se debe eliminar el **prefijo numérico** (incluyendo punto o espacio) de cada registro, conservando únicamente el número de cédula.
+
+**Resultado esperado:**
+- 241758461  
+- 7455039910  
+- 4478468449  
+- 4192283306  
+
+---
+
+## 🧩 Regla 3 — Formato del Campo *Tipo_Documental*
+
+**Descripción:**  
+El campo **Tipo_Documental** se encuentra definido en formato *Camel Case* y debe mantenerse así.
+
+**Ejemplo original:**
+- Prorroga y Preaviso  
+- Prorroga y Preaviso  
+- Contrato de Trabajo  
+
+**Regla:**  
+Conservar el formato *Camel Case* tal como está definido.
+
+**Resultado esperado:**
+- Prorroga y Preaviso  
+- Prorroga y Preaviso  
+- Contrato de Trabajo  
+
+---
+
+## 🧩 Regla 4 — Estilo del Tipo Documental “Carpeta Completa”
+
+**Descripción:**  
+El tipo documental **Carpeta Completa** debe registrarse exclusivamente en mayúsculas.
+
+**Regla:**  
+Convertir a mayúsculas únicamente el valor **Carpeta Completa**.
+
+**Resultado esperado:**
+- CARPETA COMPLETA
 
 
 
