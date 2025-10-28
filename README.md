@@ -2,8 +2,7 @@
 
 El proyecto está organizado en capas para separar responsabilidades y facilitar el mantenimiento.
 
-- 🖥 **Interfaz (UI) — CapaIgu**
-  - [README CapaIgu](./Capa%20Igu.md)
+- 🖥 **Interfaz (UI) — CapaIgu**  - [README CapaIgu](./Capa%20Igu.md)
 
 - 🎼 **Capa Controlador**
   - Coordina la lógica entre Negocio y UI
