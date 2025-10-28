@@ -1,3 +1,37 @@
+# 🏗 Arquitectura del Proyecto — ExcelSQLFusion
+
+El proyecto está organizado en capas para separar responsabilidades y facilitar el mantenimiento.
+
+- 🖥 **Interfaz (UI) — CapaIgu**
+  - [README CapaIgu](./Capa%20Igu.md)
+
+- 🎼 **Capa Controlador**
+  - Coordina la lógica entre Negocio y UI
+  - [README Capa Controlador](./Capa%20Controlador.md)
+
+- 🧩 **Capa Negocio**
+  - Aplica reglas de negocio sobre los datos
+  - [README Capa Negocio](./Capa%20Negocio.md)
+
+- 💾 **Capa Datos**
+  - Gestiona Base de Datos
+  - [README Capa Datos Origen](./Capa%20Datos%20Origen.md)
+  - [README Capa Datos Destino](./Capa%20Datos%20Destino.md)
+
+
+
+
+
+
+
+
+
+## Documentación de Capas
+
+- [Capa Datos Origen](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Datos%20Origen.md)
+- [Capa Datos Destino](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Datos%20Destino.md)
+
+
 
 # 📘 Reglas de Negocio
 
