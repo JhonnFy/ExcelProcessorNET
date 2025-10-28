@@ -18,5 +18,20 @@ namespace CapaDatos
         public string CbDocumento { get; set; }
         public string CbExpediente { get; set; }
         public string CbCaja { get; set; }
+
+        public ModeloCodigoDeBarrasOrigen()
+        {
+            IdIdentity = 0;
+            Radicado = 0;
+            Id = 0;
+            Empleado = string.Empty;
+            Identificacion = string.Empty;
+            TipoDocumental = string.Empty;
+            CodigoDeBarrasRecepcion = string.Empty;
+            CbDocumento = string.Empty;
+            CbExpediente = string.Empty;
+            CbCaja = string.Empty;
+        }
+
     }
 }
