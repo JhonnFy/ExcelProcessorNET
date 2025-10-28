@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CapaIgu\CapaIgu.csproj" />
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj" />
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj" />
   </ItemGroup>
 
