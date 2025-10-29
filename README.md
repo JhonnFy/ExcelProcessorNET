@@ -1,7 +1,6 @@
 # 🏗 Arquitectura del Proyecto — ExcelSQLFusion
 
 El proyecto está organizado en capas para separar responsabilidades y facilitar el mantenimiento.
-
      ┌────────────────────┐
      │    Interfaz (UI)   │
      │   CapaIgu          │
@@ -28,6 +27,8 @@ El proyecto está organizado en capas para separar responsabilidades y facilitar
  │   Origen y Destino     │
  │  Tablas / Sabana       │
  └───────────────────────┘
+
+
 
 
 
