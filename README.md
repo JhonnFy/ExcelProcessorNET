@@ -75,40 +75,6 @@ Este enfoque permite una clara separación de responsabilidades, facilita el man
 
 ##  Reglas de Negocio
 
----
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Documentación de Capas
-
-- [Capa Datos Origen](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Datos%20Origen.md)
-- [Capa Datos Destino](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Datos%20Destino.md)
-
-
-
-# 📘 Reglas de Negocio
-
----
-
 Los nombres y números de identificación han sido generados automáticamente mediante PowerShell. No corresponden a datos reales.
 
 1. CapaDatos
@@ -216,4 +182,6 @@ Convertir a mayúsculas únicamente el valor **Carpeta Completa**.
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/295a0923-ee71-41f9-987c-afabfe403f05" />
 <img width="667" height="442" alt="Arquitectura" src="https://github.com/user-attachments/assets/1b63f62f-0203-449f-9623-bb17cd7b4708" />
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/f06d5ad4-c254-437f-a696-da637f11c7ff" />
+
+---
 
