@@ -1,7 +1,4 @@
 # 🏗 Arquitectura del Proyecto — ExcelSQLFusion
-El proyecto está organizado en capas para separar responsabilidades y facilitar el mantenimiento.
-
-# 🏗 Arquitectura del Proyecto — ExcelSQLFusion
 
 El proyecto está organizado en capas para separar responsabilidades y facilitar el mantenimiento.
 
