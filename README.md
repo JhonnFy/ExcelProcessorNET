@@ -130,10 +130,7 @@ Conservar el formato *Camel Case* tal como está definido.
 - Prorroga y Preaviso  
 - Contrato de Trabajo  
 
----
-
-## 🧩 Regla 4 — Estilo del Tipo Documental “Carpeta Completa”
-
+- [x] Regla 4: Estilo del Tipo Documental “Carpeta Completa
 **Descripción:**  
 El tipo documental **Carpeta Completa** debe registrarse exclusivamente en mayúsculas.
 
