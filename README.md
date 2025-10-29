@@ -22,20 +22,6 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 ## Descripción
 
 **ExcelSQLFusion** es una aplicación desarrollada en **.NET** bajo una **arquitectura por capas**, diseñada para procesar archivos Excel y almacenar sus datos en **SQL Server** de manera estructurada y confiable.
-
-La aplicación sigue un enfoque modular con las siguientes capas:
-
-- **Capa de Datos – Completada:** se encarga del acceso y la inserción de datos en la base de datos.  
-- **Capa de Negocio – Completada:** contiene la lógica de negocio y validaciones necesarias antes de persistir los datos.  
-- **Capa Controlador – Pendiente:** mediará entre la interfaz de usuario y las capas internas.  
-- **Capa de Interfaz Gráfica de Usuario (IGU) – Pendiente:** permitirá al usuario seleccionar archivos Excel para su procesamiento.
-
-1. El usuario selecciona un archivo Excel desde la **IGU**.  
-2. La **Capa Controlador** recibe el archivo y lo envía a la **Capa de Datos**.  
-3. La **Capa de Datos** inserta los registros en la tabla **`CodigoDeBarrasOrigen`**, **sin aplicar ninguna transformación**, manteniendo los datos exactamente como vienen en el Excel.
-
-Esta **estructura modular** garantiza que cada capa cumpla su función específica, facilitando el mantenimiento, la escalabilidad y futuras extensiones de la aplicación.
-
 ---
 
 ## Características
