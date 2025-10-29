@@ -1,27 +1,27 @@
 # 🏗 Arquitectura del Proyecto — ExcelSQLFusion
 El proyecto está organizado en capas para separar responsabilidades y facilitar el mantenimiento.
 
+# 🏗 Arquitectura del Proyecto — ExcelSQLFusion
 
-Enlaces relacionados:
+El proyecto está organizado en capas para separar responsabilidades y facilitar el mantenimiento.
 
-- [CapaIgu / Interfaz](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Igu.md)
-- [Capa Datos Origen](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Datos%20Origen.md)
+- 🖥 **Interfaz (UI) — CapaIgu**
+  - [README CapaIgu](./Capa%20Igu.md)
 
-✅ Ventaja: el diagrama se ve limpio y los enlaces funcionan sin romperlo.
+- 🎼 **Capa Controlador**
+  - Coordina la lógica entre Negocio y UI
+  - [README Capa Controlador](./Capa%20Controlador.md)
 
----
+- 🧩 **Capa Negocio**
+  - Aplica reglas de negocio sobre los datos
+  - [README Capa Negocio](./Capa%20Negocio.md)
 
-### 2️⃣ Usar una versión “simplificada” dentro de una tabla
-Otra forma es **hacer un mini-diagrama con tabla Markdown**, así puedes incluir **links y mantener cierta estructura**:
+- 💾 **Capa Datos**
+  - Gestiona Base de Datos
+  - [README Capa Datos Origen](./Capa%20Datos%20Origen.md)
+  - [README Capa Datos Destino](./Capa%20Datos%20Destino.md)
 
-```markdown
-| Capa                  | Descripción | Enlace |
-|-----------------------|------------|--------|
-| Interfaz (UI) / CapaIgu | Interfaz de usuario | [Ver README](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Igu.md) |
-| Capa Controlador 🎼    | Coordina Negocio y UI | [Ver README](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Controlador.md) |
-| Capa Negocio           | Aplica reglas de negocio | [Ver README](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Negocio.md) |
-| Capa Datos             | Gestiona Base de Datos | [Ver README](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Datos.md) |
-| Origen / Destino       | Tablas / Sabana | [Ver README](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Datos%20Origen.md) |
+
 
 
 
