@@ -74,8 +74,7 @@ Este enfoque permite una clara separación de responsabilidades, facilita el man
 ---
 
 ##  Reglas de Negocio
----
-- Regla 1 — Limpieza de Nombres en la Sabana
+- **Regla 1 — Limpieza de Nombres en la Sabana**  
 
 **Descripción:**  
 En la sabana de datos, los nombres de las personas incluyen un prefijo numérico.
