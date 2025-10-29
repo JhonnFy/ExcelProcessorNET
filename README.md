@@ -38,6 +38,8 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
   <figcaption><i><b>Figura.</b>3.</i></figcaption>
 </figure>
 
+  <img width="700" alt="Arquitectura del Proceso de Limpieza" src="https://github.com/user-attachments/assets/1b63f62f-0203-449f-9623-bb17cd7b4708" />
+
 ---
 
 ## Características
