@@ -26,20 +26,10 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
   <figcaption><i><b>Figura.</b>1.</i></figcaption>
 </figure>
 
-<!-- Figura 2: Limpieza de Cédulas -->
-<figure align="center">
-  <img width="950" alt="Vista de la Sabana de Datos - Limpieza de Cédulas" src="https://github.com/user-attachments/assets/d7078806-db38-4ed5-9aad-4049173510b4" />
-  <figcaption><i><b>Figura.</b>2.</i></figcaption>
-</figure>
 
-<!-- Figura 3: Arquitectura General -->
-<figure align="center">
-  <img width="700" alt="Arquitectura del Proceso de Limpieza" src="https://github.com/user-attachments/assets/1b63f62f-0203-449f-9623-bb17cd7b4708" />
-  <figcaption><i><b>Figura.</b>3.</i></figcaption>
-</figure>
-
-  <img width="700" alt="Arquitectura del Proceso de Limpieza" src="https://github.com/user-attachments/assets/1b63f62f-0203-449f-9623-bb17cd7b4708" />
-
+<img width="800" alt="Vista de la Sabana de Datos - Limpieza de Nombres" src="https://github.com/user-attachments/assets/e593526a-740f-4602-a16e-69602de22022" />
+<img width="950" alt="Vista de la Sabana de Datos - Limpieza de Cédulas" src="https://github.com/user-attachments/assets/d7078806-db38-4ed5-9aad-4049173510b4" />
+<img width="700" alt="Arquitectura del Proceso de Limpieza" src="https://github.com/user-attachments/assets/1b63f62f-0203-449f-9623-bb17cd7b4708" />
 ---
 
 ## Características
