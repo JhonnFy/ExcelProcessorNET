@@ -96,6 +96,7 @@ Se debe eliminar el **prefijo numérico** (incluyendo punto o espacio) de cada r
 - Carlos Jhon Gomez Ruiz
   
 ---
+
 - Regla 2 — Limpieza de Cédulas en la Sabana
   
 **Descripción:**  
