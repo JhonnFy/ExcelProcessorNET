@@ -86,7 +86,7 @@ En la sabana de datos, los nombres de las personas incluyen un prefijo numérico
 3. Juan Mariana Castro Ruiz  
 4. Carlos Jhon Gomez Ruiz  
 
-**Regla:**  
+**Requerimiento:**  
 Se debe eliminar el **prefijo numérico** (incluyendo punto o espacio) de cada registro, conservando únicamente el nombre completo.
 
 **Resultado esperado:**
