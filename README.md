@@ -20,8 +20,16 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 ---
 
 ## Interface
-<img width="581" height="366" alt="image" src="https://github.com/user-attachments/assets/e593526a-740f-4602-a16e-69602de22022" />
-<img width="1360" height="546" alt="image" src="https://github.com/user-attachments/assets/d7078806-db38-4ed5-9aad-4049173510b4" />
+<figure align="center">
+  <img width="800" alt="Vista de la Sabana de Datos" src="https://github.com/user-attachments/assets/e593526a-740f-4602-a16e-69602de22022" />
+  <figcaption><i>Figura 1: Ejemplo de registros con prefijo numérico en los nombres</i></figcaption>
+</figure>
+
+<figure align="center">
+  <img width="1000" alt="Vista de la Sabana - Limpieza de Cédulas" src="https://github.com/user-attachments/assets/d7078806-db38-4ed5-9aad-4049173510b4" />
+  <figcaption><i>Figura 2: Ejemplo de limpieza de cédulas eliminando prefijos numéricos</i></figcaption>
+</figure>
+
 
 ---
 
