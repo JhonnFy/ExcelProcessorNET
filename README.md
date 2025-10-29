@@ -1,28 +1,38 @@
 # 🏗 Arquitectura del Proyecto — ExcelSQLFusion
 
-El proyecto está organizado en capas para separar responsabilidades y facilitar el mantenimiento.
+El proyecto está organizado en capas para separar responsabilidades y facilitar el mantenimiento.  
+Cada capa tiene su propia documentación y tests asociados.
 
-- 🖥 **Interfaz (UI) — CapaIgu**  - [README CapaIgu](./Capa%20Igu.md)
+---
 
-- 🎼 **Capa Controlador**
-  - Coordina la lógica entre Negocio y UI
-  - [README Capa Controlador](./Capa%20Controlador.md)
-
-- 🧩 **Capa Negocio**
-  - Aplica reglas de negocio sobre los datos
-  - [README Capa Negocio](./Capa%20Negocio.md)
+## 📂 Capas de la Aplicación
 
 - 💾 **Capa Datos**
-  - Gestiona Base de Datos
-  - [README Capa Datos Origen](./Capa%20Datos%20Origen.md)
-  - [README Capa Datos Destino](./Capa%20Datos%20Destino.md)
+  - [Capa Datos Origen](./Capa%20Datos%20Origen.md)
+  - [Capa Datos Destino](./Capa%20Datos%20Destino.md)
+  - Submódulos:
+    - [CrudCodigoDeBarrasOrigen](./CrudCodigoDeBarrasOrigen.md)
+    - [CrudCodigoDeBarrasDestino](./CrudCodigoDeBarrasDestino.md)
 
+- 🎼 **Capa Controlador**
+  - [CapaControlador Origen](./CapaControlador%20Origen.md)
+  - Submódulos:
+    - [CapaControladorOrigen](./CapaControladorOrigen.md)
+    - [CapaControladorDestino](./CapaControladorDestino.md)
 
+- 🧩 **Capa Negocio**
+  - Submódulos:
+    - [CapaNegocioOrigen](./CapaNegocioOrigen.md)
+    - [CapaNegocioDestino](./CapaNegocioDestino.md)
 
+- 🖥 **Capa Interfaz (CapaIgu)**
+  - [CapaIgu](./CapaIgu.md)
 
-
-
-
+- ✅ **Capa Testing**
+  - [Testing CapaControlador](./Testing%20CapaControlador.md)
+  - [Testing CapaDatos](./Testing%20CapaDatos.md)
+  - [Testing CapaIgu](./Testing%20CapaIgu.md)
+  - [Testing CapaNegocio](./Testing%20CapaNegocio.md)
 
 
 ## Documentación de Capas
