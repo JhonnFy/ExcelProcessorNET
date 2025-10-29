@@ -6,7 +6,7 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 
 ## Tabla de Contenidos
 
-1. [Descripción](#descripción)  
+1. [Interface](#Interface)  
 2. [Características](#características)  
 3. [Tecnologías](#tecnologías)  
 4. [Arquitectura del Proyecto](#arquitectura-del-proyecto)  
@@ -19,7 +19,7 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 
 ---
 
-## Descripción
+## Interface
 <img width="581" height="366" alt="image" src="https://github.com/user-attachments/assets/e593526a-740f-4602-a16e-69602de22022" />
 <img width="1360" height="546" alt="image" src="https://github.com/user-attachments/assets/d7078806-db38-4ed5-9aad-4049173510b4" />
 
