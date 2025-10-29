@@ -1,3 +1,96 @@
+# 📘 Reglas de Negocio — Integrador de Datos
+
+Nota: Los nombres y números de identificación han sido generados automáticamente mediante PowerShell. No corresponden a datos reales.
+
+---
+
+🧩 Regla 1 — Limpieza de Nombres
+Descripción:
+Los nombres en la sabana contienen un prefijo numérico que debe eliminarse.
+
+Ejemplo original:
+1. Santiago Jorge Ruiz Alvarez
+2. Isabella Jose Mendoza Castro
+3. Juan Mariana Castro Ruiz
+4. Carlos Jhon Gomez Ruiz
+
+Regla:
+Eliminar el prefijo numérico, incluyendo punto o espacio, conservando solo el nombre completo.
+
+Resultado esperado:
+- Santiago Jorge Ruiz Alvarez
+- Isabella Jose Mendoza Castro
+- Juan Mariana Castro Ruiz
+- Carlos Jhon Gomez Ruiz
+
+---
+
+🧩 Regla 2 — Limpieza de Cédulas
+Descripción:
+Las cédulas de ciudadanía (CC) pueden incluir un prefijo numérico que debe eliminarse.
+
+Ejemplo original:
+1. 241758461
+2. 7455039910
+3. 4478468449
+4. 4192283306
+
+Regla:
+Eliminar el prefijo numérico (puntos o espacios), dejando únicamente el número de cédula.
+
+Resultado esperado:
+- 241758461
+- 7455039910
+- 4478468449
+- 4192283306
+
+---
+
+🧩 Regla 3 — Formato del Campo Tipo_Documental
+Descripción:
+El campo Tipo_Documental se define en formato Camel Case y debe mantenerse.
+
+Ejemplo original:
+- Prorroga y Preaviso
+- Prorroga y Preaviso
+- Contrato de Trabajo
+
+Regla:
+Conservar el formato Camel Case tal como está definido.
+
+Resultado esperado:
+- Prorroga y Preaviso
+- Prorroga y Preaviso
+- Contrato de Trabajo
+
+---
+
+🧩 Regla 4 — Estilo del Tipo Documental “Carpeta Completa”
+Descripción:
+El tipo documental Carpeta Completa debe registrarse únicamente en mayúsculas.
+
+Regla:
+Convertir a mayúsculas únicamente el valor Carpeta Completa.
+
+Resultado esperado:
+- CARPETA COMPLETA
+
+---
+
+🖼 Imágenes de Referencia
+Imagen | Descripción
+Referencia1.png | Ejemplo de sabana con prefijos numéricos en nombres
+Referencia2.png | Ejemplo de sabana con cédulas
+Referencia3.png | Pantalla de ejemplo de la aplicación
+Referencia4.png | Pantalla de ejemplo de la aplicación
+Referencia5.png | Pantalla de ejemplo de la aplicación
+Arquitectura.png | Diagrama de la arquitectura por capas
+
+💡 Tip: Mantener todos los ejemplos dentro de este bloque de código garantiza que el Markdown sea uniforme y fácil de copiar.
+
+
+
+
 
 # 📘 Reglas de Negocio
 
