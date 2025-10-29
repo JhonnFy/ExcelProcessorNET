@@ -1,33 +1,27 @@
 # 🏗 Arquitectura del Proyecto — ExcelSQLFusion
 El proyecto está organizado en capas para separar responsabilidades y facilitar el mantenimiento.
 
-     ┌────────────────────┐
-     │    Interfaz (UI)   │
-     │      CapaIgu       │ - [Capa Datos Origen](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Datos%20Origen.md)
-     └─────────┬──────────┘
-               │
-     ┌─────────▼──────────┐
-     │  Capa Controlador 🎼 │
-     │ Coordina la lógica  │
-     │ entre Negocio y UI │
-     └─────────┬──────────┘
-               │
-     ┌─────────▼──────────┐
-     │    Capa Negocio    │
-     │ Aplica reglas de   │
-     │ negocio sobre datos│
-     └─────────┬──────────┘
-               │
-     ┌─────────▼──────────┐
-     │     Capa Datos     │
-     │  Gestiona Base de  │
-     │      Datos         │
-     └─────────┬──────────┘
-               │
-     ┌─────────▼──────────┐
-     │  Origen y Destino  │
-     │   Tablas / Sabana  │
-     └────────────────────┘
+
+Enlaces relacionados:
+
+- [CapaIgu / Interfaz](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Igu.md)
+- [Capa Datos Origen](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Datos%20Origen.md)
+
+✅ Ventaja: el diagrama se ve limpio y los enlaces funcionan sin romperlo.
+
+---
+
+### 2️⃣ Usar una versión “simplificada” dentro de una tabla
+Otra forma es **hacer un mini-diagrama con tabla Markdown**, así puedes incluir **links y mantener cierta estructura**:
+
+```markdown
+| Capa                  | Descripción | Enlace |
+|-----------------------|------------|--------|
+| Interfaz (UI) / CapaIgu | Interfaz de usuario | [Ver README](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Igu.md) |
+| Capa Controlador 🎼    | Coordina Negocio y UI | [Ver README](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Controlador.md) |
+| Capa Negocio           | Aplica reglas de negocio | [Ver README](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Negocio.md) |
+| Capa Datos             | Gestiona Base de Datos | [Ver README](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Datos.md) |
+| Origen / Destino       | Tablas / Sabana | [Ver README](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Datos%20Origen.md) |
 
 
 
