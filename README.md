@@ -97,8 +97,8 @@ Se debe eliminar el **prefijo numérico** (incluyendo punto o espacio) de cada r
 
 ---
 
-## 🧩 Regla 2 — Limpieza de Cédulas en la Sabana
-
+- Regla 1 — Limpieza de Cédulas en la Sabana
+  
 **Descripción:**  
 En la sabana, las cédulas de ciudadanía (CC) también incluyen un prefijo numérico.
 
@@ -108,7 +108,7 @@ En la sabana, las cédulas de ciudadanía (CC) también incluyen un prefijo num�
 3. 4478468449  
 4. 4192283306  
 
-**Regla:**  
+**Requerimiento:**  
 Se debe eliminar el **prefijo numérico** (incluyendo punto o espacio) de cada registro, conservando únicamente el número de cédula.
 
 **Resultado esperado:**
