@@ -95,7 +95,6 @@ Se debe eliminar el **prefijo numérico** (incluyendo punto o espacio) de cada r
 - Carlos Jhon Gomez Ruiz
 
 - [x] Regla 2: Limpieza de Cédulas en la Sabana
-  
 **Descripción:**  
 En la sabana, las cédulas de ciudadanía (CC) también incluyen un prefijo numérico.
 
@@ -114,10 +113,7 @@ Se debe eliminar el **prefijo numérico** (incluyendo punto o espacio) de cada r
 - 4478468449  
 - 4192283306  
 
----
-
-## 🧩 Regla 3 — Formato del Campo *Tipo_Documental*
-
+- [x] Regla 3: Formato del Campo *Tipo_Documental
 **Descripción:**  
 El campo **Tipo_Documental** se encuentra definido en formato *Camel Case* y debe mantenerse así.
 
