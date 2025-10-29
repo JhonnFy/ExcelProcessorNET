@@ -11,7 +11,7 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 3. [Tecnologías](#tecnologías)  
 4. [Arquitectura del Proyecto](#arquitectura-del-proyecto)  
 5. [Instalación y Configuración](#instalación-y-configuración)  
-6. [Uso](#uso)  
+6. [Reglas de Negocio](#Reglas de Negocio)  
 7. [Pruebas](#pruebas)  
 8. [Contribuciones](#contribuciones)  
 9. [Licencia](#licencia)  
@@ -70,11 +70,12 @@ Este enfoque permite una clara separación de responsabilidades, facilita el man
 1. Clona este repositorio en tu equipo:  
    ```bash
    git clone https://github.com/JhonnFy/ExcelSQLFusion.git
+   
+---
 
+##  Reglas de Negocio
 
-
-
-
+---
 
 
 
