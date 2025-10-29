@@ -45,7 +45,7 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
   - Capa de Negocio (Business)  
   - Capa de Controladores (Controller)  
   - Capa de Interfaz de Usuario (Interface)
-  - Capa Testing
+  - Capa Testing (Test)
 - Herramientas de pruebas: MSTest  
 - Escritura de scripts PowerShell para manipulación automatizada de datos (Creación de usuarios y asignación de cédulas de ciudadanía (CC) mediante scripts en PowerShell.)
 
