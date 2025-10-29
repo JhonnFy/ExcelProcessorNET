@@ -74,7 +74,7 @@ Este enfoque permite una clara separación de responsabilidades, facilita el man
 ---
 
 ##  Reglas de Negocio
-
+---
 - Regla 1 — Limpieza de Nombres en la Sabana
 
 **Descripción:**  
@@ -96,7 +96,6 @@ Se debe eliminar el **prefijo numérico** (incluyendo punto o espacio) de cada r
 - Carlos Jhon Gomez Ruiz
   
 ---
-
 - Regla 2 — Limpieza de Cédulas en la Sabana
   
 **Descripción:**  
