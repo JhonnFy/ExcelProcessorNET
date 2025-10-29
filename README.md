@@ -7,32 +7,45 @@ Cada capa tiene su propia documentación y tests asociados.
 
 ## 📂 Capas de la Aplicación
 
-- 💾 **Capa Datos**
+- 📂 **Capa Datos**
   - [Capa Datos Origen](./Capa%20Datos%20Origen.md)
   - [Capa Datos Destino](./Capa%20Datos%20Destino.md)
   - Submódulos:
     - [CrudCodigoDeBarrasOrigen](./CrudCodigoDeBarrasOrigen.md)
     - [CrudCodigoDeBarrasDestino](./CrudCodigoDeBarrasDestino.md)
 
-- 🎼 **Capa Controlador**
+- 📂 **Capa Controlador**
   - [CapaControlador Origen](./CapaControlador%20Origen.md)
   - Submódulos:
     - [CapaControladorOrigen](./CapaControladorOrigen.md)
     - [CapaControladorDestino](./CapaControladorDestino.md)
 
-- 🧩 **Capa Negocio**
+- 📂 **Capa Negocio**
   - Submódulos:
     - [CapaNegocioOrigen](./CapaNegocioOrigen.md)
     - [CapaNegocioDestino](./CapaNegocioDestino.md)
 
-- 🖥 **Capa Interfaz (CapaIgu)**
+- 📂 **Capa Interfaz (CapaIgu)**
   - [CapaIgu](./CapaIgu.md)
 
-- ✅ **Capa Testing**
+- 📂 **Capa Testing**
   - [Testing CapaControlador](./Testing%20CapaControlador.md)
   - [Testing CapaDatos](./Testing%20CapaDatos.md)
   - [Testing CapaIgu](./Testing%20CapaIgu.md)
   - [Testing CapaNegocio](./Testing%20CapaNegocio.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Documentación de Capas
