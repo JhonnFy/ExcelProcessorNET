@@ -1,36 +1,98 @@
-# 🏗 Arquitectura del Proyecto — ExcelSQLFusion
+# ExcelSQLFusion
 
-El proyecto está organizado en capas para separar responsabilidades y facilitar el mantenimiento.  
-Cada capa tiene su propia documentación y tests asociados.
+Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Controller, Interface), diseñada para **procesar y gestionar códigos de barras desde archivos Excel y almacenarlos en una base de datos SQL Server**.
 
 ---
 
-## 📂 Capas de la Aplicación
+## Tabla de Contenidos
 
-- 📂 **Capa Controlador**
-  - [CapaControladorOrigen](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Datos%20Origen.md)
-  - [CapaControladorDestino](https://github.com/JhonnFy/ExcelSQLFusion/blob/main/Capa%20Datos%20Destino.md)
+1. [Descripción](#descripción)  
+2. [Características](#características)  
+3. [Tecnologías](#tecnologías)  
+4. [Arquitectura del Proyecto](#arquitectura-del-proyecto)  
+5. [Instalación y Configuración](#instalación-y-configuración)  
+6. [Uso](#uso)  
+7. [Pruebas](#pruebas)  
+8. [Contribuciones](#contribuciones)  
+9. [Licencia](#licencia)  
+10. [Contacto](#contacto)
 
-   - [CapaControladorOrigen](./CapaControlador%20Origen.md)
-  - [CapaControladorDestino](./CapaControlador%20Destino.md)
+---
 
-- 📂 **CapaDatos**
-  - [Capa Datos Origen]()
-  - [Capa Datos Destino]()
+## Descripción
 
-- 📂 **Capa Interfaz (CapaIgu)**
-  - [Capa Igu]()
+ExcelSQLFusion es una solución orientada a empresas u organizaciones que requieren automatizar la gestión de códigos de barras generados en hojas de cálculo Excel y sincronizarlos de forma fiable con una base de datos SQL Server.  
+Gracias a su diseño en capas, separa claramente la lógica de acceso a datos, la lógica de negocio, los controladores y la interfaz de usuario, lo que facilita el mantenimiento, escalabilidad y pruebas del sistema.
 
-- 📂 **Capa Negocio**
-  - [CapaNegocioOrigen]()
-  - [CapaNegocioDestino]()
+---
+
+## Características
+
+- Lectura de archivos Excel (orígenes de datos) para extracción de códigos de barras y otros campos relevantes.  
+- Limpieza y normalización de datos según reglas de negocio específicas.  
+- Persistencia de datos en una base de datos SQL Server (capa de destino).  
+- Arquitectura modular que permite futuras expansiones (por ejemplo, nuevas fuentes de datos, nuevos destinos, interfaz web, etc.).  
+- Conjunto de pruebas automatizadas para asegurar calidad de código y estabilidad (capa de testing).  
+- Documentación de reglas de negocio incorporadas.
+
+---
+
+## Tecnologías
+
+- Lenguaje: C# (.NET)  
+- Base de datos: Microsoft SQL Server  
+- Arquitectura en capas:  
+  - Capa de Datos (Data)  
+  - Capa de Negocio (Business)  
+  - Capa de Controladores (Controller)  
+  - Capa de Interfaz de Usuario (Interface)  
+- Herramientas de pruebas: MSTest (u otro framework según el proyecto)  
+- Escritura de scripts PowerShell para manipulación automatizada de datos (cuando aplique)
+
+---
+
+## Arquitectura del Proyecto
+
+El proyecto está organizado en carpetas que reflejan cada capa de responsabilidad:
+
+- **CapaDatos** – Contiene los repositorios, entidades de datos y lógica de acceso a la base de datos.  
+- **CapaNegocio** – Aquí reside la implementación de las reglas de negocio y el procesamiento de los datos.  
+- **CapaControlador** – Contiene los controladores que actúan como intermediarios entre la interfaz de usuario y la lógica de negocio.  
+- **CapaIgu (UI)** – Interfaz de usuario, que puede ser un proyecto de escritorio o solución moderna según implementación.  
+- **CapaTesting** – Proyecto dedicado a pruebas unitarias e integración para asegurar la calidad del software.
+
+Este enfoque permite una clara separación de responsabilidades, facilita el mantenimiento y posibilita la reutilización de componentes.
+
+---
+
+## Instalación y Configuración
+
+1. Clona este repositorio en tu equipo:  
+   ```bash
+   git clone https://github.com/JhonnFy/ExcelSQLFusion.git
 
 
-- 📂 **Capa Testing**
-  - [Testing CapaControlador]()
-  - [Testing CapaDatos]()
-  - [Testing CapaIgu]()
-  - [Testing CapaNegocio]()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
