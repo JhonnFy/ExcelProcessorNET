@@ -34,3 +34,7 @@ Mostrar mensajes de error si ocurre alguna excepción.
 CapaControlador
 CapaNegocio
 CapaDatos
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/855c6943-421e-4202-a97c-1d398a932bba" />
+
+
+
