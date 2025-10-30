@@ -15,3 +15,16 @@ Capa Igu
 
 Importante:
 Revisar el nombre del servidor: SELECT @@SERVERNAME AS NombreServidor;
+
+
+🧩 Funciones que debe cumplir tu Capa IGU
+
+Importar el archivo Excel.
+Permitir al usuario seleccionar un archivo Excel desde su sistema.
+Leer el contenido del Excel (usando por ejemplo ClosedXML, EPPlus, o Microsoft.Office.Interop.Excel).
+Convertir cada fila del Excel en una lista de objetos ModeloCodigoDeBarrasOrigen.
+Enviar los datos a la Capa Controlador.
+Llamar al método GuardarRegistrosOrigen(List<ModeloCodigoDeBarrasOrigen> listaExcel) de tu clase CapaControladorOrigen.
+Mostrar resultados al usuario.
+Mostrar cuántos registros fueron insertados correctamente.
+Mostrar mensajes de error si ocurre alguna excepción.
