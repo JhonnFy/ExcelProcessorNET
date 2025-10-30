@@ -49,6 +49,7 @@ Agregar el DataGridView
 
 <figure align="center">
   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/7daac9a3-013e-4b56-898f-ae5b256e4c39" />
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/a13887a1-8381-43e0-b74e-7b2dc9de7fe8" />
 </figure>
 
 Crear un metodo para personalizar el DataGridView
