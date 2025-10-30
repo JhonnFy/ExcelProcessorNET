@@ -28,3 +28,13 @@ Llamar al método GuardarRegistrosOrigen(List<ModeloCodigoDeBarrasOrigen> listaE
 Mostrar resultados al usuario.
 Mostrar cuántos registros fueron insertados correctamente.
 Mostrar mensajes de error si ocurre alguna excepción.
+
+
+1-Agregar las referencias de las capas:
+CapaControlador
+CapaNegocio
+CapaDatos
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/855c6943-421e-4202-a97c-1d398a932bba" />
+
+
+
