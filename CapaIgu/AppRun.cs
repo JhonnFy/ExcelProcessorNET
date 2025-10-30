@@ -82,6 +82,28 @@ namespace CapaIgu
             dataGridViewExcel.Columns["Btn_CREATE"].Index, -1, true);
         }
 
+        public void CrearBtnImport()
+        {
+
+        }
+
+        public void CrearBtnCreate()
+        {
+
+        }
+
+        public void CrearBtnUpdate()
+        {
+
+        }
+
+
+        public void CrearBtnDelete()
+        {
+
+        }
+
+
         private void dataGridViewExcel_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
