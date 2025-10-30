@@ -34,7 +34,7 @@ namespace CapaIgu
 
             this.BeginInvoke((Action)(() => this.ActiveControl = null));
             ConfigurarDataGridView();
-            ConstruirBtnImport();
+            ConstruirBtnCreate();
         }
 
 
@@ -76,7 +76,7 @@ namespace CapaIgu
 
         }
 
-        private void ConstruirBtnImport()
+        private void ConstruirBtnCreate()
         {
             Button objBtnCreate = new Button();
 
@@ -87,7 +87,7 @@ namespace CapaIgu
             objBtnCreate.FlatAppearance.MouseOverBackColor = Color.White;
             objBtnCreate.FlatAppearance.MouseDownBackColor = Color.White;
 
-            string rutaImagen = @"C:\Developer\ExcelProcessorNET\Icons\btnImport.jpg";
+            string rutaImagen = @"C:\Developer\ExcelProcessorNET\Icons\btnCreate.jpg";
 
             if (System.IO.File.Exists(rutaImagen))
             {
