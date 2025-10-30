@@ -55,12 +55,15 @@ namespace CapaIgu
             dataGridViewExcel.Columns.Add("Cb Documento", "Cb Documento");
             dataGridViewExcel.Columns.Add("CB Expediente", "CB Expediente");
             dataGridViewExcel.Columns.Add("CB Caja", "CB Caja");
+            dataGridViewExcel.Columns.Add("", "");
+            dataGridViewExcel.Columns.Add("", "");
             dataGridViewExcel.RowHeadersVisible = false;
-
+            dataGridViewExcel.AllowUserToResizeColumns = false;
+            
             foreach (DataGridViewColumn column in dataGridViewExcel.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
-                column.Width = 130;
+                column.Width = 123;
             }
         }
 
