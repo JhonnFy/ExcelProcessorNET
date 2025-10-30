@@ -30,6 +30,14 @@ namespace CapaIgu
                 MessageBoxButtons.OK,
                 resultado.estado ? MessageBoxIcon.Information : MessageBoxIcon.Error
             );
+
+            //Evita que cualquier control reciba foco al cargar
+            this.BeginInvoke((Action)(() => this.ActiveControl = null));
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
