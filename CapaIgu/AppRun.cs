@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaDatos;
+using CapaNegocio;
+using CapaControlador;
+using System.IO;
+using OfficeOpenXml;
+
 
 namespace CapaIgu
 {
@@ -176,6 +181,19 @@ namespace CapaIgu
             catch (Exception ex)
             {
                 MessageBox.Show("Error al crear el botón [ConstruirBtnImport] " + ex.Message);
+            }
+        }
+
+
+        public void ImportarDatosExcel()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al importar datos desde Excel [ImportarDatosExcel]: " + ex.Message);
             }
         }
 
