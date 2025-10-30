@@ -42,7 +42,7 @@ CapaDatos
 
 3-Diseñar la Igu
 <figure align="center">
-  <img width="800" alt="Vista de la Sabana de Datos - Limpieza de Nombres" src="https://github.com/user-attachments/assets/e593526a-740f-4602-a16e-69602de22022" />
+  <img width="617" height="395" alt="image" src="https://github.com/user-attachments/assets/e898f146-2d11-40e2-b020-460f170e737f" />
 </figure>
 
 Agregar el DataGridView
