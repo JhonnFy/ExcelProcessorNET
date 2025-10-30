@@ -70,15 +70,15 @@ namespace CapaIgu
                     
         }
 
-        private void CordenadasImport()
+        private Rectangle CordenadasImport()
         {
-            Rectangle rctImport = dataGridViewExcel.GetCellDisplayRectangle(
+            return dataGridViewExcel.GetCellDisplayRectangle(
             dataGridViewExcel.Columns["Btn_IMPORT"].Index, -1, true);
         }
 
-        public void CodenadasCreate()
+        public Rectangle CodenadasCreate()
         {
-            Rectangle objCreate = dataGridViewExcel.GetCellDisplayRectangle(
+            return dataGridViewExcel.GetCellDisplayRectangle(
             dataGridViewExcel.Columns["Btn_CREATE"].Index, -1, true);
         }
 
