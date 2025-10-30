@@ -50,6 +50,7 @@
             Controls.Add(dataGridViewExcel);
             Name = "AppRun";
             Text = "AppRun";
+            WindowState = FormWindowState.Maximized;
             Load += AppRun_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewExcel).EndInit();
             ResumeLayout(false);
