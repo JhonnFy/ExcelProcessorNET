@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppRun));
             dataGridViewExcel = new DataGridView();
             btnCreate = new Button();
+            btnImport = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewExcel).BeginInit();
             SuspendLayout();
             // 
@@ -54,11 +55,22 @@
             btnCreate.UseVisualStyleBackColor = true;
             btnCreate.Click += btnCreate_Click;
             // 
+            // btnImport
+            // 
+            btnImport.BackgroundImage = (Image)resources.GetObject("btnImport.BackgroundImage");
+            btnImport.Location = new Point(473, 77);
+            btnImport.Name = "btnImport";
+            btnImport.Size = new Size(123, 21);
+            btnImport.TabIndex = 4;
+            btnImport.UseVisualStyleBackColor = true;
+            btnImport.Click += btnImport_Click;
+            // 
             // AppRun
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(699, 345);
+            Controls.Add(btnImport);
             Controls.Add(btnCreate);
             Controls.Add(dataGridViewExcel);
             Name = "AppRun";
@@ -71,5 +83,6 @@
         #endregion
         private DataGridView dataGridViewExcel;
         private Button btnCreate;
+        private Button btnImport;
     }
 }

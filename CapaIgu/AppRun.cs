@@ -71,10 +71,10 @@ namespace CapaIgu
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
                 column.Width = 124;
-}
+            }
 
         }
-               
+
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
@@ -86,10 +86,10 @@ namespace CapaIgu
             btnCreate.FlatAppearance.MouseDownBackColor = Color.White;
 
             Image original = btnCreate.BackgroundImage;
-            btnCreate.BackgroundImage = new Bitmap(original, new Size(40,20));
+            btnCreate.BackgroundImage = new Bitmap(original, new Size(40, 20));
             btnCreate.BackgroundImageLayout = ImageLayout.Center;
             btnCreate.ImageAlign = ContentAlignment.MiddleCenter;
-            
+
 
             int margenDerecha = 1;
             int margenArriba = 2;
@@ -100,6 +100,21 @@ namespace CapaIgu
             );
 
             btnCreate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            btnImport.Size = new Size(123, 21);
+            btnImport.FlatStyle = FlatStyle.Flat;
+            btnImport.UseVisualStyleBackColor = false;
+            btnImport.FlatAppearance.BorderSize = 0;
+            btnImport.FlatAppearance.MouseOverBackColor = Color.White;
+            btnImport.FlatAppearance.MouseDownBackColor = Color.White;
+
+            Image original = btnImport.BackgroundImage;
+            btnImport.BackgroundImage = new Bitmap(original, new Size(40, 20));
+            btnImport.BackgroundImageLayout = ImageLayout.Center;
+            btnImport.ImageAlign = ContentAlignment.MiddleCenter;
         }
     }
 }
