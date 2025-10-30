@@ -34,6 +34,7 @@ namespace CapaIgu
 
             this.BeginInvoke((Action)(() => this.ActiveControl = null));
             ConfigurarDataGridView();
+            ConstruirBtnImport();
         }
 
 
@@ -75,46 +76,45 @@ namespace CapaIgu
 
         }
 
-
-        private void btnCreate_Click(object sender, EventArgs e)
+        private void ConstruirBtnImport()
         {
-            btnCreate.Size = new Size(123, 21);
-            btnCreate.FlatStyle = FlatStyle.Flat;
-            btnCreate.UseVisualStyleBackColor = false;
-            btnCreate.FlatAppearance.BorderSize = 0;
-            btnCreate.FlatAppearance.MouseOverBackColor = Color.White;
-            btnCreate.FlatAppearance.MouseDownBackColor = Color.White;
+            Button objBtnCreate = new Button();
 
-            Image original = btnCreate.BackgroundImage;
-            btnCreate.BackgroundImage = new Bitmap(original, new Size(40, 20));
-            btnCreate.BackgroundImageLayout = ImageLayout.Center;
-            btnCreate.ImageAlign = ContentAlignment.MiddleCenter;
+            objBtnCreate.Size = new Size(123, 21);
+            objBtnCreate.FlatStyle = FlatStyle.Flat;
+            objBtnCreate.UseVisualStyleBackColor = false;
+            objBtnCreate.FlatAppearance.BorderSize = 0;
+            objBtnCreate.FlatAppearance.MouseOverBackColor = Color.White;
+            objBtnCreate.FlatAppearance.MouseDownBackColor = Color.White;
+
+            string rutaImagen = @"C:\Developer\ExcelProcessorNET\Icons\btnImport.jpg";
+
+            if (System.IO.File.Exists(rutaImagen))
+            {
+                Image original = Image.FromFile(rutaImagen);
+
+                objBtnCreate.BackgroundImage = new Bitmap(original, new Size(40, 20));
+                objBtnCreate.BackgroundImageLayout = ImageLayout.Center;
+                objBtnCreate.ImageAlign = ContentAlignment.MiddleCenter;
+            }
+            else 
+            {
+                MessageBox.Show("La imagen no se encontró en la ruta especificada: " + rutaImagen);
+            }
 
 
             int margenDerecha = 1;
             int margenArriba = 2;
 
-            btnCreate.Location = new Point(
-                this.ClientSize.Width - btnCreate.Width - margenDerecha,
+           objBtnCreate.Location = new Point(
+                this.ClientSize.Width -objBtnCreate.Width - margenDerecha,
                 margenArriba
             );
 
-            btnCreate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-        }
+           objBtnCreate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+           this.Controls.Add(objBtnCreate);
+           objBtnCreate.BringToFront();
 
-        private void btnImport_Click(object sender, EventArgs e)
-        {
-            btnImport.Size = new Size(123, 21);
-            btnImport.FlatStyle = FlatStyle.Flat;
-            btnImport.UseVisualStyleBackColor = false;
-            btnImport.FlatAppearance.BorderSize = 0;
-            btnImport.FlatAppearance.MouseOverBackColor = Color.White;
-            btnImport.FlatAppearance.MouseDownBackColor = Color.White;
-
-            Image original = btnImport.BackgroundImage;
-            btnImport.BackgroundImage = new Bitmap(original, new Size(40, 20));
-            btnImport.BackgroundImageLayout = ImageLayout.Center;
-            btnImport.ImageAlign = ContentAlignment.MiddleCenter;
         }
     }
 }
