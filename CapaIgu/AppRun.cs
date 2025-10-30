@@ -62,13 +62,6 @@ namespace CapaIgu
             dataGridViewExcel.ScrollBars = ScrollBars.Vertical;
             dataGridViewExcel.BackgroundColor = Color.White;
 
-            //Cordenadas De Las Columas
-            Rectangle rctImport = dataGridViewExcel.GetCellDisplayRectangle(
-                dataGridViewExcel.Columns["Btn_IMPORT"].Index, -1, true);
-            Rectangle objCreate = dataGridViewExcel.GetCellDisplayRectangle(
-                dataGridViewExcel.Columns["Btn_CREATE"].Index, -1, true
-            );
-
             foreach (DataGridViewColumn column in dataGridViewExcel.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -77,12 +70,22 @@ namespace CapaIgu
                     
         }
 
+        private void CordenadasImport()
+        {
+            Rectangle rctImport = dataGridViewExcel.GetCellDisplayRectangle(
+            dataGridViewExcel.Columns["Btn_IMPORT"].Index, -1, true);
+        }
+
+        public void CodenadasCreate()
+        {
+            Rectangle objCreate = dataGridViewExcel.GetCellDisplayRectangle(
+            dataGridViewExcel.Columns["Btn_CREATE"].Index, -1, true);
+        }
+
         private void dataGridViewExcel_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
-
-
 
 
     }
