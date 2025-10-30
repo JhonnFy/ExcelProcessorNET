@@ -86,7 +86,7 @@ namespace CapaIgu
             btnCreate.FlatAppearance.MouseDownBackColor = Color.White;
 
             Image original = btnCreate.BackgroundImage;
-            btnCreate.BackgroundImage = new Bitmap(original, new Size(50,20));
+            btnCreate.BackgroundImage = new Bitmap(original, new Size(40,20));
             btnCreate.BackgroundImageLayout = ImageLayout.Center;
             btnCreate.ImageAlign = ContentAlignment.MiddleCenter;
             
