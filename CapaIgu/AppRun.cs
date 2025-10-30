@@ -78,43 +78,63 @@ namespace CapaIgu
 
         private void ConstruirBtnCreate()
         {
-            Button objBtnCreate = new Button();
-
-            objBtnCreate.Size = new Size(123, 21);
-            objBtnCreate.FlatStyle = FlatStyle.Flat;
-            objBtnCreate.UseVisualStyleBackColor = false;
-            objBtnCreate.FlatAppearance.BorderSize = 0;
-            objBtnCreate.FlatAppearance.MouseOverBackColor = Color.White;
-            objBtnCreate.FlatAppearance.MouseDownBackColor = Color.White;
-
-            string rutaImagen = @"C:\Developer\ExcelProcessorNET\Icons\btnCreate.jpg";
-
-            if (System.IO.File.Exists(rutaImagen))
+            try
             {
-                Image original = Image.FromFile(rutaImagen);
+                Button objBtnCreate = new Button();
 
-                objBtnCreate.BackgroundImage = new Bitmap(original, new Size(40, 20));
-                objBtnCreate.BackgroundImageLayout = ImageLayout.Center;
-                objBtnCreate.ImageAlign = ContentAlignment.MiddleCenter;
+                objBtnCreate.Size = new Size(123, 21);
+                objBtnCreate.FlatStyle = FlatStyle.Flat;
+                objBtnCreate.UseVisualStyleBackColor = false;
+                objBtnCreate.FlatAppearance.BorderSize = 0;
+                objBtnCreate.FlatAppearance.MouseOverBackColor = Color.White;
+                objBtnCreate.FlatAppearance.MouseDownBackColor = Color.White;
+
+                string rutaImagen = @"C:\Developer\ExcelProcessorNET\Icons\btnCreate.jpg";
+
+                if (System.IO.File.Exists(rutaImagen))
+                {
+                    Image original = Image.FromFile(rutaImagen);
+
+                    objBtnCreate.BackgroundImage = new Bitmap(original, new Size(40, 20));
+                    objBtnCreate.BackgroundImageLayout = ImageLayout.Center;
+                    objBtnCreate.ImageAlign = ContentAlignment.MiddleCenter;
+                }
+                else
+                {
+                    MessageBox.Show("La imagen no se encontró en la ruta especificada: " + rutaImagen);
+                }
+
+
+                int margenDerecha = 1;
+                int margenArriba = 2;
+
+                objBtnCreate.Location = new Point(
+                     this.ClientSize.Width - objBtnCreate.Width - margenDerecha,
+                     margenArriba
+                 );
+
+                objBtnCreate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+                this.Controls.Add(objBtnCreate);
+                objBtnCreate.BringToFront();
             }
-            else 
+            catch (Exception ex)
             {
-                MessageBox.Show("La imagen no se encontró en la ruta especificada: " + rutaImagen);
+                MessageBox.Show("Error al crear el botón [ConstruirBtnCreate] " + ex.Message);
             }
-
-
-            int margenDerecha = 1;
-            int margenArriba = 2;
-
-           objBtnCreate.Location = new Point(
-                this.ClientSize.Width -objBtnCreate.Width - margenDerecha,
-                margenArriba
-            );
-
-           objBtnCreate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-           this.Controls.Add(objBtnCreate);
-           objBtnCreate.BringToFront();
-
         }
+
+
+        public void ConstruirBtnImport()
+        {
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al crear el botón [ConstruirBtnImport] " + ex.Message);
+            }
+        }
+
+
     }
 }
