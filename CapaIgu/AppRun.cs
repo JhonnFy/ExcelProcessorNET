@@ -59,12 +59,14 @@ namespace CapaIgu
             dataGridViewExcel.Columns.Add("", "");
             dataGridViewExcel.RowHeadersVisible = false;
             dataGridViewExcel.AllowUserToResizeColumns = false;
-            
+            dataGridViewExcel.ScrollBars = ScrollBars.Vertical;
+
             foreach (DataGridViewColumn column in dataGridViewExcel.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
-                column.Width = 123;
+                column.Width = 124;
             }
+                    
         }
 
         private void dataGridViewExcel_CellContentClick(object sender, DataGridViewCellEventArgs e)
