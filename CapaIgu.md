@@ -40,6 +40,10 @@ CapaDatos
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ae045678-9cf4-4c08-b819-3f69668e0c13" />
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/1aba6990-fc78-4026-9ea8-dce5a783c585" />
 
+3-Diseñar la Igu
+<figure align="center">
+  <img width="800" alt="Vista de la Sabana de Datos - Limpieza de Nombres" src="https://github.com/user-attachments/assets/e593526a-740f-4602-a16e-69602de22022" />
+</figure>
 
 
 
