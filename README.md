@@ -21,7 +21,7 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 
 ## Interface
 <figure align="center">
-  <img width="800" alt="Vista de la Sabana de Datos - Limpieza de Nombres" src="https://github.com/user-attachments/assets/e593526a-740f-4602-a16e-69602de22022" />
+  <img width="617" height="395" alt="image" src="https://github.com/user-attachments/assets/403943ea-b8ab-400e-bff0-f3a799a9f1c0" />
 </figure>
 
 <figure align="center">
