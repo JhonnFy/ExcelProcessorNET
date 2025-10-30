@@ -45,5 +45,8 @@ CapaDatos
   <img width="800" alt="Vista de la Sabana de Datos - Limpieza de Nombres" src="https://github.com/user-attachments/assets/e593526a-740f-4602-a16e-69602de22022" />
 </figure>
 
+Agregar el DataGridView
 
-
+<figure align="center">
+  <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/7daac9a3-013e-4b56-898f-ae5b256e4c39" />
+</figure>
