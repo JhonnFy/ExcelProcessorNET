@@ -38,7 +38,7 @@
             dataGridViewExcel.Dock = DockStyle.Fill;
             dataGridViewExcel.Location = new Point(0, 0);
             dataGridViewExcel.Name = "dataGridViewExcel";
-            dataGridViewExcel.Size = new Size(654, 302);
+            dataGridViewExcel.Size = new Size(714, 345);
             dataGridViewExcel.TabIndex = 2;
             dataGridViewExcel.CellContentClick += dataGridViewExcel_CellContentClick;
             // 
@@ -46,7 +46,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(654, 302);
+            ClientSize = new Size(714, 345);
             Controls.Add(dataGridViewExcel);
             Name = "AppRun";
             Text = "AppRun";
