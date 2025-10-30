@@ -160,7 +160,7 @@ namespace CapaIgu
                     MessageBox.Show("La imagen no se encontró en la ruta especificada: " + rutaImagen);
                 }
 
-                int margenDerecha = 125 + 5; // ancho del botón Create (123) + pequeño espacio
+                int margenDerecha = 120 + 5;
                 int margenArriba = 2;
 
                 objBtnImport.Location = new Point(
