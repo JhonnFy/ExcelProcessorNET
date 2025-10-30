@@ -1,7 +1,7 @@
 Capa Igu
 
-# 1- Borrar el fomulario que viene por defevto en esta clase.
-# 2- crear Un Formulario con el nombre de la App. Tipo AppRun o similar
+#  Borrar el fomulario que viene por defevto en esta clase.
+#  crear Un Formulario con el nombre de la App. Tipo AppRun o similar
 
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/5f76b323-fa38-4083-9863-6fcd43be1af4" />
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/0f233f61-fab3-41a4-9b19-f79e7a966b75" />
@@ -35,6 +35,11 @@ CapaControlador
 CapaNegocio
 CapaDatos
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/855c6943-421e-4202-a97c-1d398a932bba" />
+
+2-Instalar La Libreria Para Leer Excel Install-Package ClosedXML
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ae045678-9cf4-4c08-b819-3f69668e0c13" />
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/1aba6990-fc78-4026-9ea8-dce5a783c585" />
+
 
 
 
