@@ -55,11 +55,19 @@ namespace CapaIgu
             dataGridViewExcel.Columns.Add("Cb Documento", "Cb Documento");
             dataGridViewExcel.Columns.Add("CB Expediente", "CB Expediente");
             dataGridViewExcel.Columns.Add("CB Caja", "CB Caja");
-            dataGridViewExcel.Columns.Add("", "");
-            dataGridViewExcel.Columns.Add("", "");
+            dataGridViewExcel.Columns.Add("Btn_IMPORT", "");
+            dataGridViewExcel.Columns.Add("Btn_CREATE", "");
             dataGridViewExcel.RowHeadersVisible = false;
             dataGridViewExcel.AllowUserToResizeColumns = false;
             dataGridViewExcel.ScrollBars = ScrollBars.Vertical;
+            dataGridViewExcel.BackgroundColor = Color.White;
+
+            //Cordenadas De Las Columas
+            Rectangle rctImport = dataGridViewExcel.GetCellDisplayRectangle(
+                dataGridViewExcel.Columns["Btn_IMPORT"].Index, -1, true);
+            Rectangle objCreate = dataGridViewExcel.GetCellDisplayRectangle(
+                dataGridViewExcel.Columns["Btn_CREATE"].Index, -1, true
+            );
 
             foreach (DataGridViewColumn column in dataGridViewExcel.Columns)
             {
