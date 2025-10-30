@@ -30,12 +30,41 @@ namespace CapaIgu
                 MessageBoxButtons.OK,
                 resultado.estado ? MessageBoxIcon.Information : MessageBoxIcon.Error
             );
+            
 
             //Evita que cualquier control reciba foco al cargar
             this.BeginInvoke((Action)(() => this.ActiveControl = null));
+            ConfigurarDataGridView();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void ConfigurarDataGridView()
+        {
+            dataGridViewExcel.Columns.Clear();
+            dataGridViewExcel.AutoGenerateColumns = false;
+            dataGridViewExcel.AllowUserToAddRows = false;
+            dataGridViewExcel.ReadOnly = true;
+            dataGridViewExcel.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            dataGridViewExcel.Columns.Add("Radicado", "Radicado");
+            dataGridViewExcel.Columns.Add("Id", "Id");
+            dataGridViewExcel.Columns.Add("Empleado", "Empleado");
+            dataGridViewExcel.Columns.Add("Identificacion", "Identificacion");
+            dataGridViewExcel.Columns.Add("Tipo Documental", "Tipo Documental");
+            dataGridViewExcel.Columns.Add("Codigo De Barras", "Codigo De Barras");
+            dataGridViewExcel.Columns.Add("Cb Documento", "Cb Documento");
+            dataGridViewExcel.Columns.Add("CB Expediente", "CB Expediente");
+            dataGridViewExcel.Columns.Add("CB Caja", "CB Caja");
+            dataGridViewExcel.RowHeadersVisible = false;
+
+            foreach (DataGridViewColumn column in dataGridViewExcel.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                column.Width = 130;
+            }
+        }
+
+        private void dataGridViewExcel_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

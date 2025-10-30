@@ -28,45 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppRun));
-            btnImport = new Button();
-            btnCreate = new Button();
+            dataGridViewExcel = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewExcel).BeginInit();
             SuspendLayout();
             // 
-            // btnImport
+            // dataGridViewExcel
             // 
-            btnImport.BackgroundImage = (Image)resources.GetObject("btnImport.BackgroundImage");
-            btnImport.Location = new Point(12, 12);
-            btnImport.Name = "btnImport";
-            btnImport.Size = new Size(54, 50);
-            btnImport.TabIndex = 0;
-            btnImport.UseVisualStyleBackColor = true;
-            // 
-            // btnCreate
-            // 
-            btnCreate.BackgroundImage = (Image)resources.GetObject("btnCreate.BackgroundImage");
-            btnCreate.Location = new Point(72, 12);
-            btnCreate.Name = "btnCreate";
-            btnCreate.Size = new Size(54, 50);
-            btnCreate.TabIndex = 1;
-            btnCreate.UseVisualStyleBackColor = true;
+            dataGridViewExcel.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewExcel.Dock = DockStyle.Fill;
+            dataGridViewExcel.Location = new Point(0, 0);
+            dataGridViewExcel.Name = "dataGridViewExcel";
+            dataGridViewExcel.Size = new Size(654, 302);
+            dataGridViewExcel.TabIndex = 2;
+            dataGridViewExcel.CellContentClick += dataGridViewExcel_CellContentClick;
             // 
             // AppRun
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(737, 312);
-            Controls.Add(btnCreate);
-            Controls.Add(btnImport);
+            ClientSize = new Size(654, 302);
+            Controls.Add(dataGridViewExcel);
             Name = "AppRun";
             Text = "AppRun";
             Load += AppRun_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridViewExcel).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Button btnImport;
-        private Button btnCreate;
+        private DataGridView dataGridViewExcel;
     }
 }
