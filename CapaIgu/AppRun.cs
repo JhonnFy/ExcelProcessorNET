@@ -32,9 +32,14 @@ namespace CapaIgu
             );
 
 
-            //Evita que cualquier control reciba foco al cargar
             this.BeginInvoke((Action)(() => this.ActiveControl = null));
             ConfigurarDataGridView();
+        }
+
+
+        private void dataGridViewExcel_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
 
@@ -66,19 +71,35 @@ namespace CapaIgu
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
                 column.Width = 124;
-            }
-                    
+}
+
         }
+               
 
-
-
-
-
-        private void dataGridViewExcel_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnCreate_Click(object sender, EventArgs e)
         {
+            btnCreate.Size = new Size(123, 21);
+            btnCreate.FlatStyle = FlatStyle.Flat;
+            btnCreate.UseVisualStyleBackColor = false;
+            btnCreate.FlatAppearance.BorderSize = 0;
+            btnCreate.FlatAppearance.MouseOverBackColor = Color.White;
+            btnCreate.FlatAppearance.MouseDownBackColor = Color.White;
 
+            Image original = btnCreate.BackgroundImage;
+            btnCreate.BackgroundImage = new Bitmap(original, new Size(50,20));
+            btnCreate.BackgroundImageLayout = ImageLayout.Center;
+            btnCreate.ImageAlign = ContentAlignment.MiddleCenter;
+            
+
+            int margenDerecha = 1;
+            int margenArriba = 2;
+
+            btnCreate.Location = new Point(
+                this.ClientSize.Width - btnCreate.Width - margenDerecha,
+                margenArriba
+            );
+
+            btnCreate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         }
-
-
     }
 }

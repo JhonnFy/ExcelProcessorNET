@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AppRun));
             dataGridViewExcel = new DataGridView();
+            btnCreate = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewExcel).BeginInit();
             SuspendLayout();
             // 
@@ -42,11 +44,22 @@
             dataGridViewExcel.TabIndex = 2;
             dataGridViewExcel.CellContentClick += dataGridViewExcel_CellContentClick;
             // 
+            // btnCreate
+            // 
+            btnCreate.BackgroundImage = (Image)resources.GetObject("btnCreate.BackgroundImage");
+            btnCreate.Location = new Point(473, 36);
+            btnCreate.Name = "btnCreate";
+            btnCreate.Size = new Size(123, 21);
+            btnCreate.TabIndex = 3;
+            btnCreate.UseVisualStyleBackColor = true;
+            btnCreate.Click += btnCreate_Click;
+            // 
             // AppRun
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(699, 345);
+            Controls.Add(btnCreate);
             Controls.Add(dataGridViewExcel);
             Name = "AppRun";
             Text = "AppRun";
@@ -57,5 +70,6 @@
 
         #endregion
         private DataGridView dataGridViewExcel;
+        private Button btnCreate;
     }
 }
