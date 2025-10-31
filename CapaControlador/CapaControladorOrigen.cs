@@ -16,13 +16,15 @@ namespace CapaControlador
             objCapaNegocioOrigen = new CapaNegocioOrigen();
         }
 
-        // Método para importar registros desde Excel y devolver la lista de modelos
+
         public List<ModeloCodigoDeBarrasOrigen> ImportarDesdeExcel(string rutaArchivo)
         {
             var listaExcel = new List<ModeloCodigoDeBarrasOrigen>();
 
             try
             {
+                Console.WriteLine("[CapaControladorOrigen].[ImportarDesdeExcel] Leyendo archivo Excel");
+
                 if (!File.Exists(rutaArchivo))
                     throw new FileNotFoundException("[ImportarDesdeExcel].[El Archivo no Existe]", rutaArchivo);
 
@@ -49,20 +51,25 @@ namespace CapaControlador
                     }
                 }
 
-                // Invocar Negocio para guardar en DB
+                Console.WriteLine($"[CapaControladorOrigen].[ImportarDesdeExcel] Total registros leídos: {listaExcel.Count}");
+                Console.WriteLine("[CapaControladorOrigen].[ImportarDesdeExcel] Enviando lista a CapaNegocio");
+
                 int totalGuardados = objCapaNegocioOrigen.GuardarListaOrigen(listaExcel);
-                Console.WriteLine($"[CapaControladorOrigen] Total de registros guardados: {totalGuardados}");
+
+                Console.WriteLine("[CapaControladorOrigen].[ImportarDesdeExcel] Guardado completado correctamente.");
+                Console.WriteLine($"[CapaControladorOrigen].[ImportarDesdeExcel] Total de registros guardados: {totalGuardados}");
+
             }
             catch (Exception ex)
             {
-                // Lanzar excepción para que la IGU pueda capturarla
+
                 throw new Exception("ERROR [Capa ControladorOrigen].[ImportarDesdeExcel] " + ex.Message, ex);
             }
 
             return listaExcel;
         }
 
-        // Método para guardar registros directamente desde lista
+
         public int GuardarRegistrosOrigen(List<ModeloCodigoDeBarrasOrigen> listaExcel)
         {
             if (listaExcel == null || listaExcel.Count == 0)
