@@ -20,7 +20,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                throw new Exception("Error al inicializar la conexión: " + ex.Message);
+                throw new Exception("ERROR [Capa Datos Conexion].[Cadenda Conexion] " + ex.Message);
             }
         }
 
@@ -37,11 +37,11 @@ namespace CapaDatos
             }
             catch (SqlException ex)
             {
-                return (false, $"Error SQL {ex.Number}: {ex.Message}");
+                return (false, $"ERROR [Capa Datos Conexion].[SQL] {ex.Number}: {ex.Message}");
             }
             catch (Exception ex)
             {
-                return (false, $"Error general: {ex.Message}");
+                return (false, $"ERROR [Capa Datos Conexion].[SQL] {ex.Message}");
             }
         }
 
