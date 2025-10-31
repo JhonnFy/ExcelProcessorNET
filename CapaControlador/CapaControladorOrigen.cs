@@ -1,29 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 using OfficeOpenXml;
 using CapaNegocio;
 using CapaDatos;
 
-
 namespace CapaControlador
 {
     public class CapaControladorOrigen
     {
-        private readonly CapaNegocioOrigen capaNegocioOrigen;
-
-        CapaNegocioOrigen objCapaNegocioOrigen;
+        private readonly CapaNegocioOrigen objCapaNegocioOrigen;
 
         public CapaControladorOrigen()
         {
             objCapaNegocioOrigen = new CapaNegocioOrigen();
         }
 
-
-        //Metodo Para Importar Registros/Retorno De Modelos
+        // Método para importar registros desde Excel y devolver la lista de modelos
         public List<ModeloCodigoDeBarrasOrigen> ImportarDesdeExcel(string rutaArchivo)
         {
             var listaExcel = new List<ModeloCodigoDeBarrasOrigen>();
@@ -31,16 +24,14 @@ namespace CapaControlador
             try
             {
                 if (!File.Exists(rutaArchivo))
-                {
                     throw new FileNotFoundException("[ImportarDesdeExcel].[El Archivo no Existe]", rutaArchivo);
-                }
 
                 using (var package = new ExcelPackage(new FileInfo(rutaArchivo)))
                 {
                     ExcelWorksheet hoja = package.Workbook.Worksheets[0];
                     int filas = hoja.Dimension.End.Row;
 
-                    for(int row = 2; row <= filas; row++)
+                    for (int row = 2; row <= filas; row++)
                     {
                         var objModelo = new ModeloCodigoDeBarrasOrigen
                         {
@@ -58,43 +49,34 @@ namespace CapaControlador
                     }
                 }
 
-
-                //Imbocar Negocio Para Guardar En dB
+                // Invocar Negocio para guardar en DB
                 int totalGuardados = objCapaNegocioOrigen.GuardarListaOrigen(listaExcel);
                 Console.WriteLine($"[CapaControladorOrigen] Total de registros guardados: {totalGuardados}");
-
-
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[ImportarDesdeExcel] Error al guardar los registros: {ex.Message}");
+                // Lanzar excepción para que la IGU pueda capturarla
+                throw new Exception("[ImportarDesdeExcel].[Error al guardar los registros] " + ex.Message, ex);
             }
 
             return listaExcel;
-
         }
 
-
-
+        // Método para guardar registros directamente desde lista
         public int GuardarRegistrosOrigen(List<ModeloCodigoDeBarrasOrigen> listaExcel)
         {
             if (listaExcel == null || listaExcel.Count == 0)
-            {
-                Console.WriteLine("[CapaControladorOrigen] La lista de registros está vacía o es nula.");
-                return 0;
-            }
-                       
+                throw new ArgumentException("[GuardarRegistrosOrigen].[La lista de registros está vacía o es nula]");
+
             try
             {
                 int totalGuardados = objCapaNegocioOrigen.GuardarListaOrigen(listaExcel);
                 Console.WriteLine($"[CapaControladorOrigen] Total de registros guardados: {totalGuardados}");
                 return totalGuardados;
-
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[CapaControladorOrigen] Error al guardar los registros: {ex.Message}");
-                throw;
+                throw new Exception("[GuardarRegistrosOrigen].[Error al guardar los registros] " + ex.Message, ex);
             }
         }
     }

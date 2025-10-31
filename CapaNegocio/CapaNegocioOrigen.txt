@@ -9,49 +9,40 @@ namespace CapaNegocio
 {
     public class CapaNegocioOrigen
     {
-        //Instancia para acceder a la capa de datos
-        private CrudCodigoDeBarrasOrigen datosOrigen;
 
-        //Constructor
+        private readonly CrudCodigoDeBarrasOrigen datosOrigen;
+
+
         public CapaNegocioOrigen()
         {
             datosOrigen = new CrudCodigoDeBarrasOrigen();
         }
 
-        //Método para guardar todos los registros de origen
+
         public int GuardarListaOrigen(List<ModeloCodigoDeBarrasOrigen> listaExcel)
         {
             if (listaExcel == null || listaExcel.Count == 0)
-                return 0; // No hay registros que guardar
+                return 0; 
 
             int totalGuardados = 0;
 
-            try
+            foreach (var registroOrigen in listaExcel)
             {
 
-                foreach (var registroOrigen in listaExcel)
+                try
                 {
-
-                    if (string.IsNullOrWhiteSpace(registroOrigen.Identificacion))
-                    {
-                        Console.WriteLine($"[CapaNegocioOrigen] Registro sin Identificación, omitido.");
-                        continue;
-                    }
-
-                    // Intentar guardar cada registro
                     bool exito = datosOrigen.CreateOrigen(registroOrigen);
                     if (exito)
                         totalGuardados++;
                 }
-
-                Console.WriteLine($"[CapaNegocioOrigen] Proceso completado. Total guardados: {totalGuardados} de {listaExcel.Count}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"[CapaNegocioOrigen] Error al guardar la lista de origen: {ex.Message}");
-                throw;
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"[CapaNegocioOrigen] Error al guardar la lista de origen: {ex.Message}");
+                    throw;
+                }
             }
 
+            Console.WriteLine($"[CapaNegocioOrigen] Total de registros guardados correctamente: {totalGuardados} de {listaExcel.Count}");
             return totalGuardados;
         }
     }
