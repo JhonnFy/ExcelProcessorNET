@@ -56,7 +56,7 @@ namespace CapaControlador
             catch (Exception ex)
             {
                 // Lanzar excepción para que la IGU pueda capturarla
-                throw new Exception("[ImportarDesdeExcel].[Error al guardar los registros] " + ex.Message, ex);
+                throw new Exception("ERROR [Capa ControladorOrigen].[ImportarDesdeExcel] " + ex.Message, ex);
             }
 
             return listaExcel;
@@ -76,7 +76,7 @@ namespace CapaControlador
             }
             catch (Exception ex)
             {
-                throw new Exception("[GuardarRegistrosOrigen].[Error al guardar los registros] " + ex.Message, ex);
+                throw new Exception("ERROR [Capa ControladorOrigen].[GuardarRegistrosOrigen] " + ex.Message, ex);
             }
         }
     }
