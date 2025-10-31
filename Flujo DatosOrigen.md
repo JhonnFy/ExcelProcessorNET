@@ -23,3 +23,11 @@ Mantiene el principio de separación de responsabilidades: reglas de negocio se 
 La capa Datos tiene los métodos CRUD (CreateOrigen, ReadOrigen, etc.).
 Recibe cada modelo de negocio y hace los inserts en la base de datos.
 Aquí se asegura que se guarden correctamente los registros.
+
+
+Flujo completo
+IGU → Usuario elige Excel → pasa ruta al Controlador.
+Controlador → Lee Excel con EPPlus → crea lista de modelos.
+Controlador → Llama Negocio → Negocio guarda en Datos.
+Datos → Inserta cada registro en la base de datos.
+Controlador → Retorna lista a IGU → IGU muestra en DataGridView.
