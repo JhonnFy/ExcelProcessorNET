@@ -12,6 +12,7 @@ using CapaNegocio;
 using CapaControlador;
 using System.IO;
 using OfficeOpenXml;
+using System.IO.Compression;
 
 
 namespace CapaIgu
@@ -89,6 +90,38 @@ namespace CapaIgu
 
         }
 
+        private void InsertarDatosDataGridView(List<ModeloCodigoDeBarrasOrigen> lista)
+        {
+            try
+            {
+                dataGridViewExcel.Rows.Clear();
+
+                foreach (var atributo in lista)
+                {
+                    dataGridViewExcel.Rows.Add(
+                        atributo.Radicado,
+                        atributo.Id,
+                        atributo.Empleado,
+                        atributo.Identificacion,
+                        atributo.TipoDocumental,
+                        atributo.CodigoDeBarrasRecepcion,
+                        atributo.CbDocumento,
+                        atributo.CbExpediente,
+                        atributo.CbCaja,
+                        "",
+                        ""
+                    );
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error [InsertarDatosDataGridView] " + ex.Message);
+            }
+
+        }
+
+
         private void ConstruirBtnCreate()
         {
             try
@@ -124,7 +157,9 @@ namespace CapaIgu
                 objBtnCreate.Location = new Point(
                      this.ClientSize.Width - objBtnCreate.Width - margenDerecha,
                      margenArriba
-                 );
+                );
+
+                
 
                 objBtnCreate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 this.Controls.Add(objBtnCreate);
@@ -173,6 +208,36 @@ namespace CapaIgu
                     margenArriba
                 );
 
+
+                //Evento Click
+                objBtnImport.Click += (s, e) =>
+                {
+                    try
+                    {
+                        OpenFileDialog dialog = new OpenFileDialog
+                        {
+                            Filter = "Archivos de Excel (*.xlsx)|*.xlsx|Todos los archivos (*.*)|*.*",
+                            Title = "Seleccionar Archivo Excel"
+                        };
+
+                        if (dialog.ShowDialog() == DialogResult.OK)
+                        {
+                            string rutaArchivo = dialog.FileName;
+
+                            //Enviar Al Controlador
+                            var controlador = new CapaControladorOrigen();
+                            //var lista = controlador.ImportarDesdeExcel(rutaArchivo);
+                            //InsertarDatosDataGridView(lista);
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error En Evento Click Del Btn Import " +ex.Message);
+                    }
+                };
+
+
                 objBtnImport.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 this.Controls.Add(objBtnImport);
                 objBtnImport.BringToFront();
@@ -185,78 +250,7 @@ namespace CapaIgu
         }
 
 
-        public void ImportarDatosExcel()
-        {
-            try
-            {
-                OpenFileDialog objOpenfile = new OpenFileDialog();
-                objOpenfile.Filter = "Archivos de Excel (*.xlsx)|*.xlsx|Todos los archivos (*.*)|*.*";
-                objOpenfile.Title = "Seleccionar archivo de Excel";
-
-                if (objOpenfile.ShowDialog() == DialogResult.OK)
-                {
-                    string rutaArchivo = objOpenfile.FileName;
-                    var listaExcel = new List<ModeloCodigoDeBarrasOrigen>();
-
-                    // Abrir el archivo con EPPlus
-                    using (var package = new ExcelPackage(new FileInfo(rutaArchivo)))
-                    {
-                        ExcelWorksheet hoja = package.Workbook.Worksheets[0];
-                        int filas = hoja.Dimension.End.Row;
-                        int columnas = hoja.Dimension.End.Column;
-
-                        for (int row = 2; row <=filas; row++)
-                        {
-                            var obj = new ModeloCodigoDeBarrasOrigen
-                            {
-                                Radicado = Convert.ToInt64(hoja.Cells[row,1].Value ?? 0),
-                                Id = Convert.ToInt64(hoja.Cells[row, 2].Value ?? 0),
-                                Empleado = hoja.Cells[row, 3].Value?.ToString() ?? "",
-                                Identificacion = hoja.Cells[row,4].Value?.ToString() ?? "",
-                                TipoDocumental = hoja.Cells[row,5].Value?.ToString() ?? "",
-                                CodigoDeBarrasRecepcion = hoja.Cells[row,6].Value?.ToString() ?? "",
-                                CbDocumento = hoja.Cells[row,7].Value?.ToString() ?? "",
-                                CbExpediente = hoja.Cells[row, 8].Value?.ToString() ?? "",
-                                CbCaja = hoja.Cells[row, 9].Value?.ToString() ?? ""
-                            };
-
-                            listaExcel.Add(obj);
-                        }
-                    }
-
-                    // Mostrar los datos en el DataGridView
-                    dataGridViewExcel.Rows.Clear();
-                    foreach (var item in listaExcel)
-                    {
-                        dataGridViewExcel.Rows.Add(
-                            item.Radicado,
-                            item.Id,
-                            item.Empleado,
-                            item.Identificacion,
-                            item.TipoDocumental,
-                            item.CodigoDeBarrasRecepcion,
-                            item.CbDocumento,
-                            item.CbExpediente,
-                            item.CbCaja,
-                            "", // Celda vacía para el botón IMPORT
-                            "" // Celda vacía para el botón CREATE
-                        );
-                    }
-
-                    // Enviar al controlador para guardar en la DB
-                    CapaControladorOrigen controlador = new CapaControladorOrigen();
-                    int totalGuardados = controlador .GuardarRegistrosOrigen(listaExcel);
-                    MessageBox.Show($"Total de registros guardados: {totalGuardados}", "Importación completa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al importar datos desde Excel [ImportarDatosExcel]: " + ex.Message);
-            }
-        }
-
+        
 
     }
 }
