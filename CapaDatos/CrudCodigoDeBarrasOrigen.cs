@@ -51,7 +51,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                throw new Exception("[ReadOrigen].[Error al leer los orígenes de código de barras] " + ex.Message);
+                throw new Exception("ERROR [Capa CrudCodigoDeBarrasOrigen].[ReadOrigen] " + ex.Message);
             }
 
             return listaReadOrigen;
@@ -104,7 +104,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                throw new Exception("[ReadOrigenPorId].[Error al leer el código de barras por Id]" + ex.Message);
+                throw new Exception("ERROR [Capa CrudCodigoDeBarrasOrigen].[ReadOrigenId]" + ex.Message);
             }
             return listaReadOrigenId;
         }
@@ -142,7 +142,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                throw new Exception("[CreateOrigen].[Error al crear el código de barras origen] " + ex.Message);
+                throw new Exception("ERROR [Capa CrudCodigoDeBarrasOrigen].[CreateOrigen] " + ex.Message);
             }
         }
 
@@ -183,7 +183,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                throw new Exception("[UpdateOrigen].[Error al actualizar el código de barras origen] " + ex.Message);
+                throw new Exception("ERROR [Capa CrudCodigoDeBarrasOrigen].[UpdateOrigen] " + ex.Message);
             }
         }
 
@@ -209,7 +209,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
-                throw new Exception("[DeleteOrigen].[Error al eliminar el código de barras origen] " + ex.Message);
+                throw new Exception("ERROR [Capa CrudCodigoDeBarrasOrigen].[DeleteOrigen] " + ex.Message);
             }
         }
 
