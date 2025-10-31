@@ -1,15 +1,25 @@
+using System;
+using System.Runtime.InteropServices;
+using OfficeOpenXml;
+using System.Windows.Forms;
+
 namespace CapaIgu
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        static extern bool AllocConsole();
+
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
+            AllocConsole(); 
+
+
+            ExcelPackage.License.SetNonCommercialPersonal("JhonFy");
+
             ApplicationConfiguration.Initialize();
             Application.Run(new AppRun());
         }
