@@ -226,8 +226,8 @@ namespace CapaIgu
 
                             //Enviar Al Controlador
                             var controlador = new CapaControladorOrigen();
-                            //var lista = controlador.ImportarDesdeExcel(rutaArchivo);
-                            //InsertarDatosDataGridView(lista);
+                            var lista = controlador.ImportarDesdeExcel(rutaArchivo);
+                            InsertarDatosDataGridView(lista);
                         }
 
                     }
