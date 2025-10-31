@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Configuration;
-using Microsoft.Data.SqlClient;
+using System.Diagnostics;
 
 namespace CapaDatos
 {
@@ -15,11 +16,13 @@ namespace CapaDatos
                 var cs = ConfigurationManager.ConnectionStrings["CadenaSQL"];
                 if (cs == null || string.IsNullOrEmpty(cs.ConnectionString))
                     throw new Exception("No se encontró la cadena de conexión 'CadenaSQL' o está vacía.");
+                Debug.WriteLine("[****].[ERROR] [Capa Datos Conexion].[No se encontró la cadena de conexión 'CadenaSQL' o está vacía.]");
 
                 cadenaConexion = cs.ConnectionString;
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("[****].[ERROR] [Capa Datos Conexion].[Cadenda Conexion]");
                 throw new Exception("ERROR [Capa Datos Conexion].[Cadenda Conexion] " + ex.Message);
             }
         }
@@ -31,16 +34,20 @@ namespace CapaDatos
             {
                 using (var conn = new SqlConnection(cadenaConexion))
                 {
+
                     conn.Open();
+                    Debug.WriteLine("[****].[OK].[CapaDatos].[Conexion Exitosa dB]");
                     return (true, "Conexión exitosa a la base de datos.");
                 }
             }
             catch (SqlException ex)
             {
+                Debug.WriteLine("[****].[ERROR] [Capa Datos Conexion].[Cadenda Conexion]");
                 return (false, $"ERROR [Capa Datos Conexion].[SQL] {ex.Number}: {ex.Message}");
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("[****].[ERROR] [Capa Datos Conexion].[Cadenda Conexion]");
                 return (false, $"ERROR [Capa Datos Conexion].[SQL] {ex.Message}");
             }
         }

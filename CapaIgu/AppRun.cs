@@ -1,18 +1,19 @@
-﻿using System;
+﻿using CapaControlador;
+using CapaDatos;
+using CapaNegocio;
+using OfficeOpenXml;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CapaDatos;
-using CapaNegocio;
-using CapaControlador;
-using System.IO;
-using OfficeOpenXml;
-using System.IO.Compression;
 
 
 namespace CapaIgu
@@ -26,9 +27,10 @@ namespace CapaIgu
 
         private void AppRun_Load(object sender, EventArgs e)
         {
+            Debug.WriteLine("[****].[OK].[Paso 0].[CapaIgu].[AppRun_Load].[Iniciando aplicación]");
             var conexion = new Conexion();
-
             var resultado = conexion.ProbarConexion();
+            Debug.WriteLine("[****].[OK].[Paso 0.1].[CapaIgu].[AppRun_Load].[Conexión a la base de datos ejecutada]");
 
             MessageBox.Show(
                 resultado.mensaje,
@@ -36,7 +38,7 @@ namespace CapaIgu
                 MessageBoxButtons.OK,
                 resultado.estado ? MessageBoxIcon.Information : MessageBoxIcon.Error
             );
-
+            Debug.WriteLine($"[****].[OK].[Paso 0.2].[CapaIgu].[AppRun_Load].[UI Inicializada — DataGrid y Botones en construcción]");
 
             this.BeginInvoke((Action)(() => this.ActiveControl = null));
             ConfigurarDataGridView();
@@ -55,6 +57,7 @@ namespace CapaIgu
         {
             try
             {
+                Debug.WriteLine("[****].[OK].[Paso 1].[CapaIgu].[ConfigurarDataGridView iniciado]");
                 dataGridViewExcel.Columns.Clear();
                 dataGridViewExcel.AutoGenerateColumns = false;
                 dataGridViewExcel.AllowUserToAddRows = false;
@@ -82,9 +85,11 @@ namespace CapaIgu
                     column.SortMode = DataGridViewColumnSortMode.NotSortable;
                     column.Width = 124;
                 }
+                Debug.WriteLine("[****].[OK].[Paso 1.1].[CapaIgu].[DataGridView configurado correctamente]");
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("[****].[ERROR].[CapaIgu].[ConfigurarDataGridView] " + ex.Message);
                 MessageBox.Show("ERROR [Capa IGU].[ConfigurarDataGridView] " + ex.Message);
             }
 
@@ -94,6 +99,7 @@ namespace CapaIgu
         {
             try
             {
+                Debug.WriteLine("[****].[OK].[Paso 5].[CapaIgu].[InsertarDatosDataGridView iniciado]");
                 dataGridViewExcel.Rows.Clear();
 
                 foreach (var atributo in lista)
@@ -112,10 +118,12 @@ namespace CapaIgu
                         ""
                     );
                 }
+                Debug.WriteLine("[****].[OK].[Paso 6].[CapaIgu].[Datos insertados en DataGridView correctamente]");
 
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("[****].[ERROR].[CapaIgu].[InsertarDatosDataGridView] " + ex.Message);
                 MessageBox.Show("ERROR [Capa IGU].[InsertarDatosDataGridView] " + ex.Message);
             }
 
@@ -126,6 +134,8 @@ namespace CapaIgu
         {
             try
             {
+                Debug.WriteLine("[****].[OK].[Paso 2].[CapaIgu].[ConstruirBtnCreate Iniciado]");
+
                 Button objBtnCreate = new Button();
 
                 objBtnCreate.Size = new Size(123, 21);
@@ -147,6 +157,7 @@ namespace CapaIgu
                 }
                 else
                 {
+                    Debug.WriteLine("[****].[ADVERTENCIA].[CapaIgu].[Imagen no encontrada para btnCreate]");
                     MessageBox.Show("La imagen no se encontró en la ruta especificada: " + rutaImagen);
                 }
 
@@ -164,9 +175,12 @@ namespace CapaIgu
                 objBtnCreate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 this.Controls.Add(objBtnCreate);
                 objBtnCreate.BringToFront();
+
+                Debug.WriteLine("[****].[OK].[Paso 2.1].[CapaIgu].[Botón CREATE construido correctamente]");
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("[****].[ERROR].[CapaIgu].[ConstruirBtnCreate] " + ex.Message);
                 MessageBox.Show("ERROR [Capa IGU].[ConstruirBtnCreate] " + ex.Message);
             }
         }
@@ -176,6 +190,7 @@ namespace CapaIgu
         {
             try
             {
+                Debug.WriteLine("[****].[OK].[Paso 3].[CapaIgu].[ConstruirBtnImport iniciado]");
                 Button objBtnImport = new Button();
 
                 objBtnImport.Size = new Size(123, 21);
@@ -197,6 +212,7 @@ namespace CapaIgu
                 }
                 else
                 {
+                    Debug.WriteLine("[****].[ADVERTENCIA].[CapaIgu].[Imagen no encontrada para btnImport]");
                     MessageBox.Show("La imagen no se encontró en la ruta especificada: " + rutaImagen);
                 }
 
@@ -214,6 +230,7 @@ namespace CapaIgu
                 {
                     try
                     {
+                        Debug.WriteLine("[****].[OK].[Paso 4].[CapaIgu].[Click en botón Importar detectado]");
                         OpenFileDialog dialog = new OpenFileDialog
                         {
                             Filter = "Archivos de Excel (*.xlsx)|*.xlsx|Todos los archivos (*.*)|*.*",
@@ -223,16 +240,19 @@ namespace CapaIgu
                         if (dialog.ShowDialog() == DialogResult.OK)
                         {
                             string rutaArchivo = dialog.FileName;
+                            Debug.WriteLine($"[****].[ok].[Paso 4.1].[Archivo seleccionado: {rutaArchivo}");
 
                             //Enviar Al Controlador
                             var controlador = new CapaControladorOrigen();
                             var lista = controlador.ImportarDesdeExcel(rutaArchivo);
                             InsertarDatosDataGridView(lista);
+                            Debug.WriteLine("[****].[OK].[Paso 4.3].[Datos recibidos y enviados al DataGridView]");
                         }
 
                     }
                     catch (Exception ex)
                     {
+                        Debug.WriteLine("[****].[ERROR].[CapaIgu].[Evento Click Import] " + ex.Message);
                         MessageBox.Show("ERROR [Capa IGU].[Evento Click] " + ex.Message);
                     }
                 };
@@ -241,10 +261,12 @@ namespace CapaIgu
                 objBtnImport.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 this.Controls.Add(objBtnImport);
                 objBtnImport.BringToFront();
+                Debug.WriteLine("[****].[OK].[Paso 3.1].[CapaIgu].[Botón IMPORT construido correctamente]");
 
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("[****].[ERROR].[CapaIgu].[ConstruirBtnImport] " + ex.Message);
                 MessageBox.Show("ERROR [Capa IGU].[ConstruirBtnImport] " + ex.Message);
             }
         }

@@ -37,12 +37,12 @@ namespace CapaNegocio
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"ERROR [CapaNegocioOrigen].[GuardarListaOrigen]: {ex.Message}");
+                    //Console.WriteLine($"ERROR [CapaNegocioOrigen].[GuardarListaOrigen]: {ex.Message}");
                     throw;
                 }
             }
 
-            Console.WriteLine($"[CapaNegocioOrigen] Total de registros guardados correctamente: {totalGuardados} de {listaExcel.Count}");
+            //Console.WriteLine($"[CapaNegocioOrigen] Total de registros guardados correctamente: {totalGuardados} de {listaExcel.Count}");
             return totalGuardados;
         }
     }

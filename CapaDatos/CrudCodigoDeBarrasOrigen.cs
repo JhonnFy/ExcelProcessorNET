@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Data.SqlClient;
 
 namespace CapaDatos
 {
@@ -51,6 +52,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("[****].[ERROR].[Capa CrudCodigoDeBarrasOrigen].[ReadOrigen]");
                 throw new Exception("ERROR [Capa CrudCodigoDeBarrasOrigen].[ReadOrigen] " + ex.Message);
             }
 
@@ -104,6 +106,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("[****].[ERROR].[Capa CrudCodigoDeBarrasOrigen].[ReadOrigen]");
                 throw new Exception("ERROR [Capa CrudCodigoDeBarrasOrigen].[ReadOrigenId]" + ex.Message);
             }
             return listaReadOrigenId;
@@ -142,6 +145,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("[****].[ERROR].[Capa CrudCodigoDeBarrasOrigen].[CreateOrigen]");
                 throw new Exception("ERROR [Capa CrudCodigoDeBarrasOrigen].[CreateOrigen] " + ex.Message);
             }
         }
@@ -183,6 +187,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("[****].[ERROR].[Capa CrudCodigoDeBarrasOrigen].[UpdateOrigen]");
                 throw new Exception("ERROR [Capa CrudCodigoDeBarrasOrigen].[UpdateOrigen] " + ex.Message);
             }
         }
@@ -209,6 +214,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("[****].[ERROR].[Capa CrudCodigoDeBarrasOrigen].[DeleteOrigen]");
                 throw new Exception("ERROR [Capa CrudCodigoDeBarrasOrigen].[DeleteOrigen] " + ex.Message);
             }
         }

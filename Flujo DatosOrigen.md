@@ -1,3 +1,7 @@
+Limipiar la tabla: 
+	--DELETE FROM CodigoDeBarrasOrigen
+	--DBCC CHECKIDENT ('CodigoDeBarrasOrigen', RESEED, 0);
+
 1 IGU (Interfaz Gráfica de Usuario)
 Usuario abre la aplicación.
 Cuando presiona el botón Importar, se abre un OpenFileDialog para seleccionar un archivo Excel.

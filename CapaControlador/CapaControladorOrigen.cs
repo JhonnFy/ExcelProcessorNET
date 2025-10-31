@@ -23,7 +23,7 @@ namespace CapaControlador
 
             try
             {
-                Console.WriteLine("[CapaControladorOrigen].[ImportarDesdeExcel] Leyendo archivo Excel");
+                ////Console.WriteLine("[CapaControladorOrigen].[ImportarDesdeExcel] Leyendo archivo Excel");
 
                 if (!File.Exists(rutaArchivo))
                     throw new FileNotFoundException("[ImportarDesdeExcel].[El Archivo no Existe]", rutaArchivo);
@@ -51,13 +51,13 @@ namespace CapaControlador
                     }
                 }
 
-                Console.WriteLine($"[CapaControladorOrigen].[ImportarDesdeExcel] Total registros leídos: {listaExcel.Count}");
-                Console.WriteLine("[CapaControladorOrigen].[ImportarDesdeExcel] Enviando lista a CapaNegocio");
+                ////Console.WriteLine($"[CapaControladorOrigen].[ImportarDesdeExcel] Total registros leídos: {listaExcel.Count}");
+                ////Console.WriteLine("[CapaControladorOrigen].[ImportarDesdeExcel] Enviando lista a CapaNegocio");
 
                 int totalGuardados = objCapaNegocioOrigen.GuardarListaOrigen(listaExcel);
 
-                Console.WriteLine("[CapaControladorOrigen].[ImportarDesdeExcel] Guardado completado correctamente.");
-                Console.WriteLine($"[CapaControladorOrigen].[ImportarDesdeExcel] Total de registros guardados: {totalGuardados}");
+                ////Console.WriteLine("[CapaControladorOrigen].[ImportarDesdeExcel] Guardado completado correctamente.");
+                //Console.WriteLine($"[CapaControladorOrigen].[ImportarDesdeExcel] Total de registros guardados: {totalGuardados}");
 
             }
             catch (Exception ex)
@@ -78,7 +78,7 @@ namespace CapaControlador
             try
             {
                 int totalGuardados = objCapaNegocioOrigen.GuardarListaOrigen(listaExcel);
-                Console.WriteLine($"[CapaControladorOrigen] Total de registros guardados: {totalGuardados}");
+                //Console.WriteLine($"[CapaControladorOrigen] Total de registros guardados: {totalGuardados}");
                 return totalGuardados;
             }
             catch (Exception ex)
