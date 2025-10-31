@@ -37,7 +37,7 @@ namespace CapaNegocio
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"[CapaNegocioOrigen] Error al guardar la lista de origen: {ex.Message}");
+                    Console.WriteLine($"ERROR [Capa NEGOCIO].[GuardarListaOrigen]: {ex.Message}");
                     throw;
                 }
             }
