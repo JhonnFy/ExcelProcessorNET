@@ -60,4 +60,6 @@ Instalar Libreria EPPlus
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/cbc87a3b-5772-4bc8-b783-fe54df0ce7c2" />
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/ce12f1e2-5ce7-41b9-ba75-7bab0b119edf" />
 
+Limpiar la tabla, y resetear el IdIdentity
+DBCC CHECKIDENT ('CodigoDeBarrasOrigen', RESEED, 0);
 
