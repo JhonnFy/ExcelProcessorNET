@@ -85,7 +85,7 @@ namespace CapaIgu
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error En El DataGridView " + ex.Message);
+                MessageBox.Show("ERROR [Capa IGU].[ConfigurarDataGridView] " + ex.Message);
             }
 
         }
@@ -116,7 +116,7 @@ namespace CapaIgu
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error [InsertarDatosDataGridView] " + ex.Message);
+                MessageBox.Show("ERROR [Capa IGU].[InsertarDatosDataGridView] " + ex.Message);
             }
 
         }
@@ -167,7 +167,7 @@ namespace CapaIgu
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al crear el botón [ConstruirBtnCreate] " + ex.Message);
+                MessageBox.Show("ERROR [Capa IGU].[ConstruirBtnCreate] " + ex.Message);
             }
         }
 
@@ -233,7 +233,7 @@ namespace CapaIgu
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error En Evento Click Del Btn Import " +ex.Message);
+                        MessageBox.Show("ERROR [Capa IGU].[Evento Click] " + ex.Message);
                     }
                 };
 
@@ -245,12 +245,9 @@ namespace CapaIgu
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al crear el botón [ConstruirBtnImport] " + ex.Message);
+                MessageBox.Show("ERROR [Capa IGU].[ConstruirBtnImport] " + ex.Message);
             }
         }
-
-
-        
 
     }
 }
