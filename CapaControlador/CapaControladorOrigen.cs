@@ -4,6 +4,7 @@ using System.IO;
 using OfficeOpenXml;
 using CapaNegocio;
 using CapaDatos;
+using System.Diagnostics;
 
 namespace CapaControlador
 {
@@ -23,7 +24,11 @@ namespace CapaControlador
 
             try
             {
-                ////Console.WriteLine("[CapaControladorOrigen].[ImportarDesdeExcel] Leyendo archivo Excel");
+                Debug.WriteLine("[****].[OK].[CapaControladorOrigen].[ImportarDesdeExcel].[Leyendo archivo Excel]");
+
+                objCapaNegocioOrigen.LimpiarCodigoDeBarrasOrigen();
+                Debug.WriteLine("[****].[OK].[CapaControladorOrigen].[ImportarDesdeExcel].[Tabla CodigoDeBarrasOrigen limpiada]");
+
 
                 if (!File.Exists(rutaArchivo))
                     throw new FileNotFoundException("[ImportarDesdeExcel].[El Archivo no Existe]", rutaArchivo);
@@ -51,18 +56,17 @@ namespace CapaControlador
                     }
                 }
 
-                ////Console.WriteLine($"[CapaControladorOrigen].[ImportarDesdeExcel] Total registros leídos: {listaExcel.Count}");
-                ////Console.WriteLine("[CapaControladorOrigen].[ImportarDesdeExcel] Enviando lista a CapaNegocio");
+                Debug.WriteLine($"[****].[OK].[CapaControladorOrigen].[ImportarDesdeExcel]: {listaExcel.Count}");
+                Debug.WriteLine("[****].[OK].[CapaControladorOrigen].[ImportarDesdeExcel].[Enviando lista a CapaNegocio]");
 
                 int totalGuardados = objCapaNegocioOrigen.GuardarListaOrigen(listaExcel);
-
-                ////Console.WriteLine("[CapaControladorOrigen].[ImportarDesdeExcel] Guardado completado correctamente.");
-                //Console.WriteLine($"[CapaControladorOrigen].[ImportarDesdeExcel] Total de registros guardados: {totalGuardados}");
+                Debug.WriteLine("[****].[OK].[CapaControladorOrigen].[ImportarDesdeExcel].[Guardado completado correctamente.]");
+                Debug.WriteLine($"[****].[OK].[CapaControladorOrigen].[ImportarDesdeExcel]: Total de registros guardados: {totalGuardados}");
 
             }
             catch (Exception ex)
             {
-
+                Debug.WriteLine("[****].[ERROR].[CapaControladorOrigen].[ImportarDesdeExcel]: " + ex.Message);
                 throw new Exception("ERROR [Capa ControladorOrigen].[ImportarDesdeExcel] " + ex.Message, ex);
             }
 
@@ -78,11 +82,12 @@ namespace CapaControlador
             try
             {
                 int totalGuardados = objCapaNegocioOrigen.GuardarListaOrigen(listaExcel);
-                //Console.WriteLine($"[CapaControladorOrigen] Total de registros guardados: {totalGuardados}");
+                Debug.WriteLine("[CapaControladorOrigen].[GuardarRegistrosOrigen] Guardado completado correctamente.");
                 return totalGuardados;
             }
             catch (Exception ex)
             {
+                Debug.WriteLine("[****].[ERROR].[CapaControladorOrigen].[GuardarRegistrosOrigen]: " + ex.Message);
                 throw new Exception("ERROR [Capa ControladorOrigen].[GuardarRegistrosOrigen] " + ex.Message, ex);
             }
         }
