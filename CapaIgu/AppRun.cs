@@ -69,6 +69,7 @@ namespace CapaIgu
                 dataGridViewExcel.AllowUserToResizeColumns = false;
                 dataGridViewExcel.ScrollBars = ScrollBars.Vertical;
                 dataGridViewExcel.BackgroundColor = Color.White;
+                dataGridViewExcel.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
                 dataGridViewExcel.Columns.Add("Radicado", "Radicado");
                 dataGridViewExcel.Columns.Add("Id", "Id");
