@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
@@ -63,7 +64,8 @@ namespace CapaIgu
                 dataGridViewExcel.AllowUserToAddRows = false;
                 dataGridViewExcel.ReadOnly = true;
                 dataGridViewExcel.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
+                dataGridViewExcel.AllowUserToResizeRows = false;
+                              
                 dataGridViewExcel.Columns.Add("Radicado", "Radicado");
                 dataGridViewExcel.Columns.Add("Id", "Id");
                 dataGridViewExcel.Columns.Add("Empleado", "Empleado");
@@ -80,11 +82,23 @@ namespace CapaIgu
                 dataGridViewExcel.ScrollBars = ScrollBars.Vertical;
                 dataGridViewExcel.BackgroundColor = Color.White;
 
+                dataGridViewExcel.Columns["Radicado"].Width = 80;
+                dataGridViewExcel.Columns["Id"].Width = 80;
+                dataGridViewExcel.Columns["Empleado"].Width = 200;
+                dataGridViewExcel.Columns["Identificacion"].Width = 124;
+                dataGridViewExcel.Columns["Tipo Documental"].Width = 124;
+                dataGridViewExcel.Columns["Codigo De Barras"].Width = 124;
+                dataGridViewExcel.Columns["Cb Documento"].Width = 124;
+                dataGridViewExcel.Columns["CB Expediente"].Width = 124;
+                dataGridViewExcel.Columns["CB Caja"].Width = 124;
+                dataGridViewExcel.Columns["Btn_IMPORT"].Width = 124;
+                dataGridViewExcel.Columns["Btn_CREATE"].Width = 124;
+
                 foreach (DataGridViewColumn column in dataGridViewExcel.Columns)
                 {
                     column.SortMode = DataGridViewColumnSortMode.NotSortable;
-                    column.Width = 124;
                 }
+
                 Debug.WriteLine("[****].[OK].[Paso 1.1].[CapaIgu].[DataGridView configurado correctamente]");
             }
             catch (Exception ex)

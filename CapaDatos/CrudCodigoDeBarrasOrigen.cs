@@ -66,8 +66,8 @@ namespace CapaDatos
             {
                 db.Open();
                     string @query =
-                        "DELETE FROM CodigoDeBarrasOrigen " +
-                        "DBCC CHECKIDENT ('CodigoDeBarrasOrigen', RESEED, 0)";
+                        "DELETE FROM CodigoDeBarrasOrigen; " +
+                        "DBCC CHECKIDENT ('CodigoDeBarrasOrigen', RESEED, 0);";
 
                     using (SqlCommand sqlCommand = new SqlCommand(@query, db))
                     {
