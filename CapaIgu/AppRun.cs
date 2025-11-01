@@ -81,14 +81,14 @@ namespace CapaIgu
                 dataGridViewExcel.Columns.Add("Cb Documento", "Cb Documento");
                 dataGridViewExcel.Columns.Add("CB Expediente", "CB Expediente");
                 dataGridViewExcel.Columns.Add("CB Caja", "CB Caja");
-                
+
                 DataGridViewImageColumn addBntUpdate = new DataGridViewImageColumn();
-                addBntUpdate.Width = 124;
+                addBntUpdate.Width = 108;
                 addBntUpdate.Name = "Btn_UPDATE";
                 dataGridViewExcel.Columns.Add(addBntUpdate);
 
                 DataGridViewImageColumn addBtnDelete = new DataGridViewImageColumn();
-                addBtnDelete.Width = 124;
+                addBtnDelete.Width = 108;
                 addBtnDelete.Name = "Btn_DELETE";
                 dataGridViewExcel.Columns.Add(addBtnDelete);
 
@@ -234,7 +234,7 @@ namespace CapaIgu
 
                 Button objBtnCreate = new Button();
 
-                objBtnCreate.Size = new Size(123, 21);
+                objBtnCreate.Size = new Size(100, 20);
                 objBtnCreate.FlatStyle = FlatStyle.Flat;
                 objBtnCreate.UseVisualStyleBackColor = false;
                 objBtnCreate.FlatAppearance.BorderSize = 0;
@@ -257,16 +257,16 @@ namespace CapaIgu
                     MessageBox.Show("La imagen no se encontró en la ruta especificada: " + rutaImagen);
                 }
 
+               
 
-                int margenDerecha = 1;
+                int margenDerecha = 20;
                 int margenArriba = 2;
 
                 objBtnCreate.Location = new Point(
                      this.ClientSize.Width - objBtnCreate.Width - margenDerecha,
                      margenArriba
                 );
-
-                
+                                
 
                 objBtnCreate.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 this.Controls.Add(objBtnCreate);
@@ -289,7 +289,7 @@ namespace CapaIgu
                 Debug.WriteLine("[****].[OK].[Paso 3].[CapaIgu].[ConstruirBtnImport iniciado]");
                 Button objBtnImport = new Button();
 
-                objBtnImport.Size = new Size(123, 21);
+                objBtnImport.Size = new Size(100, 20);
                 objBtnImport.FlatStyle = FlatStyle.Flat;
                 objBtnImport.UseVisualStyleBackColor = false;
                 objBtnImport.FlatAppearance.BorderSize = 0;
@@ -312,7 +312,7 @@ namespace CapaIgu
                     MessageBox.Show("La imagen no se encontró en la ruta especificada: " + rutaImagen);
                 }
 
-                int margenDerecha = 120 + 5;
+                int margenDerecha = 130;
                 int margenArriba = 2;
 
                 objBtnImport.Location = new Point(
