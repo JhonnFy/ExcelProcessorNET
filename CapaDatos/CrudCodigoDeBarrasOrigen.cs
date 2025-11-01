@@ -59,6 +59,29 @@ namespace CapaDatos
             return listaReadOrigen;
         }
 
+        public void LimpiarCodigoDeBarrasOrigen()
+        {
+            using (var db = conexion.ObtenerConexion())
+                try
+            {
+                db.Open();
+                    string @query =
+                        "DELETE FROM CodigoDeBarrasOrigen " +
+                        "DBCC CHECKIDENT ('CodigoDeBarrasOrigen', RESEED, 0)";
+
+                    using (SqlCommand sqlCommand = new SqlCommand(@query, db))
+                    {
+                        sqlCommand.ExecuteNonQuery();
+                    }
+                    Debug.WriteLine("[****].[OK].[Capa CrudCodigoDeBarrasOrigen].[LimpiarCodigoDeBarrasOrigen]");
+                }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("[****].[ERROR].[Capa CrudCodigoDeBarrasOrigen].[LimpiarCodigoDeBarrasOrigen]");
+                throw new Exception("ERROR [Capa CrudCodigoDeBarrasOrigen].[LimpiarCodigoDeBarrasOrigen] " + ex.Message);
+            }
+        }
+
         public List<ModeloCodigoDeBarrasOrigen> ReadOrigenId(long identificacion)
         {
               var listaReadOrigenId = new List<ModeloCodigoDeBarrasOrigen>();

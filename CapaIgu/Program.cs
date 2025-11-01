@@ -15,7 +15,7 @@ namespace CapaIgu
         [STAThread]
         static void Main()
         {
-            AllocConsole(); 
+            //AllocConsole(); 
 
 
             ExcelPackage.License.SetNonCommercialPersonal("JhonFy");
