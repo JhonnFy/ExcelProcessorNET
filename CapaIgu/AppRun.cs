@@ -65,7 +65,11 @@ namespace CapaIgu
                 dataGridViewExcel.ReadOnly = true;
                 dataGridViewExcel.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 dataGridViewExcel.AllowUserToResizeRows = false;
-                              
+                dataGridViewExcel.RowHeadersVisible = false;
+                dataGridViewExcel.AllowUserToResizeColumns = false;
+                dataGridViewExcel.ScrollBars = ScrollBars.Vertical;
+                dataGridViewExcel.BackgroundColor = Color.White;
+
                 dataGridViewExcel.Columns.Add("Radicado", "Radicado");
                 dataGridViewExcel.Columns.Add("Id", "Id");
                 dataGridViewExcel.Columns.Add("Empleado", "Empleado");
@@ -77,26 +81,24 @@ namespace CapaIgu
                 dataGridViewExcel.Columns.Add("CB Caja", "CB Caja");
                 dataGridViewExcel.Columns.Add("Btn_IMPORT", "");
                 dataGridViewExcel.Columns.Add("Btn_CREATE", "");
-                dataGridViewExcel.RowHeadersVisible = false;
-                dataGridViewExcel.AllowUserToResizeColumns = false;
-                dataGridViewExcel.ScrollBars = ScrollBars.Vertical;
-                dataGridViewExcel.BackgroundColor = Color.White;
-
+                
                 dataGridViewExcel.Columns["Radicado"].Width = 80;
                 dataGridViewExcel.Columns["Id"].Width = 80;
                 dataGridViewExcel.Columns["Empleado"].Width = 200;
                 dataGridViewExcel.Columns["Identificacion"].Width = 124;
-                dataGridViewExcel.Columns["Tipo Documental"].Width = 124;
+                dataGridViewExcel.Columns["Tipo Documental"].Width = 150;
                 dataGridViewExcel.Columns["Codigo De Barras"].Width = 124;
                 dataGridViewExcel.Columns["Cb Documento"].Width = 124;
                 dataGridViewExcel.Columns["CB Expediente"].Width = 124;
                 dataGridViewExcel.Columns["CB Caja"].Width = 124;
                 dataGridViewExcel.Columns["Btn_IMPORT"].Width = 124;
                 dataGridViewExcel.Columns["Btn_CREATE"].Width = 124;
+                
 
                 foreach (DataGridViewColumn column in dataGridViewExcel.Columns)
                 {
                     column.SortMode = DataGridViewColumnSortMode.NotSortable;
+                    column.DefaultCellStyle.Font = new Font("Segoe UI", 7);
                 }
 
                 Debug.WriteLine("[****].[OK].[Paso 1.1].[CapaIgu].[DataGridView configurado correctamente]");
