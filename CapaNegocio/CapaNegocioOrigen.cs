@@ -1,9 +1,10 @@
-﻿using System;
+﻿using CapaDatos;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CapaDatos;
 
 namespace CapaNegocio
 {
@@ -18,6 +19,13 @@ namespace CapaNegocio
             datosOrigen = new CrudCodigoDeBarrasOrigen();
         }
 
+        public void LimpiarCodigoDeBarrasOrigen()
+        {
+            var datos = new CrudCodigoDeBarrasOrigen();
+            datos.LimpiarCodigoDeBarrasOrigen();
+
+            Debug.WriteLine("[****].[OK].[Capa CrudCapaNegocioOrigen].[LimpiarCodigoDeBarrasOrigen]");
+        }
 
         public int GuardarListaOrigen(List<ModeloCodigoDeBarrasOrigen> listaExcel)
         {
@@ -37,12 +45,11 @@ namespace CapaNegocio
                 }
                 catch (Exception ex)
                 {
-                    //Console.WriteLine($"ERROR [CapaNegocioOrigen].[GuardarListaOrigen]: {ex.Message}");
+                    Debug.WriteLine($"ERROR [CapaNegocioOrigen].[GuardarListaOrigen]: {ex.Message}");
                     throw;
                 }
             }
-
-            //Console.WriteLine($"[CapaNegocioOrigen] Total de registros guardados correctamente: {totalGuardados} de {listaExcel.Count}");
+            Debug.WriteLine($"[CapaNegocioOrigen] Total de registros guardados correctamente: {totalGuardados} de {listaExcel.Count}");
             return totalGuardados;
         }
     }
