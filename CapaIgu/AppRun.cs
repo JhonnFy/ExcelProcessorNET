@@ -46,6 +46,7 @@ namespace CapaIgu
             ConstruirBtnCreate();
             ConstruirBtnImport();
             ConstruirBtnUpdate();
+            ConstruirBtnDelete();
         }
 
 
@@ -85,9 +86,13 @@ namespace CapaIgu
                 
                 DataGridViewImageColumn addBntUpdate = new DataGridViewImageColumn();
                 addBntUpdate.Width = 124;
-                addBntUpdate.Name = "Btn_IMPORT";
+                addBntUpdate.Name = "Btn_UPDATE";
                 dataGridViewExcel.Columns.Add(addBntUpdate);
 
+                DataGridViewImageColumn addBtnDelete = new DataGridViewImageColumn();
+                addBtnDelete.Width = 124;
+                addBtnDelete.Name = "Btn_DELETE";
+                dataGridViewExcel.Columns.Add(addBtnDelete);
 
 
                 dataGridViewExcel.Columns["Radicado"].Width = 80;
@@ -135,11 +140,10 @@ namespace CapaIgu
                         atributo.CodigoDeBarrasRecepcion,
                         atributo.CbDocumento,
                         atributo.CbExpediente,
-                        atributo.CbCaja,
-                        "",
-                        ""
+                        atributo.CbCaja
                     );
                 }
+                ConstruirBtnDelete();
                 ConstruirBtnUpdate();
 
                 Debug.WriteLine("[****].[OK].[Paso 6].[CapaIgu].[Datos insertados en DataGridView correctamente]");
@@ -153,12 +157,47 @@ namespace CapaIgu
 
         }
 
+        private void ConstruirBtnDelete()
+        {
+            try
+            {
+
+                DataGridViewImageColumn objBtnDelete = (DataGridViewImageColumn)dataGridViewExcel.Columns["Btn_DELETE"]; 
+                objBtnDelete.HeaderText = "";
+                objBtnDelete.ImageLayout = DataGridViewImageCellLayout.Zoom;
+                                 
+                string rutaImagenDelete = @"C:\Developer\ExcelProcessorNET\Icons\btnDelete.jpg";
+                if (System.IO.File.Exists(rutaImagenDelete))
+                {
+                    Image original = Image.FromFile(rutaImagenDelete);
+
+                    foreach (DataGridViewRow fila in dataGridViewExcel.Rows)
+                    {
+                        fila.Cells["Btn_DELETE"].Value = new Bitmap(original, new Size(50, 50));
+                    }
+
+                }
+                else
+                {
+                    Debug.WriteLine("[****].[ADVERTENCIA].[CapaIgu].[Imagen no encontrada para btnDelete]");
+                    MessageBox.Show("La imagen no se encontró en la ruta especificada: " + rutaImagenDelete);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("[****].[ERROR].[CapaIgu].[ConstruirBtnDelete] " + ex.Message);
+                MessageBox.Show("ERROR [Capa IGU].[ConstruirBtnDelete] " + ex.Message);
+            }
+
+        }
+
         private void ConstruirBtnUpdate()
         {
             try
             {
 
-                DataGridViewImageColumn objBtnUpdate = (DataGridViewImageColumn)dataGridViewExcel.Columns["Btn_IMPORT"];
+                DataGridViewImageColumn objBtnUpdate = (DataGridViewImageColumn)dataGridViewExcel.Columns["Btn_UPDATE"];
                 objBtnUpdate.HeaderText = "";
                 objBtnUpdate.ImageLayout = DataGridViewImageCellLayout.Zoom;
                 
@@ -170,7 +209,7 @@ namespace CapaIgu
 
                     foreach(DataGridViewRow fila in dataGridViewExcel.Rows)
                     {
-                        fila.Cells["Btn_IMPORT"].Value = new Bitmap(original, new Size(50, 50));
+                        fila.Cells["Btn_UPDATE"].Value = new Bitmap(original, new Size(50, 50));
                     }
 
                 }
