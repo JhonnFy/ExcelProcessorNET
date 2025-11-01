@@ -81,8 +81,6 @@ namespace CapaIgu
                 dataGridViewExcel.Columns.Add("Cb Documento", "Cb Documento");
                 dataGridViewExcel.Columns.Add("CB Expediente", "CB Expediente");
                 dataGridViewExcel.Columns.Add("CB Caja", "CB Caja");
-                //dataGridViewExcel.Columns.Add("Btn_IMPORT", "");
-                //dataGridViewExcel.Columns.Add("Btn_CREATE", "");
                 
                 DataGridViewImageColumn addBntUpdate = new DataGridViewImageColumn();
                 addBntUpdate.Width = 124;
