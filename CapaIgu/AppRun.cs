@@ -81,6 +81,8 @@ namespace CapaIgu
                 dataGridViewExcel.Columns.Add("Cb Documento", "Cb Documento");
                 dataGridViewExcel.Columns.Add("CB Expediente", "CB Expediente");
                 dataGridViewExcel.Columns.Add("CB Caja", "CB Caja");
+                dataGridViewExcel.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dataGridViewExcel.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9, FontStyle.Bold);
 
                 DataGridViewImageColumn addBntUpdate = new DataGridViewImageColumn();
                 addBntUpdate.Width = 108;
@@ -91,7 +93,6 @@ namespace CapaIgu
                 addBtnDelete.Width = 108;
                 addBtnDelete.Name = "Btn_DELETE";
                 dataGridViewExcel.Columns.Add(addBtnDelete);
-
 
                 dataGridViewExcel.Columns["Radicado"].Width = 80;
                 dataGridViewExcel.Columns["Id"].Width = 80;
