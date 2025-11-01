@@ -102,7 +102,10 @@ namespace CapaIgu
                 dataGridViewExcel.Columns["Cb Documento"].Width = 124;
                 dataGridViewExcel.Columns["CB Expediente"].Width = 124;
                 dataGridViewExcel.Columns["CB Caja"].Width = 124;
-                
+
+                dataGridViewExcel.ColumnHeadersHeight = 27;
+                dataGridViewExcel.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+
 
                 foreach (DataGridViewColumn column in dataGridViewExcel.Columns)
                 {
@@ -234,7 +237,7 @@ namespace CapaIgu
 
                 Button objBtnCreate = new Button();
 
-                objBtnCreate.Size = new Size(100, 20);
+                objBtnCreate.Size = new Size(100, 25);
                 objBtnCreate.FlatStyle = FlatStyle.Flat;
                 objBtnCreate.UseVisualStyleBackColor = false;
                 objBtnCreate.FlatAppearance.BorderSize = 0;
@@ -247,7 +250,7 @@ namespace CapaIgu
                 {
                     Image original = Image.FromFile(rutaImagen);
 
-                    objBtnCreate.BackgroundImage = new Bitmap(original, new Size(40, 20));
+                    objBtnCreate.BackgroundImage = new Bitmap(original, new Size(40, 25));
                     objBtnCreate.BackgroundImageLayout = ImageLayout.Center;
                     objBtnCreate.ImageAlign = ContentAlignment.MiddleCenter;
                 }
@@ -259,7 +262,7 @@ namespace CapaIgu
 
                
 
-                int margenDerecha = 20;
+                int margenDerecha = 23;
                 int margenArriba = 2;
 
                 objBtnCreate.Location = new Point(
@@ -289,7 +292,7 @@ namespace CapaIgu
                 Debug.WriteLine("[****].[OK].[Paso 3].[CapaIgu].[ConstruirBtnImport iniciado]");
                 Button objBtnImport = new Button();
 
-                objBtnImport.Size = new Size(100, 20);
+                objBtnImport.Size = new Size(100, 25);
                 objBtnImport.FlatStyle = FlatStyle.Flat;
                 objBtnImport.UseVisualStyleBackColor = false;
                 objBtnImport.FlatAppearance.BorderSize = 0;
@@ -302,7 +305,7 @@ namespace CapaIgu
                 {
                     Image original = Image.FromFile(rutaImagen);
 
-                    objBtnImport.BackgroundImage = new Bitmap(original, new Size(40, 20));
+                    objBtnImport.BackgroundImage = new Bitmap(original, new Size(40, 25));
                     objBtnImport.BackgroundImageLayout = ImageLayout.Center;
                     objBtnImport.ImageAlign = ContentAlignment.MiddleCenter;
                 }
