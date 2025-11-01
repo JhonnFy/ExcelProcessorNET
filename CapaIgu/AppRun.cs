@@ -45,6 +45,7 @@ namespace CapaIgu
             ConfigurarDataGridView();
             ConstruirBtnCreate();
             ConstruirBtnImport();
+            ConstruirBtnUpdate();
         }
 
 
@@ -80,9 +81,16 @@ namespace CapaIgu
                 dataGridViewExcel.Columns.Add("Cb Documento", "Cb Documento");
                 dataGridViewExcel.Columns.Add("CB Expediente", "CB Expediente");
                 dataGridViewExcel.Columns.Add("CB Caja", "CB Caja");
-                dataGridViewExcel.Columns.Add("Btn_IMPORT", "");
-                dataGridViewExcel.Columns.Add("Btn_CREATE", "");
+                //dataGridViewExcel.Columns.Add("Btn_IMPORT", "");
+                //dataGridViewExcel.Columns.Add("Btn_CREATE", "");
                 
+                DataGridViewImageColumn addBntUpdate = new DataGridViewImageColumn();
+                addBntUpdate.Width = 124;
+                addBntUpdate.Name = "Btn_IMPORT";
+                dataGridViewExcel.Columns.Add(addBntUpdate);
+
+
+
                 dataGridViewExcel.Columns["Radicado"].Width = 80;
                 dataGridViewExcel.Columns["Id"].Width = 80;
                 dataGridViewExcel.Columns["Empleado"].Width = 200;
@@ -92,8 +100,6 @@ namespace CapaIgu
                 dataGridViewExcel.Columns["Cb Documento"].Width = 124;
                 dataGridViewExcel.Columns["CB Expediente"].Width = 124;
                 dataGridViewExcel.Columns["CB Caja"].Width = 124;
-                dataGridViewExcel.Columns["Btn_IMPORT"].Width = 124;
-                dataGridViewExcel.Columns["Btn_CREATE"].Width = 124;
                 
 
                 foreach (DataGridViewColumn column in dataGridViewExcel.Columns)
@@ -135,6 +141,8 @@ namespace CapaIgu
                         ""
                     );
                 }
+                ConstruirBtnUpdate();
+
                 Debug.WriteLine("[****].[OK].[Paso 6].[CapaIgu].[Datos insertados en DataGridView correctamente]");
 
             }
@@ -144,6 +152,41 @@ namespace CapaIgu
                 MessageBox.Show("ERROR [Capa IGU].[InsertarDatosDataGridView] " + ex.Message);
             }
 
+        }
+
+        private void ConstruirBtnUpdate()
+        {
+            try
+            {
+
+                DataGridViewImageColumn objBtnUpdate = (DataGridViewImageColumn)dataGridViewExcel.Columns["Btn_IMPORT"];
+                objBtnUpdate.HeaderText = "";
+                objBtnUpdate.ImageLayout = DataGridViewImageCellLayout.Zoom;
+                
+
+                string rutaImagen = @"C:\Developer\ExcelProcessorNET\Icons\btnUpdate.jpg";
+                if (System.IO.File.Exists(rutaImagen))
+                {
+                    Image original = Image.FromFile(rutaImagen);
+
+                    foreach(DataGridViewRow fila in dataGridViewExcel.Rows)
+                    {
+                        fila.Cells["Btn_IMPORT"].Value = new Bitmap(original, new Size(50, 50));
+                    }
+
+                }
+                else
+                {
+                    Debug.WriteLine("[****].[ADVERTENCIA].[CapaIgu].[Imagen no encontrada para btnUpdate]");
+                    MessageBox.Show("La imagen no se encontró en la ruta especificada: " + rutaImagen);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("[****].[ERROR].[CapaIgu].[ConstruirBtnUpdate] " + ex.Message);
+                MessageBox.Show("ERROR [Capa IGU].[ConstruirBtnUpdate] " + ex.Message);
+            }
         }
 
 
