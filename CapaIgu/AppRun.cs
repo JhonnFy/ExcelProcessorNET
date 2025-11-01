@@ -54,7 +54,6 @@ namespace CapaIgu
 
         }
 
-
         private void ConfigurarDataGridView()
         {
             try
