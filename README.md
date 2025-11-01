@@ -13,10 +13,6 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 5. [Instalación y Configuración](#instalación-y-configuración)  
 6. [Reglas de Negocio](#Reglas-De-Negocio)  
 7. [Pruebas](#pruebas)  
-8. [Contribuciones](#contribuciones)  
-9. [Licencia](#licencia)  
-10. [Contacto](#contacto)
-
 ---
 
 ## Interface
