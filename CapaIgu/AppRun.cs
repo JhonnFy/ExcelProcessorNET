@@ -319,7 +319,7 @@ namespace CapaIgu
                     MessageBox.Show("La imagen no se encontró en la ruta especificada: " + rutaImagen);
                 }
 
-                int margenDerecha = 130;
+                int margenDerecha = 128;
                 int margenArriba = 2;
 
                 objBtnImport.Location = new Point(
