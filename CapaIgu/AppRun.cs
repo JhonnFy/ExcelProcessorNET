@@ -86,7 +86,6 @@ namespace CapaIgu
 
                 DataGridViewImageColumn addBntUpdate = new DataGridViewImageColumn();
                 addBntUpdate.Width = 100;
-                //addBntUpdate.Width = 108;
                 addBntUpdate.Name = "Btn_UPDATE";
                 dataGridViewExcel.Columns.Add(addBntUpdate);
 
@@ -266,7 +265,6 @@ namespace CapaIgu
                
 
                 int margenDerecha = 28;
-                //int margenDerecha = 23;
                 int margenArriba = 2;
 
                 objBtnCreate.Location = new Point(
@@ -327,7 +325,6 @@ namespace CapaIgu
                     this.ClientSize.Width - objBtnImport.Width - margenDerecha,
                     margenArriba
                 );
-
 
                 //Evento Click
                 objBtnImport.Click += (s, e) =>
