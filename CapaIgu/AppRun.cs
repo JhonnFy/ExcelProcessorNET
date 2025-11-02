@@ -91,7 +91,7 @@ namespace CapaIgu
                 dataGridViewExcel.Columns.Add(addBntUpdate);
 
                 DataGridViewImageColumn addBtnDelete = new DataGridViewImageColumn();
-                addBtnDelete.Width = 108;
+                addBtnDelete.Width = 101;
                 addBtnDelete.Name = "Btn_DELETE";
                 dataGridViewExcel.Columns.Add(addBtnDelete);
 
@@ -265,7 +265,8 @@ namespace CapaIgu
 
                
 
-                int margenDerecha = 23;
+                int margenDerecha = 28;
+                //int margenDerecha = 23;
                 int margenArriba = 2;
 
                 objBtnCreate.Location = new Point(
