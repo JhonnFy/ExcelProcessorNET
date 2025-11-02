@@ -85,7 +85,8 @@ namespace CapaIgu
                 dataGridViewExcel.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 9, FontStyle.Bold);
 
                 DataGridViewImageColumn addBntUpdate = new DataGridViewImageColumn();
-                addBntUpdate.Width = 108;
+                addBntUpdate.Width = 100;
+                //addBntUpdate.Width = 108;
                 addBntUpdate.Name = "Btn_UPDATE";
                 dataGridViewExcel.Columns.Add(addBntUpdate);
 
@@ -244,6 +245,7 @@ namespace CapaIgu
                 objBtnCreate.FlatAppearance.BorderSize = 0;
                 objBtnCreate.FlatAppearance.MouseOverBackColor = Color.White;
                 objBtnCreate.FlatAppearance.MouseDownBackColor = Color.White;
+                objBtnCreate.BackColor = Color.White;
 
                 string rutaImagen = @"C:\Developer\ExcelProcessorNET\Icons\btnCreate.jpg";
 
@@ -299,6 +301,7 @@ namespace CapaIgu
                 objBtnImport.FlatAppearance.BorderSize = 0;
                 objBtnImport.FlatAppearance.MouseOverBackColor = Color.White;
                 objBtnImport.FlatAppearance.MouseDownBackColor = Color.White;
+                objBtnImport.BackColor = Color.White;
 
                 string rutaImagen = @"C:\Developer\ExcelProcessorNET\Icons\btnImport.jpg";
 
