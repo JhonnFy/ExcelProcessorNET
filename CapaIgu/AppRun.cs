@@ -9,6 +9,7 @@ using System.Data;
 using System.Data.Common;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Text;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
@@ -21,6 +22,8 @@ namespace CapaIgu
 {
     public partial class AppRun : Form
     {
+        private Button objBtnImport;
+
         public AppRun()
         {
             InitializeComponent();
@@ -47,6 +50,8 @@ namespace CapaIgu
             ConstruirBtnImport();
             ConstruirBtnUpdate();
             ConstruirBtnDelete();
+
+            EventoClickConstruirBtnImport();
         }
 
 
@@ -263,7 +268,6 @@ namespace CapaIgu
                 }
 
                
-
                 int margenDerecha = 28;
                 int margenArriba = 2;
 
@@ -292,7 +296,7 @@ namespace CapaIgu
             try
             {
                 Debug.WriteLine("[****].[OK].[Paso 3].[CapaIgu].[ConstruirBtnImport iniciado]");
-                Button objBtnImport = new Button();
+                objBtnImport = new Button();
 
                 objBtnImport.Size = new Size(100, 25);
                 objBtnImport.FlatStyle = FlatStyle.Flat;
@@ -325,39 +329,7 @@ namespace CapaIgu
                     this.ClientSize.Width - objBtnImport.Width - margenDerecha,
                     margenArriba
                 );
-
-                //Evento Click
-                objBtnImport.Click += (s, e) =>
-                {
-                    try
-                    {
-                        Debug.WriteLine("[****].[OK].[Paso 4].[CapaIgu].[Click en botón Importar detectado]");
-                        OpenFileDialog dialog = new OpenFileDialog
-                        {
-                            Filter = "Archivos de Excel (*.xlsx)|*.xlsx|Todos los archivos (*.*)|*.*",
-                            Title = "Seleccionar Archivo Excel"
-                        };
-
-                        if (dialog.ShowDialog() == DialogResult.OK)
-                        {
-                            string rutaArchivo = dialog.FileName;
-                            Debug.WriteLine($"[****].[ok].[Paso 4.1].[Archivo seleccionado: {rutaArchivo}");
-
-                            //Enviar Al Controlador
-                            var controlador = new CapaControladorOrigen();
-                            var lista = controlador.ImportarDesdeExcel(rutaArchivo);
-                            InsertarDatosDataGridView(lista);
-                            Debug.WriteLine("[****].[OK].[Paso 4.3].[Datos recibidos y enviados al DataGridView]");
-                        }
-
-                    }
-                    catch (Exception ex)
-                    {
-                        Debug.WriteLine("[****].[ERROR].[CapaIgu].[Evento Click Import] " + ex.Message);
-                        MessageBox.Show("ERROR [Capa IGU].[Evento Click] " + ex.Message);
-                    }
-                };
-
+                                
 
                 objBtnImport.Anchor = AnchorStyles.Top | AnchorStyles.Right;
                 this.Controls.Add(objBtnImport);
@@ -370,6 +342,42 @@ namespace CapaIgu
                 Debug.WriteLine("[****].[ERROR].[CapaIgu].[ConstruirBtnImport] " + ex.Message);
                 MessageBox.Show("ERROR [Capa IGU].[ConstruirBtnImport] " + ex.Message);
             }
+        }
+
+
+        public void EventoClickConstruirBtnImport()
+        {
+
+            objBtnImport.Click += (s, e) =>
+            {
+                try
+                {
+                    Debug.WriteLine("[****].[OK].[Paso 4].[CapaIgu].[Click en botón Importar detectado]");
+                    OpenFileDialog dialog = new OpenFileDialog
+                    {
+                        Filter = "Archivos de Excel (*.xlsx)|*.xlsx|Todos los archivos (*.*)|*.*",
+                        Title = "Seleccionar Archivo Excel"
+                    };
+
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        string rutaArchivo = dialog.FileName;
+                        Debug.WriteLine($"[****].[ok].[Paso 4.1].[Archivo seleccionado: {rutaArchivo}");
+
+
+                        var controlador = new CapaControladorOrigen();
+                        var lista = controlador.ImportarDesdeExcel(rutaArchivo);
+                        InsertarDatosDataGridView(lista);
+                        Debug.WriteLine("[****].[OK].[Paso 4.3].[Datos recibidos y enviados al DataGridView]");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine("[****].[ERROR].[CapaIgu].[Evento Click Import] " + ex.Message);
+                    MessageBox.Show("ERROR [Capa IGU].[Evento Click] " + ex.Message);
+                }
+            };
         }
 
     }
