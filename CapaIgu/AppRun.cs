@@ -398,7 +398,6 @@ namespace CapaIgu
                         {
                             int idSeleccionado = Convert.ToInt32(dataGridViewExcel.Rows[e.RowIndex].Cells["Id"].Value);
 
-                            //Confirmación Acción Usuario
                             var confirmacion = MessageBox.Show(
                                     $"¿Deseas Eliminar El Registro {idSeleccionado}?",
                                     "Confirmar Eliminación",
@@ -406,13 +405,11 @@ namespace CapaIgu
                                     MessageBoxIcon.Warning
                                 );
 
-                            //Si El Usuario Confirma, Se Imboca El Controlador
                             if (confirmacion == DialogResult.Yes)
                             {
                                 CapaControladorOrigen controlador = new CapaControladorOrigen();
                                 //Aqui va el llamado al controlador
 
-                                //Eliminar Visualmente Del DataGridView
                                 dataGridViewExcel.Rows.RemoveAt(e.RowIndex);
 
                                 MessageBox.Show(
