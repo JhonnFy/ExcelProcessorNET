@@ -414,7 +414,7 @@ namespace CapaIgu
 
                                 MessageBox.Show(
                                     "Registro Eliminado Correctamente",
-                                    "Eliminado",
+                                    "[⚙️ AppRun]",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information
                                 );
