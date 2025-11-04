@@ -400,7 +400,7 @@ namespace CapaIgu
 
                             var confirmacion = MessageBox.Show(
                                     $"¿Deseas Eliminar El Registro {idSeleccionado}?",
-                                    "Confirmar Eliminación",
+                                    "CONFIRMACIÓN REQUERIDA",
                                     MessageBoxButtons.YesNo,
                                     MessageBoxIcon.Warning
                                 );
