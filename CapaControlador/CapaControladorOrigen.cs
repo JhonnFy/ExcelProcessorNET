@@ -91,5 +91,25 @@ namespace CapaControlador
                 throw new Exception("ERROR [Capa ControladorOrigen].[GuardarRegistrosOrigen] " + ex.Message, ex);
             }
         }
+
+
+        public void BorrarRegistrosOrigen(int id)
+        {
+            try
+            {
+                Debug.Write($"[****].[OK].[CapaControladorOrigen].[BorrarRegistrosOrigen] ID={id}");
+
+                if (id <= 0)
+                    throw new ArgumentException($"El Proporcionado No Es Valido  ID ={ id }");
+
+                objCapaNegocioOrigen.EliminarPorId(id);
+                Debug.WriteLine($"[****].[OK].[CapaControladorOrigen].[BorrarRegistrosOrigen] ID={id}");
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("[****].[ERROR].[CapaControladorOrigen].[EliminarRegistro] " + ex.Message);
+                throw new Exception("ERROR [Capa ControladorOrigen].[EliminarRegistro] " + ex.Message, ex);
+            }
+        }
     }
 }
