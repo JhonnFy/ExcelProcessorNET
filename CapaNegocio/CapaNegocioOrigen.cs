@@ -19,13 +19,19 @@ namespace CapaNegocio
             datosOrigen = new CrudCodigoDeBarrasOrigen();
         }
 
-        public void EliminarPorId(int id)
+        public bool EliminarPorId(long id)
         {
             try
             {
+                Debug.WriteLine($"[****].[OK].[CapaNegocioOrigen].[EliminarPorId].[Iniciado Id={id}]");
 
+                if (id <= 0)
+                    throw new ArgumentException("El Id Debe Ser Mayor A Cero");
 
+                bool resultado = datosOrigen.DeleteOrigenPorId((int)id);
+                Debug.WriteLine($"[****].[OK].[CapaNegocioOrigen].[EliminarPorId].[Resultado={resultado}]");
 
+                return resultado;
 
             }
             catch (Exception ex)
