@@ -380,5 +380,31 @@ namespace CapaIgu
             };
         }
 
+        public void EventoClickConstruirBtnDelete()
+        {
+            try
+            {
+                Debug.WriteLine("[****].[OK].[EventoClickConstruirBtnDelete].[Iniciado]");
+
+                dataGridViewExcel.CellContentClick += (s, e) =>
+                {
+                    try
+                    {
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine("[****].[ERROR].[CapaIgu].[EventoClickConstruirBtnDelete] " + ex.Message );
+                        MessageBox.Show("[****].[ERROR].[CapaIgu].[EventoClickConstruirBtnDelete] " + ex.Message);
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("[****].[ERROR].[CapaIgu].[EventoClickConstruirBtnDelete] " + ex.Message);
+                MessageBox.Show("ERROR [Capa IGU].[EventoClickConstruirBtnDelete] " + ex.Message);
+            }
+        }
+
     }
 }
