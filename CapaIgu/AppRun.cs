@@ -38,7 +38,7 @@ namespace CapaIgu
 
             MessageBox.Show(
                 resultado.mensaje,
-                resultado.estado ? "Conexión exitosa" : "Error de conexión",
+                resultado.estado ? "[⚙️ AppRun]" : "Error de conexión",
                 MessageBoxButtons.OK,
                 resultado.estado ? MessageBoxIcon.Information : MessageBoxIcon.Error
             );
@@ -400,7 +400,7 @@ namespace CapaIgu
 
                             var confirmacion = MessageBox.Show(
                                     $"¿Deseas Eliminar El Registro {idSeleccionado}?",
-                                    "CONFIRMACIÓN REQUERIDA",
+                                    "[⚙️ AppRun]",
                                     MessageBoxButtons.YesNo,
                                     MessageBoxIcon.Warning
                                 );

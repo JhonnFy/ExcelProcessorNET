@@ -36,8 +36,8 @@ namespace CapaDatos
                 {
 
                     conn.Open();
-                    Debug.WriteLine("[****].[OK].[CapaDatos].[Conexion Exitosa dB]");
-                    return (true, "Conexión exitosa a la base de datos.");
+                    Debug.WriteLine("[****].[OK].[CapaDatos].[Conexion Exitosa]");
+                   return (true, "Conexión exitosa a la base de datos.");
                 }
             }
             catch (SqlException ex)
