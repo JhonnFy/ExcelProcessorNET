@@ -178,3 +178,10 @@ Convertir a mayúsculas únicamente el valor **Carpeta Completa**.
 
 ---
 
+
+
+
+
+
+
+
