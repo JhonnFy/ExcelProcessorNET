@@ -52,6 +52,7 @@ namespace CapaIgu
             ConstruirBtnDelete();
 
             EventoClickConstruirBtnImport();
+            EventoClickConstruirBtnDelete();
         }
 
 
@@ -390,6 +391,40 @@ namespace CapaIgu
                 {
                     try
                     {
+                        if (e.RowIndex < 0 || e.ColumnIndex < 0)
+                            return;
+
+                        if (dataGridViewExcel.Columns[e.ColumnIndex].Name == "Btn_DELETE")
+                        {
+                            int idSeleccionado = Convert.ToInt32(dataGridViewExcel.Rows[e.RowIndex].Cells["Id"].Value);
+
+                            //Confirmación Acción Usuario
+                            var confirmacion = MessageBox.Show(
+                                    $"¿Deseas Eliminar El Registro {idSeleccionado}?",
+                                    "Confirmar Eliminación",
+                                    MessageBoxButtons.YesNo,
+                                    MessageBoxIcon.Warning
+                                );
+
+                            //Si El Usuario Confirma, Se Imboca El Controlador
+                            if (confirmacion == DialogResult.Yes)
+                            {
+                                CapaControladorOrigen controlador = new CapaControladorOrigen();
+                                //Aqui va el llamado al controlador
+
+                                //Eliminar Visualmente Del DataGridView
+                                dataGridViewExcel.Rows.RemoveAt(e.RowIndex);
+
+                                MessageBox.Show(
+                                    "Registro Eliminado Correctamente",
+                                    "Eliminado",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information
+                                );
+
+                                Debug.WriteLine($"[****].[OK].[CapaIGU].[EventoClickConstruirBtnDelete].[Eliminado ID={idSeleccionado}]");
+                            }
+                        }
 
                     }
                     catch (Exception ex)
