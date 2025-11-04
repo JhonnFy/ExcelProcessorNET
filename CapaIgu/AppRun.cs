@@ -408,7 +408,7 @@ namespace CapaIgu
                             if (confirmacion == DialogResult.Yes)
                             {
                                 CapaControladorOrigen controlador = new CapaControladorOrigen();
-                                //Aqui va el llamado al controlador
+                                controlador.BorrarRegistrosOrigen(idSeleccionado);
 
                                 dataGridViewExcel.Rows.RemoveAt(e.RowIndex);
 
