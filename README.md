@@ -177,7 +177,3 @@ Convertir a mayúsculas únicamente el valor **Carpeta Completa**.
 <img width="1360" height="768" alt="image" src="https://github.com/user-attachments/assets/f06d5ad4-c254-437f-a696-da637f11c7ff" />
 
 ---
-
-
-
-
