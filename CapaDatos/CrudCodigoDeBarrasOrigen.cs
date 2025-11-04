@@ -244,7 +244,26 @@ namespace CapaDatos
 
         public bool DeleteOrigenPorId(int id)
         {
-            
+            try
+            {
+                using var db = conexion.ObtenerConexion();
+                db.Open();
+
+                string deleteId = "DELETE FROM CodigoDeBarrasOrigen WHERE Id = @id";
+
+                using (SqlCommand objDeteteSql = new SqlCommand(deleteId, db))
+                {
+                    objDeteteSql.Parameters.AddWithValue("@id", id);
+                    int filasAfectadas = objDeteteSql.ExecuteNonQuery();
+                    return filasAfectadas > 0;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("[****].[ERROR].[CapaCrudCodigoDeBarrasOrigen].[DeleteOrigenPorId] " + ex.Message);
+                throw new Exception("ERROR [CapaCrudCodigoDeBarrasOrigen].[DeleteOrigenPorId] " + ex.Message, ex);
+            }
         }
 
     }
