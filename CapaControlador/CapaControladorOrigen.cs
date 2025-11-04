@@ -97,10 +97,14 @@ namespace CapaControlador
         {
             try
             {
-               
+                Debug.WriteLine($"[****].[OK].[CapaNegocioOrigen].[EliminarPorId].[Iniciado Id={id}]");
 
+                bool eliminado = objCapaNegocioOrigen.EliminarPorId(id);
 
-
+                if (eliminado)
+                    Debug.WriteLine($"[****].[OK].[CapaNegocioOrigen].[EliminarPorId].[Iniciado Id={id}]");
+                else
+                    Debug.WriteLine($"[****].[WARN].[CapaControladorOrigen].[BorrarRegistrosOrigen].[No se encontró el registro Id={id}]");
             }
             catch (Exception ex)
             {

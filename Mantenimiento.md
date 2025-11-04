@@ -1,5 +1,10 @@
 ¿Orden Para Agregar Nuevos Metodos?
 
+IGU
+Controlador
+Negocio
+Datos
+
 Creare un metodo que limpie la tabla en la dB
 --DELETE FROM CodigoDeBarrasOrigen
 --DBCC CHECKIDENT ('CodigoDeBarrasOrigen', RESEED, 0);
