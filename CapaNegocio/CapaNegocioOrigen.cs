@@ -19,6 +19,22 @@ namespace CapaNegocio
             datosOrigen = new CrudCodigoDeBarrasOrigen();
         }
 
+        public void EliminarPorId(int id)
+        {
+            try
+            {
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("[****].[ERROR].[CapaNegocioOrigen].[EliminarPorId] " + ex.Message);
+                throw new Exception("ERROR [Capa NegocioOrigen].[EliminarPorId] " + ex.Message, ex);
+            }
+        }
+
         public void LimpiarCodigoDeBarrasOrigen()
         {
             var datos = new CrudCodigoDeBarrasOrigen();

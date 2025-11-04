@@ -242,5 +242,10 @@ namespace CapaDatos
             }
         }
 
+        public bool DeleteOrigenPorId(int id)
+        {
+            
+        }
+
     }
 }

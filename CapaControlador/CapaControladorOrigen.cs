@@ -97,13 +97,10 @@ namespace CapaControlador
         {
             try
             {
-                Debug.Write($"[****].[OK].[CapaControladorOrigen].[BorrarRegistrosOrigen] ID={id}");
+               
 
-                if (id <= 0)
-                    throw new ArgumentException($"El Proporcionado No Es Valido  ID ={ id }");
 
-                objCapaNegocioOrigen.EliminarPorId(id);
-                Debug.WriteLine($"[****].[OK].[CapaControladorOrigen].[BorrarRegistrosOrigen] ID={id}");
+
             }
             catch (Exception ex)
             {
