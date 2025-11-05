@@ -6,6 +6,7 @@ using CapaNegocio;
 using CapaDatos;
 using System.Diagnostics;
 
+
 namespace CapaControlador
 {
     public class CapaControladorOrigen
@@ -85,7 +86,7 @@ namespace CapaControlador
 
                 if (listaExcel.Count == 0)
                 {
-                    //Aqui va a ir el metodo.
+                    
                 }
 
 
