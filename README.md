@@ -25,14 +25,12 @@ Aplicación desarrollada en .NET con arquitectura en capas (Data, Business, Cont
 </figure>
 
 <figure align="center">
-  <img width="950" alt="Vista de la Sabana de Datos - Limpieza de Cédulas" src="https://github.com/user-attachments/assets/d7078806-db38-4ed5-9aad-4049173510b4" /> 
-</figure>
-
-<figure align="center">
   <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/0c0ad190-4a76-4949-8bdd-964444a36efd" />
 </figure>
 
-
+<figure align="center">
+  <img width="950" alt="Vista de la Sabana de Datos - Limpieza de Cédulas" src="https://github.com/user-attachments/assets/d7078806-db38-4ed5-9aad-4049173510b4" /> 
+</figure>
 
 <figure align="center">
   <img width="700" alt="Arquitectura del Proceso de Limpieza" src="https://github.com/user-attachments/assets/1b63f62f-0203-449f-9623-bb17cd7b4708" />
