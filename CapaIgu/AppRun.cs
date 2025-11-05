@@ -61,6 +61,16 @@ namespace CapaIgu
 
         }
 
+        private void MostrarMensajeArchivoVacio()
+        {
+            MessageBox.Show(
+                 "Sin Registros Para Leer",
+                 "[⚙️ AppRun]",
+                 MessageBoxButtons.OK,
+                 MessageBoxIcon.Information
+            );
+        }
+
         private void ConfigurarDataGridView()
         {
             try

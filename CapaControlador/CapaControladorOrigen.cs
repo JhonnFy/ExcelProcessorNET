@@ -40,6 +40,33 @@ namespace CapaControlador
 
                     for (int row = 2; row <= filas; row++)
                     {
+                        try
+                        {
+                            long? Radicado = long.TryParse(hoja.Cells[row, 1].Value?.ToString(), out long rVal) ? rVal : (long?)null;
+                            long? Id = long.TryParse(hoja.Cells[row, 2].Value?.ToString(), out long iVal) ? iVal : (long?)null;
+                            string Empleado = hoja.Cells[row, 3].Value?.ToString();
+                            string Identificacion = hoja.Cells[row, 4].Value?.ToString();
+                            string TipoDocumental = hoja.Cells[row, 5].Value?.ToString();
+                            string CodigoDeBarrasRecepcion = hoja.Cells[row, 6].Value?.ToString();
+                            string CbDocumento = hoja.Cells[row, 7].Value?.ToString();
+                            string CbExpediente = hoja.Cells[row, 8].Value?.ToString();
+                            string CbCaja = hoja.Cells[row, 9].Value?.ToString();
+
+                            if (Radicado == null && Id == null && string.IsNullOrWhiteSpace(Empleado) && string.IsNullOrWhiteSpace(Identificacion))
+                            {
+                                Debug.WriteLine($"[****].[WARN].[CapaControladorOrigen].[ImportarDesdeExcel] Fila {row} vacía, se omite.");
+                                continue;
+                            }
+
+
+                        }
+                        catch (Exception ex)
+                        {
+                            Debug.WriteLine($"[****].[ERROR].[CapaControladorOrigen].[ImportarDesdeExcel] Fila {row} vacía, se omite.");
+                        }
+
+
+
                         var objModelo = new ModeloCodigoDeBarrasOrigen
                         {
                             Radicado = long.TryParse(hoja.Cells[row, 1].Value?.ToString(), out long radicado) ? radicado : 0,
@@ -55,6 +82,12 @@ namespace CapaControlador
                         listaExcel.Add(objModelo);
                     }
                 }
+
+                if (listaExcel.Count == 0)
+                {
+                    //Aqui va a ir el metodo.
+                }
+
 
                 Debug.WriteLine($"[****].[OK].[CapaControladorOrigen].[ImportarDesdeExcel]: {listaExcel.Count}");
                 Debug.WriteLine("[****].[OK].[CapaControladorOrigen].[ImportarDesdeExcel].[Enviando lista a CapaNegocio]");
