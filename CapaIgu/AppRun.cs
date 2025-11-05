@@ -60,16 +60,7 @@ namespace CapaIgu
         {
 
         }
-
-        private void MostrarMensajeArchivoVacio()
-        {
-            MessageBox.Show(
-                 "Sin Registros Para Leer",
-                 "[⚙️ AppRun]",
-                 MessageBoxButtons.OK,
-                 MessageBoxIcon.Information
-            );
-        }
+                
 
         private void ConfigurarDataGridView()
         {
@@ -144,6 +135,20 @@ namespace CapaIgu
         {
             try
             {
+                if (lista == null || lista.Count == 0)
+                {
+                    dataGridViewExcel.Rows.Clear();
+                    MessageBox.Show
+                    (
+                        "Sin Registros Para Leer",
+                        "[⚙️ AppRun]",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+                    Debug.WriteLine("[****].[WARN].[CapaIgu].[InsertarDatosDataGridView]: Lista vacía, no se insertan datos.");
+                    return;
+                }
+
                 Debug.WriteLine("[****].[OK].[Paso 5].[CapaIgu].[InsertarDatosDataGridView iniciado]");
                 dataGridViewExcel.Rows.Clear();
 

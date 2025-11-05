@@ -59,7 +59,6 @@ namespace CapaControlador
                                 continue;
                             }
 
-
                         }
                         catch (Exception ex)
                         {
