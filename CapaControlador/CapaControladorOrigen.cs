@@ -84,11 +84,6 @@ namespace CapaControlador
                     }
                 }
 
-                if (listaExcel.Count == 0)
-                {
-                    
-                }
-
 
                 Debug.WriteLine($"[****].[OK].[CapaControladorOrigen].[ImportarDesdeExcel]: {listaExcel.Count}");
                 Debug.WriteLine("[****].[OK].[CapaControladorOrigen].[ImportarDesdeExcel].[Enviando lista a CapaNegocio]");
